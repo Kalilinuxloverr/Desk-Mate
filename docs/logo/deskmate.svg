@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Desk-Mate Logo: Körper, zwei Augen, Ampel-Punkt. Keine Schrift, keine externen Fonts. -->
+  <rect x="28" y="36" width="200" height="184" rx="44" fill="#2B2D31"/>
+  <circle cx="92" cy="112" r="34" fill="#FFFFFF"/>
+  <circle cx="164" cy="112" r="34" fill="#FFFFFF"/>
+  <circle cx="98" cy="116" r="16" fill="#2EC4B6"/>
+  <circle cx="170" cy="116" r="16" fill="#2EC4B6"/>
+  <circle cx="104" cy="110" r="5" fill="#FFFFFF"/>
+  <circle cx="176" cy="110" r="5" fill="#FFFFFF"/>
+  <rect x="76" y="166" width="104" height="14" rx="7" fill="#3A3D44"/>
+  <circle cx="128" cy="200" r="10" fill="#3DDC84"/>
+</svg>
