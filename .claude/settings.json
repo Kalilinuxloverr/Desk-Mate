@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "SessionStart": [
+      { "matcher": "startup|resume|clear",
+        "hooks": [ { "type": "command", "command": "sh \"$CLAUDE_PROJECT_DIR/tools/session-start.sh\"", "timeout": 10 } ] }
+    ],
+    "SessionEnd": [
+      { "hooks": [ { "type": "command", "command": "sh \"$CLAUDE_PROJECT_DIR/tools/session-end.sh\"", "timeout": 120 } ] }
+    ]
+  }
+}
