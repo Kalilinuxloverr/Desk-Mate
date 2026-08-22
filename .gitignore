@@ -1,0 +1,36 @@
+# Secrets — nie committen (Kühler-Lektion: Passwörter im Initial-Commit)
+secrets.h
+**/secrets.h
+.env
+.env.*
+*.local.xcconfig
+Signing.local.xcconfig
+
+# Obsidian: nur Konfiguration versionieren, nicht Arbeitszustand
+vault/.obsidian/workspace*
+vault/.obsidian/cache
+vault/.trash/
+
+# KiCad
+*-backups/
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+_autosave-*
+fp-info-cache
+*.lck
+
+# Build / Tools
+build/
+.build/
+DerivedData/
+*.xcodeproj
+*.xcworkspace
+.history/
+__pycache__/
+*.pyc
+node_modules/
+.vercel/
+
+# macOS
+.DS_Store
