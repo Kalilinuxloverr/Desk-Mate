@@ -56,7 +56,7 @@ Frage 4 (UART vs. ESP-NOW) entfiel mit dem C3. Jede Entscheidung hat eine Notiz 
  └─────────────────────┘
 ```
 
-Die Skizze von Leon kam nicht an; Proportionen und genaue Anordnung der Tasten/Fader werden beim Frontpanel-Layout mit ihm abgestimmt (Fader links/rechts, Tasten unten — so seine Beschreibung).
+**Design-Richtung (Referenzbild `docs/design/2026-08-23-referenz-roboter.png`, Leon 2026-08-23):** weißes, rundes Gehäuse; der Kopf trägt **ein durchgehendes dunkles Visier**, hinter dem beide Augen-Displays leuchten (EVE-/Chatbot-Look, kein kantiger Wall-E); der **Mund ist die WS2812-Leiste hinter dem Visier** — im Ruhezustand türkises Lächeln, als Ampel grün/gelb/rot. Das Bedienpanel (Frontpanel) sitzt vorne **angewinkelt** (Arbeitsannahme 20°, wird am Druckteil geprüft). Stummelärmchen als feste Druckteile (keine Aktorik). Genaue Anordnung der Tasten/Fader wird beim Frontpanel-Layout mit Leon abgestimmt.
 
 ### 2.2 Platinen (drei Designs, eine JLCPCB-Bestellung)
 
@@ -170,7 +170,8 @@ Motorleitungen liegen zwischen GND-Paaren (Störungen), Schleifer ebenfalls. DRV
 
 ### 2.6 Gehäuse (3D-Druck)
 
-- Drei Baugruppen: Base (Mainboard, USB-Buchsen hinten, Lüftungsschlitze für BME680, Gummifüße), Bauch (Frontpanel, Display-Fenster, Tastenausschnitte, Fader-Schlitze), Kopf (Augen, Pan-Tilt-Halter für MG90S — Standard-Halter, STL frei verfügbar)
+- Stil nach Referenzbild (§2.1): weiße Schalen, Kopf mit dunklem Visier (getönt gedrucktes/Acryl-Fenster) über beiden Augen und der WS2812-Mund-Leiste; Frontpanel um ~20° angewinkelt
+- Drei Baugruppen: Base (Mainboard, USB-Buchsen hinten, Lüftungsschlitze für BME680, Gummifüße), Bauch (Frontpanel angewinkelt, Display-Fenster, Tastenausschnitte, Fader-Schlitze, Stummelärmchen fest), Kopf (Visier, Augen, Pan-Tilt-Halter für MG90S — Standard-Halter, STL frei verfügbar)
 - Kabelführung: ein Strang Base → Bauch (IDC), ein Strang Bauch → Kopf (Augen 10 Adern + WS2812 3 Adern); Servos sitzen im Bauch/Hals, nicht im Kopf
 - Alle Teile als STEP + STL, je Teil eine Datei, deutsche Dateinamen wie beim Kühler (`Kopf_Schale_vorne.stl`); Druckparameter in `hardware/3d/README.md`
 - Fader-Kappen: leitfähig (für MPR121-Touch) — gedruckt mit leitfähigem Filament oder Standard-Kappen mit Draht zur Achse (FaderBuddy-Ansatz)
