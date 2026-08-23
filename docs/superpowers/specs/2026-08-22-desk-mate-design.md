@@ -64,9 +64,9 @@ Frage 4 (UART vs. ESP-NOW) entfiel mit dem C3. Jede Entscheidung hat eine Notiz 
 - Sockel für ESP32-S3-DevKitC-1 (2× 1×22 Buchsenleiste, 2,54 mm; Antennenseite über Platinenrand hinaus, nichts darüber)
 - 2× USB-C-Buchse 16-Pin mit THT-Befestigung: **J_DATA** (zum Rechner, D+/D− an DevKit-USB-Pins, 5 V als Quelle 2) und **J_PWR** (nur 5 V, CC1/CC2 mit 5,1 kΩ nach GND → 3 A vom Netzteil)
 - Versorgung: P-FET-ODER (2× P-FET im TO-220 oder Dual-Schottky THT als einfachere, verlustbehaftete Alternative — Entscheidung bei Bauteilwahl), Bulk 1000 µF/10 V, Polyfuse 3 A, LD1117V33 (TO-220) für 3,3-V-Peripherie (Displays, MCP23017, MPR121, BME680); DevKit-LDO versorgt nur den S3
-- 2× Sockel für DRV8833-Breakout (6-Pin-Reihen, 2,54 mm) = 4 Motorkanäle; je 100 µF am VM-Pin
+- 2× Sockel für DRV8833-Breakout (Pololu #2130, 16-polig) = 4 Motorkanäle; je 100 µF am VM-Pin; **VM-Rail per Lötjumper: 5 V (Default) oder unbestückter Boost-Sockel (MT3608-Breakout) auf ~9 V** — MF60T-Motor ist lt. Soundwell für 6–10 V spezifiziert, läuft bei 5 V nur langsamer (FaderBuddy-Praxis)
 - 2× Servo-Stecker (3-Pin JST-XH oder 2,54-Stift), eigener 5-V-Pfad mit 470 µF, 10 Ω Serie optional als Anlaufbremse
-- WS2812-Stecker 3-Pin (Data über 330 Ω, 5 V), 1000 µF lokal
+- WS2812/ARGB-Stecker 3-Pin (5 V, GND, Data über 330 Ω), 1000 µF lokal — generisch: beliebiger 5-V-ARGB-Streifen/Ring (Leons Drohnen-Streifen), LED-Anzahl per NVS, Strom-Cap in Firmware
 - BME680-Breakout-Sockel (I²C, 4-Pin)
 - IDC 2×15 zum Frontpanel (Pinbelegung 2.4)
 - Augen-/Servo-/WS2812-Kabel gehen vom Mainboard nach oben (Kopf ist am Bauch, Kabel durch Bauch-Rückwand)
@@ -128,7 +128,7 @@ Motoren laufen im **PWM + DIR**-Schema am DRV8833 (IN1 = PWM, IN2 = DIR; rückw�
 
 Über den MCP23017 (Frontpanel): GPA0–GPA5 Soft-Keys 1–6 · GPA6–GPA7 + GPB0–GPB1 Makro-Keys 1–4 · GPB2 ENC_A · GPB3 ENC_B · GPB4 ENC_SW · GPB5 DISP_RST (alle Displays) · GPB6 BELLY_BL_EN · GPB7 frei. Encoder über INT-on-change ist für Handdrehung ausreichend (< 100 Flanken/s).
 
-Die Pin-Map ist **vor KiCad** gegen das S3-Datenblatt und das DevKitC-1-Schaltbild zu prüfen (Task im Plan); insbesondere: Onboard-LED-Pin der gekauften DevKit-Revision, GPIO 45-Verhalten beim Boot mit angeschlossenem Backlight-Eingang, GPIO 48 als Eingang.
+**Verifiziert 2026-08-23** gegen Datenblätter und DevKitC-1-Schaltplan — Details und Quellen: `vault/Hardware/Pin-Map.md`. GPIO 35–37 liegen am Header, bleiben aber unverbunden (Octal-PSRAM).
 
 ### 2.4 IDC 2×15 Mainboard ↔ Frontpanel
 
@@ -290,10 +290,10 @@ SmartKnob als externes Gerät über MQTT/USB · watchOS-App (Ampel am Handgelenk
 
 ## 8 · Offene Punkte (werden im Plan als Tasks geführt)
 
-1. Pin-Map gegen S3-Datenblatt + DevKitC-1-Rev prüfen (Onboard-LED-Pin, GPIO 45/48-Verhalten).
+1. ~~Pin-Map prüfen~~ erledigt 2026-08-23: alles verifiziert, siehe `vault/Hardware/Pin-Map.md` und `firmware/arduino/deskmate/pins.h`. Neu offen: **MF60T-Motor bei 5 V charakterisieren** (Anlauf/Stall), bevor das Mainboard-Layout die VM-Rail festzurrt.
 2. USB-Daten: über die DevKit-USB-Buchse (Kabel intern zur J_DATA) oder D+/D− direkt vom DevKit-Header auf J_DATA — Entscheidung bei Bauteilwahl (ESD-Schutz!).
 3. P-FET-ODER vs. Dual-Schottky — Entscheidung bei Bauteilwahl (Spannungsabfall vs. Teilezahl).
-4. HiveMQ-Free-Tier: maximale Nachrichtengröße für Screenshots prüfen.
+4. ~~HiveMQ-Free-Tier~~ erledigt 2026-08-23: max. Nachrichtengröße 5 MB (Quelle: community.hivemq.com/t/maximum-message-size/3087) → 800-px-Screenshots unkritisch.
 5. `PreToolUse`/`AskUserQuestion`: trägt `tool_input` die Frage? Maximaler Hook-Timeout? → testen.
 6. Lizenz (MIT vs. CERN-OHL für Hardware) — Leon.
 7. Leons Skizze nachreichen → Frontpanel-Anordnung.

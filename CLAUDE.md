@@ -19,6 +19,7 @@ Desk-Mate ist ein Wall-E-artiger Schreibtisch-Begleiter: Ampel für Claude Code 
 ```bash
 sh tools/test-check-secrets.sh     # Secret-Check
 sh tools/test-session-hooks.sh     # Zeiterfassung
+sh tools/test-pins.sh              # Pin-Map-Regeln (pins.h)
 ```
 
 Kommt mit den Phasen dazu: `kicad-cli sch erc` / `pcb drc` (Phase 2), `arduino-cli compile` (Phase 3), `xcodebuild` (Phase 4). Neue Befehle hier eintragen, sobald sie existieren.
@@ -45,7 +46,7 @@ Startbestand aus ESP32-Kühler und VVVF; Desk-Mate-eigene Fallen werden hier num
 - Deutsch für Menschen (Doku, Commits, Kommentare, UI), Englisch für Bezeichner, Netznamen, JSON-Keys, MQTT-Topics.
 - Commits: Satzform, ergebnisorientiert, kein Präfix, Umlaute dürfen ASCII-gefaltet sein (`Ueberlauf`).
 - Dateien: Specs/Pläne `YYYY-MM-DD-<thema>.md`; CAD-Teile deutsch (`Kopf_Schale_vorne.stl`), je Teil STEP + STL; Sketch-Ordner snake_case.
-- Pin-Map: Spec §2.3 ist die Wahrheit, bis `firmware/arduino/deskmate/pins.h` existiert — dann `pins.h`, und der Spec wird nachgezogen.
+- Pin-Map: `firmware/arduino/deskmate/pins.h` ist die Wahrheit (verifiziert, Test `tools/test-pins.sh`); Spec §2.3 und `vault/Hardware/Pin-Map.md` werden bei Änderungen nachgezogen.
 - Through-Hole oder gesteckte Breakouts. Kein SMD auf unseren Platinen.
 - `// ponytail:`-Kommentare markieren bewusste Vereinfachungen und nennen den Ausbaupfad.
 - Jede nicht-triviale Logik hinterlässt genau einen lauffähigen Check (`tools/test-*.sh`, `assert`-Test), kein Test-Framework.
