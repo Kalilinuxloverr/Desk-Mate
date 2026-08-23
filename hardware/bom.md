@@ -32,8 +32,9 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 
 | Ref | Bauteil | Gehäuse | Stück | Quelle | Preis € | Bestand | Hinweis |
 |---|---|---|---|---|---|---|---|
-| FD1, FD2 | Behringer MF60T Motorfader (5er-Pack) | THT | 1 Pack | [Sweetwater US](https://www.sweetwater.com/store/detail/MOTORFADER--behringer-mf60t-motorized-faders-set-of-5-for-motor-controllers) | ~36 + Versand/Zoll | ? | **Kein EU-Händler gefunden (Thomann: nicht gelistet). Größtes Beschaffungsrisiko — eBay.de beobachten oder US-Import.** 10 kΩ linear, Motor 6–10 V |
-| FD3, FD4 | MF60T | Footprint, DNP | 0 | (im 5er-Pack) | 0 | — | Reserve |
+| FD1, FD2 | Behringer X32 Motor-Fader 100 mm (5er-Set) | panel-mount + Kabel | 1 Set | Amazon.de („Behringer X32 MOTOR FADER Set“) | 39,32 | bestellt 23.08. | **Ersetzt MF60T:** Prime-Lieferung 25.08., 30 Tage Retour, kein PCB-Footprint nötig. Pinout/Motorspannung bei Charakterisierung |
+| FD3, FD4 | X32-Fader (aus dem Set) | panel-mount, Reserve | 0 | (im Set, +1 Ersatz) | 0 | ✔ | Reserve |
+| J14–J17 | Fader-Anschluss-Header (Motor + Poti/Touch) | 2,54 Stift | 4 | Leistenware | ~1 | ? | Steckertyp nach Charakterisierung (X32-Kabel haben eigene Stecker — ggf. passende Buchsen nachkaufen) |
 | SW1–SW10 | MX-Schalter linear (Gateron/Outemu) | THT | 10 | Keycapsss | ~4 | ? | |
 | — | Kailh-Hot-Swap-Sockel MX | THT | 10 | [Keycapsss](https://keycapsss.com/Kailh-Hotswap-PCB-Sockets-10-pcs/KC10019-MX) | 1,80 | ? | **MX**, nicht Choc. Footprint-THT-Tauglichkeit in Task 11 prüfen, sonst direkt löten |
 | — | DSA-Blank-Keycaps | — | 10 | [Keycapsss](https://keycapsss.com/keyboard-parts/keycaps/132/dsa-blank-pbt-1u-keycaps-for-mx-switches) / [eBay](https://www.ebay.de/itm/387005285864) | ~6 | ? | |

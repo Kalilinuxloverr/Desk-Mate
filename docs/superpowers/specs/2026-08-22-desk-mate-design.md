@@ -17,8 +17,8 @@ Leitplanken aus dem Grilling: **eine PCB-Bestellung** (drei Designs, kein Re-Spi
 | 3 | Hirn | **Ein ESP32-S3 DevKitC-1 N16R8**, gesteckt; C3 nur als unbestückter Footprint |
 | 5 | Zentrale | Hybrid: USB → Desktop-Agent primär, BLE → Handy, Gerät auch standalone |
 | 6 | Standalone | BLE-HID + Gesicht + **WiFi in v1** (MQTT, NTP, OTA, Wetter, Haus-Nodes) |
-| 7 | Fader-Regelung | Eigene, einfache Regelung auf dem S3; DRV8833-Breakouts gesteckt |
-| 8 | Fader-Anzahl | 2 bestückt, 4 vorgesehen |
+| 7 | Fader-Regelung | Eigene, einfache Regelung auf dem S3; DRV8833-Breakouts gesteckt. Fader: **Behringer X32-Ersatz, 100 mm, panel-mounted mit Kabel** (entschieden 2026-08-23) |
+| 8 | Fader-Anzahl | 2 verbaut, 4 vorgesehen (5er-Set: +1 Ersatz) |
 | 9 | Displays | 2× rund 1,28" GC9A01 (Augen) + 2,8" ILI9341 (Bauch), ein SPI-Bus |
 | 10 | Tasten | 6 Soft-Keys + 4 Makro-Keys (MX, Hot-Swap) + EC11-Encoder; SmartKnob: Roadmap |
 | 11 | Strom | 2× USB-C außen (Daten-Verlängerung / 5 V 3 A); Mainboard: Polyfuse + Schottky, DevKit-Diode als zweiter Zweig |
@@ -73,14 +73,14 @@ Frage 4 (UART vs. ESP-NOW) entfiel mit dem C3. Jede Entscheidung hat eine Notiz 
 - **Reserve, unbestückt:** Stepper-Treiber-Sockel (A4988/TMC2209-Standard-Footprint, 2× 1×8) mit STEP/DIR/EN auf Lötjumper; C3-SuperMini-Footprint (2× 1×8) mit 5 V, GND, UART-TX/RX auf Lötjumper
 - Taster RESET und BOOT per Kabel/Pins nach außen führbar (DevKit-Taster liegen unter dem Gehäuse)
 
-**Frontpanel (Deck)** — 2 Lagen, ca. 150 × 120 mm (Fader geben die Höhe vor)
-- 4× Footprint Behringer MF60T (Motorfader 60 mm; 2 bestückt) — Footprint aus dem FaderBuddy-Repo übernehmen/verifizieren
+**Frontpanel (Deck)** — 2 Lagen, deutlich kleiner als ursprünglich geplant (Fader sitzen NICHT auf dem PCB)
+- Fader: **Behringer X32-Ersatzfader, 100 mm, 5er-Set** (entschieden 2026-08-23, ersetzt MF60T 60 mm) — Metallrahmen wird ans Gehäuse-Panel geschraubt, Anschluss über die mitgelieferten Kabel auf 4× Header am PCB (Motor 2-polig, Poti/Touch mehradrig — Pinout bei Charakterisierung). Kein Fader-Footprint mehr → größtes Footprint-Risiko eliminiert. Deck wird durch den 100-mm-Fahrweg ~4–5 cm höher als mit 60ern
 - 10× MX-kompatibler Schalter-Footprint (THT, mit Hot-Swap-Option), keine Dioden (kein Matrix-Scan, direkt am Expander)
 - EC11-Encoder mit Taster
 - MCP23017 (DIP-28) — Tasten 0–9, Encoder A/B/SW, Display-RST, Display-BL (on/off); INT_A/B → IDC
 - MPR121-Breakout-Sockel (I²C) — Fader-Touch 0–3 (Kanal 4–11 frei, z. B. Touch am Kopf)
 - Steckleiste für das 2,8"-ILI9341-Modul (14-Pin-Variante; SPI, ohne Touch-Pins), Display sitzt über den Soft-Keys
-- RC-Filter (1 kΩ / 100 nF) je Fader-Schleifer vor dem IDC
+- 4× Fader-Anschluss-Header (Motor + Schleifer + Touch), RC-Filter (1 kΩ / 100 nF) je Schleifer vor dem IDC
 - IDC 2×15 zum Mainboard
 
 **Augen-Adapter (Kopf)** — 2 Lagen, ca. 30 × 20 mm, nur Stecker
@@ -157,7 +157,7 @@ Motorleitungen liegen zwischen GND-Paaren (Störungen), Schleifer ebenfalls. DRV
 | Verbraucher | typ. | Spitze | Anmerkung |
 |---|---|---|---|
 | ESP32-S3 DevKit (WiFi + BLE) | 0,25 A | 0,5 A | |
-| 2× MF60T-Motor | 0,3 A | 1,2 A | Stall 0,6 A je; Firmware begrenzt Duty und Dauer |
+| 2× X32-100-mm-Fader-Motor | 0,3 A | 1,2 A | Annahme MF60T-Klasse; bei Charakterisierung messen |
 | 2× MG90S | 0,3 A | 1,4 A | Stall 0,7 A je; PWM aus im Ruhezustand |
 | ILI9341 2,8" (Backlight) | 0,15 A | 0,15 A | |
 | 2× GC9A01 | 0,08 A | 0,08 A | |
@@ -174,7 +174,8 @@ Motorleitungen liegen zwischen GND-Paaren (Störungen), Schleifer ebenfalls. DRV
 - Drei Baugruppen: Base (Mainboard, USB-Buchsen hinten, Lüftungsschlitze für BME680, Gummifüße), Bauch (Frontpanel angewinkelt, Display-Fenster, Tastenausschnitte, Fader-Schlitze, Stummelärmchen fest), Kopf (Visier, Augen, Pan-Tilt-Halter für MG90S — Standard-Halter, STL frei verfügbar)
 - Kabelführung: ein Strang Base → Bauch (IDC), ein Strang Bauch → Kopf (Augen 10 Adern + WS2812 3 Adern); Servos sitzen im Bauch/Hals, nicht im Kopf
 - Alle Teile als STEP + STL, je Teil eine Datei, deutsche Dateinamen wie beim Kühler (`Kopf_Schale_vorne.stl`); Druckparameter in `hardware/3d/README.md`
-- Fader-Kappen: leitfähig (für MPR121-Touch) — gedruckt mit leitfähigem Filament oder Standard-Kappen mit Draht zur Achse (FaderBuddy-Ansatz)
+- Fader-Kappen: X32-Kappen sind dabei; Touch über Draht/Federkontakt an die Metallachse (MPR121)
+- Deck-Höhe: 100-mm-Fader (~13 cm Körper) bestimmen das Panel — Winkel ~20°, Fader längs im Panel
 
 ### 2.7 Bauteile, die Leon schon hat
 
@@ -290,7 +291,7 @@ SmartKnob als externes Gerät über MQTT/USB · watchOS-App (Ampel am Handgelenk
 
 ## 8 · Offene Punkte (werden im Plan als Tasks geführt)
 
-1. ~~Pin-Map prüfen~~ erledigt 2026-08-23: alles verifiziert, siehe `vault/Hardware/Pin-Map.md` und `firmware/arduino/deskmate/pins.h`. Neu offen: **MF60T-Motor bei 5 V charakterisieren** (Anlauf/Stall), bevor das Mainboard-Layout die VM-Rail festzurrt.
+1. ~~Pin-Map prüfen~~ erledigt 2026-08-23: alles verifiziert, siehe `vault/Hardware/Pin-Map.md` und `firmware/arduino/deskmate/pins.h`. Neu offen: **X32-Fader charakterisieren, sobald geliefert (Di 25.08.):** Kabel-Pinout, Motorspannung/-strom bei 5 V (Anlauf/Stall), Touch-Kontaktierung, Rahmen-Maße + Schraubpunkte für Panel/3D-Druck → erst danach Frontpanel-Layout und VM-Rail final.
 2. ~~USB-Daten~~ erledigt 2026-08-23: Panel-Mount-USB-C-Verlängerung zur DevKit-Buchse (§2.2).
 3. ~~ODER-Stufe~~ erledigt 2026-08-23: Polyfuse + SB540 + DevKit-Diode, kein P-FET (§2.2).
 4. ~~HiveMQ-Free-Tier~~ erledigt 2026-08-23: max. Nachrichtengröße 5 MB (Quelle: community.hivemq.com/t/maximum-message-size/3087) → 800-px-Screenshots unkritisch.
