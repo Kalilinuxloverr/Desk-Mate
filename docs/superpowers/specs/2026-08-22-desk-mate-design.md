@@ -21,7 +21,7 @@ Leitplanken aus dem Grilling: **eine PCB-Bestellung** (drei Designs, kein Re-Spi
 | 8 | Fader-Anzahl | 2 bestückt, 4 vorgesehen |
 | 9 | Displays | 2× rund 1,28" GC9A01 (Augen) + 2,8" ILI9341 (Bauch), ein SPI-Bus |
 | 10 | Tasten | 6 Soft-Keys + 4 Makro-Keys (MX, Hot-Swap) + EC11-Encoder; SmartKnob: Roadmap |
-| 11 | Strom | 2× USB-C (Daten / 5 V 3 A), P-FET-ODER |
+| 11 | Strom | 2× USB-C außen (Daten-Verlängerung / 5 V 3 A); Mainboard: Polyfuse + Schottky, DevKit-Diode als zweiter Zweig |
 | 12 | Kopf | 2× MG90S Pan/Tilt, Easing, PWM-Aus im Ruhezustand |
 | 13 | Claude | Claude-Code-**Hooks** (Status + Freigabe), Tastendruck nur als Fallback; generische Ereignisquellen |
 | 14 | Agent | Swift-Menüleisten-App im Xcode-Projekt der iOS-App; Windows-Tray in Python (Phase 2); S3 = Composite-HID |
@@ -62,8 +62,8 @@ Frage 4 (UART vs. ESP-NOW) entfiel mit dem C3. Jede Entscheidung hat eine Notiz 
 
 **Mainboard (Base)** — 2 Lagen, ca. 100 × 80 mm
 - Sockel für ESP32-S3-DevKitC-1 (2× 1×22 Buchsenleiste, 2,54 mm; Antennenseite über Platinenrand hinaus, nichts darüber)
-- 2× USB-C-Buchse 16-Pin mit THT-Befestigung: **J_DATA** (zum Rechner, D+/D− an DevKit-USB-Pins, 5 V als Quelle 2) und **J_PWR** (nur 5 V, CC1/CC2 mit 5,1 kΩ nach GND → 3 A vom Netzteil)
-- Versorgung: P-FET-ODER (2× P-FET im TO-220 oder Dual-Schottky THT als einfachere, verlustbehaftete Alternative — Entscheidung bei Bauteilwahl), Bulk 1000 µF/10 V, Polyfuse 3 A, LD1117V33 (TO-220) für 3,3-V-Peripherie (Displays, MCP23017, MPR121, BME680); DevKit-LDO versorgt nur den S3
+- **Daten-Port** = Panel-Mount-USB-C-Verlängerung von der DevKit-USB-Buchse zur Gehäuserückwand (entschieden 2026-08-23: kein USB-Routing/ESD auf dem Mainboard, DevKit direkt flashbar). Auf dem Mainboard nur **J_PWR**: USB-C-Buchse 16-Pin THT, nur 5 V, CC1/CC2 mit 5,1 kΩ nach GND → 3 A vom Netzteil. Außen am Gehäuse bleiben zwei USB-C-Ports (Entscheidung 11)
+- Versorgung (entschieden 2026-08-23, ersetzt P-FET-ODER): J_PWR → Polyfuse 3 A → **Schottky SB540** → 5-V-Rail; USB-Pfad speist die Rail über die **DevKit-eigene Diode** am 5V-Pin (Standard-Praxis, sperrt Rückspeisung zum Host). PSU_SENSE-Teiler greift **vor** der SB540 ab → eindeutig „Netzteil da“. Rail liegt real bei ~4,6–4,7 V (Diodenabfall) — für Logik/Displays egal, für Fader-Motoren siehe VM-Boost-Sockel. Bulk 1000 µF/10 V an der Rail, LD1117V33 (TO-220) für 3,3-V-Peripherie (Displays, MCP23017, MPR121, BME680); DevKit-LDO versorgt nur den S3
 - 2× Sockel für DRV8833-Breakout (Pololu #2130, 16-polig) = 4 Motorkanäle; je 100 µF am VM-Pin; **VM-Rail per Lötjumper: 5 V (Default) oder unbestückter Boost-Sockel (MT3608-Breakout) auf ~9 V** — MF60T-Motor ist lt. Soundwell für 6–10 V spezifiziert, läuft bei 5 V nur langsamer (FaderBuddy-Praxis)
 - 2× Servo-Stecker (3-Pin JST-XH oder 2,54-Stift), eigener 5-V-Pfad mit 470 µF, 10 Ω Serie optional als Anlaufbremse
 - WS2812/ARGB-Stecker 3-Pin (5 V, GND, Data über 330 Ω), 1000 µF lokal — generisch: beliebiger 5-V-ARGB-Streifen/Ring (Leons Drohnen-Streifen), LED-Anzahl per NVS, Strom-Cap in Firmware
@@ -291,8 +291,8 @@ SmartKnob als externes Gerät über MQTT/USB · watchOS-App (Ampel am Handgelenk
 ## 8 · Offene Punkte (werden im Plan als Tasks geführt)
 
 1. ~~Pin-Map prüfen~~ erledigt 2026-08-23: alles verifiziert, siehe `vault/Hardware/Pin-Map.md` und `firmware/arduino/deskmate/pins.h`. Neu offen: **MF60T-Motor bei 5 V charakterisieren** (Anlauf/Stall), bevor das Mainboard-Layout die VM-Rail festzurrt.
-2. USB-Daten: über die DevKit-USB-Buchse (Kabel intern zur J_DATA) oder D+/D− direkt vom DevKit-Header auf J_DATA — Entscheidung bei Bauteilwahl (ESD-Schutz!).
-3. P-FET-ODER vs. Dual-Schottky — Entscheidung bei Bauteilwahl (Spannungsabfall vs. Teilezahl).
+2. ~~USB-Daten~~ erledigt 2026-08-23: Panel-Mount-USB-C-Verlängerung zur DevKit-Buchse (§2.2).
+3. ~~ODER-Stufe~~ erledigt 2026-08-23: Polyfuse + SB540 + DevKit-Diode, kein P-FET (§2.2).
 4. ~~HiveMQ-Free-Tier~~ erledigt 2026-08-23: max. Nachrichtengröße 5 MB (Quelle: community.hivemq.com/t/maximum-message-size/3087) → 800-px-Screenshots unkritisch.
 5. `PreToolUse`/`AskUserQuestion`: trägt `tool_input` die Frage? Maximaler Hook-Timeout? → testen.
 6. Lizenz (MIT vs. CERN-OHL für Hardware) — Leon.
