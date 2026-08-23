@@ -1,8 +1,20 @@
+<p align="center"><img src="docs/logo/deskmate.svg" width="170" alt="Desk-Mate Logo"></p>
+
 # Desk-Mate
 
 Ein kleiner Wall-E-artiger Schreibtisch-Begleiter: eine Ampel für alles, was dich braucht (Claude Code, Browser-Downloads, Steam), ein Deck mit Motorfadern und Soft-Keys, ein Kopf mit zwei Augen-Displays. Verbunden per USB, BLE und WiFi; steuerbar vom Mac, vom Handy und über das Haus-MQTT. Alles Through-Hole, alles 3D-gedruckt, alles dokumentiert — inklusive Arbeitszeit.
 
-**Status:** Design abgeschlossen (2026-08-22), Bauteilwahl und KiCad laufen. Noch keine Hardware aufgebaut.
+**Zwischenstand (2026-08-23):**
+
+| Schritt | Stand |
+|---|---|
+| Design-Spec (18 Grill-Fragen) | ✅ [`docs/superpowers/specs/`](docs/superpowers/specs/2026-08-22-desk-mate-design.md) |
+| Pin-Map gegen Datenblatt + DevKit-Schaltplan verifiziert | ✅ [`firmware/arduino/deskmate/pins.h`](firmware/arduino/deskmate/pins.h) |
+| Stückliste mit Quellen und Preisen (~100–160 €) | ✅ [`hardware/bom.md`](hardware/bom.md) |
+| KiCad: Mainboard · Frontpanel · Augen-Adapter | 🔜 als Nächstes |
+| Platinen-Bestellung (JLCPCB) · Firmware · Agent/App | ⬜ danach |
+
+Arbeitszeit und Tagesprotokolle: [`vault/Log/`](vault/Log/) · Projektseite: Portfolio-Eintrag P12.
 
 ```
  ┌─────────────────────┐
@@ -31,7 +43,7 @@ Ein kleiner Wall-E-artiger Schreibtisch-Begleiter: eine Ampel für alles, was di
 | `docs/superpowers/specs/` | Design-Spec (die eine Wahrheit für Hardware, Pin-Map, Protokolle) |
 | `docs/superpowers/plans/` | Implementierungspläne je Phase |
 | `docs/relic/` | Der Ursprungs-Prompt, unverändert |
-| `docs/anleitung/` | Bauanleitung (wächst mit dem Projekt) |
+| [`docs/anleitung/`](docs/anleitung/) | Bauanleitung (wächst mit dem Projekt) |
 | `docs/logo/` | Logo (SVG) |
 | `vault/` | Obsidian-Vault: Tagesblätter mit Arbeitszeit, Entscheidungen, Bestellungen |
 | `hardware/kicad/` | Mainboard, Frontpanel, Augen-Adapter (KiCad 10) |
