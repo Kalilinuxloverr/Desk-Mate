@@ -8,7 +8,7 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 |---|---|---|---|---|---|---|---|
 | U1 | ESP32-S3-DevKitC-1-**N16R8** (Espressif) | Sockel 2× 1×22 | 1 | [Mouser](https://www.mouser.at/ProductDetail/Espressif-Systems/ESP32-S3-DevKitC-1-N16R8) | ~14 | ? | BerryBase/Reichelt nur N8R8. Revision (v1.0/v1.1) nach Kauf prüfen → LED-Pin 48/38. Clone YD-ESP32-S3 ginge (~8 €), LED auf 48 + 5V-Dioden-Eigenheit |
 | U2 | LD1117V33 | TO-220 | 1 | [Reichelt](https://www.reichelt.com/de/en/ldo-voltage-regulator-15-vin-3-3-vout-950-ma-to-220-ld1117v33-p216683.html) | 0,25 | ? | 3,3 V für Peripherie |
-| U3, U4 | DRV8833-Breakout (Pololu 2130) | Sockel 2× 1×8 | 2 | [Eckstein](https://eckstein-shop.de/PololuDRV8833DualMotorDriverCarrierforTwoDCMotors12AperChannelEN) | 26,06 | ? | AliExpress-Variante ~2 €/St.: **nSLEEP muss hochgezogen sein**, Footprint erst nach Kauf final |
+| U3, U4 | DRV8833-Breakout | Sockel | 2 | **Bestand** (Arduino-Box) | 0 | ✔ | Amazon-Fallback 10,07 €. **nSLEEP prüfen**, Footprint nach den vorhandenen Modulen |
 | U5 | MT3608-Boost (VM-Rail 9 V, optional) | Sockel | 1 | AliExpress/Amazon | ~2 | ? | AZ-Delivery ausverkauft. Vor Einbau auf 9 V trimmen. Unbestückt lassen, bis MF60T bei 5 V charakterisiert ist |
 | U6 | C3-SuperMini-Reserve | Footprint, unbestückt | 0 | — | 0 | ✔ (vorhanden) | Lötjumper |
 | U7 | Stepper-Treiber-Reserve (A4988-Raster) | Footprint, unbestückt | 0 | — | 0 | — | Lötjumper |
