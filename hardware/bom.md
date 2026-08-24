@@ -38,7 +38,7 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 | SW1–SW10 | MX-Schalter linear (Gateron/Outemu) | THT | 10 | Keycapsss | ~4 | ? | |
 | — | Kailh-Hot-Swap-Sockel MX | THT | 10 | [Keycapsss](https://keycapsss.com/Kailh-Hotswap-PCB-Sockets-10-pcs/KC10019-MX) | 1,80 | ? | **MX**, nicht Choc. Footprint-THT-Tauglichkeit in Task 11 prüfen, sonst direkt löten |
 | — | DSA-Blank-Keycaps | — | 10 | [Keycapsss](https://keycapsss.com/keyboard-parts/keycaps/132/dsa-blank-pbt-1u-keycaps-for-mx-switches) / [eBay](https://www.ebay.de/itm/387005285864) | ~6 | ? | |
-| ENC1 | EC11-Encoder mit Taster + Aluknopf | THT | 1 | AliExpress (~2) oder [Pimoroni PIM770](https://www.berrybase.de/en/pimoroni-picade-max-encoder-drehgeber-mit-druckfunktion-aluminium-drehknopf-ec11-encoder) (8,90) | 2–9 | ? | |
+| ENC1 | EC11-Encoder nackt (5er-Pack) | THT | 1 Pack | Amazon | **7,04** | im Warenkorb 24.08.; Aluknopf separat (offen) |
 | U8 | MCP23017-E/SP + DIP-28-Sockel | DIP-28 | 1 | [Reichelt](https://www.reichelt.com/de/en/i-o-extension-16bit-1-8-5v-serial-i2c-dip-28-mcp-23017-e-sp-p140074.html) | 1,90 | ? | |
 | U9 | MPR121-Breakout | Sockel | 1 | [BerryBase (Adafruit)](https://www.berrybase.de/en/adafruit-12-key-capacitive-touch-sensor-breakout-mpr121) | 8,75 | ? | Clone ~2 € geht; ADDR=GND |
 | Q1 | BC337 (Backlight-Schalter) | TO-92 | 1 | Reichelt | ~0,10 | ? | |
