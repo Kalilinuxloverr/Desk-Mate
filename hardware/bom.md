@@ -42,7 +42,7 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 | U8 | MCP23017-E/SP + DIP-28-Sockel | DIP-28 | 1 | [Reichelt](https://www.reichelt.com/de/en/i-o-extension-16bit-1-8-5v-serial-i2c-dip-28-mcp-23017-e-sp-p140074.html) | 1,90 | ? | |
 | U9 | MPR121-Breakout | Sockel | 1 | [BerryBase (Adafruit)](https://www.berrybase.de/en/adafruit-12-key-capacitive-touch-sensor-breakout-mpr121) | 8,75 | ? | Clone ~2 € geht; ADDR=GND |
 | Q1 | BC337 (Backlight-Schalter) | TO-92 | 1 | Reichelt | ~0,10 | ? | |
-| DSP1 | ILI9341 2,8" SPI 320×240 | Steckleiste 14-Pin | 1 | [Eckstein](https://eckstein-shop.de/28inch-TFT-Touchscreen-Display-Modul-ILI9341-240x320-mit-SPI-Schnittstelle-EN) | 10,00 | ? | EU-Ware meist MIT Touch — egal, Touch-Pins bleiben offen |
+| DSP1 | ILI9341 2,8" SPI 320×240 | Steckleiste 14-Pin | 1 | Amazon | **14,11** | im Warenkorb 24.08. | EU-Ware meist MIT Touch — egal, Touch-Pins bleiben offen |
 | — | RC-Filter: 4× 1 kΩ + 4× 100 nF · Encoder 2× 10 nF · Pull-up 10 kΩ | axial/RM5 | — | Sortiment | ~0,50 | ? | |
 | J9/J10 | Steckleisten + IDC-Gegenstück | 2,54 | — | Leistenware | ~1 | ? | |
 
@@ -50,7 +50,7 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 
 | Ref | Bauteil | Gehäuse | Stück | Quelle | Preis € | Bestand | Hinweis |
 |---|---|---|---|---|---|---|---|
-| DSP2, DSP3 | GC9A01 1,28" rund, SPI, 7-Pin | Buchse | 2 | [makeroo](https://makeroo.de/products/1-28-zoll-rundes-tft-lcd-display-mit-spi-gc9a01-fur-arduino) ~6/St. · AliExpress ~3,50/St. | 7–12 | ? | |
+| DSP2, DSP3 | GC9A01 1,28" rund, SPI, 7-Pin | Buchse | 2 | Amazon (2er-Pack) | **10,07** | im Warenkorb 24.08. | |
 | M1, M2 | MG90S Metallgetriebe | — | 2 | [roboter-bausatz.de](https://www.roboter-bausatz.de/p/mg90s-micro-servo-motor) | 7,90 | ? | Amazon/Ali voller Fakes |
 | — | Pan-Tilt-Halter für MG90S | 3D-Druck | 1 | Printables/Thingiverse („SG90 pan tilt“) | 0 | — | Schrauben liegen Servos bei; alternativ Kit ~3 € AliExpress |
 | J11–J13 | Stecker Augen-Adapter (10-Pin ein, 2× 7-Pin aus) | 2,54 | 3 | Leistenware | ~1 | ? | |

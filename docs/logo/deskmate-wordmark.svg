@@ -1,36 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 512" width="1180" height="512">
-  <!-- Desk-Mate Bildmarke v3 — Referenz: docs/design/2026-08-23-referenz-roboter.png -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 512" role="img" aria-labelledby="title desc">
+  <title id="title">Desk-Mate — Dein Schreibtisch-Begleiter</title><desc id="desc">Wortmarke mit futuristischem Roboterkopf.</desc>
   <defs>
-    <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7EAEF"/>
-    </linearGradient>
-    <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#161A21"/><stop offset="1" stop-color="#242B36"/>
-    </linearGradient>
-    <radialGradient id="eye" cx="0.5" cy="0.4" r="0.8">
-      <stop offset="0" stop-color="#A6F7EE"/><stop offset="0.55" stop-color="#37E0D0"/><stop offset="1" stop-color="#18ADA1"/>
-    </radialGradient>
-    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="10"/></filter>
-    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0B1220" flood-opacity="0.18"/>
-    </filter>
+    <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".52" stop-color="#F1F4F8"/><stop offset="1" stop-color="#DCE2E9"/></linearGradient><linearGradient id="visor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#172432"/><stop offset="1" stop-color="#07111C"/></linearGradient><radialGradient id="eye" cx="50%" cy="32%" r="72%"><stop stop-color="#D8FFFA"/><stop offset=".42" stop-color="#73F2E5"/><stop offset="1" stop-color="#19BFB9"/></radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="15" stdDeviation="13" flood-color="#142235" flood-opacity=".2"/></filter><filter id="glow" x="-80%" y="-120%" width="260%" height="340%"><feGaussianBlur stdDeviation="10"/></filter>
   </defs>
-  <rect x="34" y="196" width="34" height="96" rx="17" fill="#DCE0E6"/>
-  <rect x="444" y="196" width="34" height="96" rx="17" fill="#DCE0E6"/>
-  <g filter="url(#soft)">
-    <rect x="64" y="88" width="384" height="312" rx="96" fill="url(#shell)" stroke="#D2D7DE" stroke-width="4"/>
-  </g>
-  <rect x="112" y="140" width="288" height="176" rx="72" fill="url(#visor)"/>
-  <path d="M150 158 q106 -18 212 0 q-10 -16 -30 -18 q-76 -10 -152 0 q-20 2 -30 18z" fill="#FFFFFF" opacity="0.07"/>
-  <ellipse cx="196" cy="220" rx="34" ry="26" fill="#37E0D0" opacity="0.5" filter="url(#glow)"/>
-  <ellipse cx="316" cy="220" rx="34" ry="26" fill="#37E0D0" opacity="0.5" filter="url(#glow)"/>
-  <ellipse cx="196" cy="220" rx="30" ry="23" fill="url(#eye)"/>
-  <ellipse cx="316" cy="220" rx="30" ry="23" fill="url(#eye)"/>
-  <ellipse cx="187" cy="211" rx="9" ry="6" fill="#FFFFFF" opacity="0.85"/>
-  <ellipse cx="307" cy="211" rx="9" ry="6" fill="#FFFFFF" opacity="0.85"/>
-  <path d="M226 266 q30 24 60 0" fill="none" stroke="#37E0D0" stroke-width="11" stroke-linecap="round"/>
-  <circle cx="256" cy="357" r="13" fill="#3DDC84" opacity="0.45" filter="url(#glow)"/>
-  <circle cx="256" cy="357" r="13" fill="#3DDC84"/>
-  <text x="530" y="290" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="132" letter-spacing="-3" fill="#20242B">Desk-Mate</text>
-  <text x="534" y="352" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="40" fill="#8A93A0">Dein Schreibtisch-Begleiter</text>
+  <g><path d="M218 87c0-24 17-39 38-39s38 15 38 39v20h-76z" fill="#C9D1DA"/><rect x="47" y="205" width="62" height="112" rx="31" fill="#D5DCE5"/><rect x="403" y="205" width="62" height="112" rx="31" fill="#D5DCE5"/><g filter="url(#shadow)"><path d="M76 185c0-73 59-121 180-121s180 48 180 121v111c0 73-59 121-180 121S76 369 76 296z" fill="url(#shell)" stroke="#C9D1DA" stroke-width="4"/></g><path d="M108 192c0-53 43-82 148-82s148 29 148 82v89c0 53-43 82-148 82s-148-29-148-82z" fill="url(#visor)"/><path d="M137 177c35-30 196-37 239 0" fill="none" stroke="#FFF" stroke-linecap="round" stroke-width="15" opacity=".3"/><ellipse cx="190" cy="244" rx="37" ry="30" fill="#37DDD3" opacity=".38" filter="url(#glow)"/><ellipse cx="322" cy="244" rx="37" ry="30" fill="#37DDD3" opacity=".38" filter="url(#glow)"/><path d="M158 247c0-22 14-36 32-36 20 0 35 15 35 36-22 8-45 8-67 0z" fill="url(#eye)"/><path d="M287 247c0-22 15-36 35-36 18 0 32 14 32 36-22 8-45 8-67 0z" fill="url(#eye)"/><path d="M178 224c7-8 18-10 27-5M310 224c7-8 18-10 27-5" fill="none" stroke="#FFF" stroke-linecap="round" stroke-width="7" opacity=".72"/><path d="M231 294c15 17 35 17 50 0" fill="none" stroke="#59E7DC" stroke-linecap="round" stroke-width="12"/><circle cx="256" cy="393" r="12" fill="#52E095"/></g>
+  <line x1="545" y1="136" x2="545" y2="376" stroke="#D8E0E8" stroke-width="2"/><text x="610" y="246" font-family="Avenir Next, Avenir, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif" font-size="142" font-weight="700" letter-spacing="-6" fill="#111C28">Desk<tspan fill="#20BFB5">-</tspan>Mate</text><text x="617" y="312" font-family="Avenir Next, Avenir, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="6" fill="#718091">DEIN SCHREIBTISCH-BEGLEITER</text>
 </svg>
