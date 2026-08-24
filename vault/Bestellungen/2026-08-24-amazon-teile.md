@@ -7,3 +7,4 @@
 | 1 | GC9A01 1,28" rund SPI (Augen) | 2 (Pack) | 10,07 | Amazon | Ali-Vergleich: 8,20 |
 | 2 | ILI9341 2,8" SPI 320×240 (Bauch) | 1 | 14,11 | Amazon | |
 | 3 | DRV8833-Module | 2 | 0 | **Bestand** | Amazon-Fallback 10,07; nSLEEP bei Charakterisierung prüfen |
+| 4 | MG90S Metallgetriebe-Servos | 2 | 14,10 | Amazon | |
