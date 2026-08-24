@@ -1,6 +1,6 @@
 # 2026-08-24 — Amazon.de (Module) — im Aufbau
 
-**Status:** Warenkorb wird befüllt (Positionen werden während des Durchgangs ergänzt)
+**Status:** Warenkorb komplett (24.08.) — Summe Amazon ~**96,4 €** + Aluknopf offen. Bestand: DRV8833, Netzteil.
 
 | Pos | Artikel | Stück | Preis € | Quelle | Notiz |
 |---|---|---|---|---|---|
@@ -16,3 +16,5 @@
 | 9a | MX-Switches linear (Pack) | 10+ | 7,04 | Amazon | |
 | 9b | ~~Kailh-Hot-Swap-Sockel~~ | — | — | gestrichen | keine mit Prime; außerdem SMD → Switches werden direkt THT gelötet (Entscheidung 24.08.) |
 | 9c | Keycaps blank | 10 | 10,04 | Amazon | |
+| 10 | Netzteil 5 V/3 A USB-C | 1 | 0 | **Bestand** | Leon hat passendes |
+| 11 | ESP32-S3-DevKitC-1-**N16R8** (Espressif Original) | 1 | 19,99 | Amazon (Prime) | statt diymore-Clone-2er (14,56) — Sockel-Pinout-Sicherheit; Listing auf „N16R8“ geprüft |
