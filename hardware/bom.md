@@ -35,9 +35,9 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 | FD1, FD2 | Behringer X32 Motor-Fader 100 mm (5er-Set) | panel-mount + Kabel | 1 Set | Amazon.de („Behringer X32 MOTOR FADER Set“) | 39,32 | bestellt 23.08. | **Ersetzt MF60T:** Prime-Lieferung 25.08., 30 Tage Retour, kein PCB-Footprint nötig. Pinout/Motorspannung bei Charakterisierung |
 | FD3, FD4 | X32-Fader (aus dem Set) | panel-mount, Reserve | 0 | (im Set, +1 Ersatz) | 0 | ✔ | Reserve |
 | J14–J17 | Fader-Anschluss-Header (Motor + Poti/Touch) | 2,54 Stift | 4 | Leistenware | ~1 | ? | Steckertyp nach Charakterisierung (X32-Kabel haben eigene Stecker — ggf. passende Buchsen nachkaufen) |
-| SW1–SW10 | MX-Schalter linear (Gateron/Outemu) | THT | 10 | Keycapsss | ~4 | ? | |
-| — | Kailh-Hot-Swap-Sockel MX | THT | 10 | [Keycapsss](https://keycapsss.com/Kailh-Hotswap-PCB-Sockets-10-pcs/KC10019-MX) | 1,80 | ? | **MX**, nicht Choc. Footprint-THT-Tauglichkeit in Task 11 prüfen, sonst direkt löten |
-| — | DSA-Blank-Keycaps | — | 10 | [Keycapsss](https://keycapsss.com/keyboard-parts/keycaps/132/dsa-blank-pbt-1u-keycaps-for-mx-switches) / [eBay](https://www.ebay.de/itm/387005285864) | ~6 | ? | |
+| SW1–SW10 | MX-Schalter linear | THT | 10 | Amazon | **7,04** | im Warenkorb 24.08. |
+| — | ~~Hot-Swap-Sockel~~ | — | 0 | gestrichen 24.08. | 0 | — | Sockel sind SMD → Switches direkt THT löten (Kein-Hand-SMD-Regel) |
+| — | Blank-Keycaps | — | 10 | Amazon | **10,04** | im Warenkorb 24.08. |
 | ENC1 | EC11-Encoder nackt (5er-Pack) | THT | 1 Pack | Amazon | **7,04** | im Warenkorb 24.08.; Aluknopf separat (offen) |
 | U8 | MCP23017-E/SP + DIP-28-Sockel | DIP-28 | 1 | [Reichelt](https://www.reichelt.com/de/en/i-o-extension-16bit-1-8-5v-serial-i2c-dip-28-mcp-23017-e-sp-p140074.html) | 1,90 | ? | |
 | U9 | MPR121-Breakout (Clone) | Sockel | 1 | Amazon | **6,04** | im Warenkorb 24.08.; ADDR=GND |

@@ -13,3 +13,6 @@
 | 6 | MT3608 Step-Up (Pack) | 1 Pack | 6,04 | Amazon | VM-Boost-Reserve für Fader-Motoren |
 | 7 | USB-C-Panel-Verlängerung (Buchse m. Flansch → Stecker) | 1 | 8,05 | Amazon | Daten-Port Rückwand → DevKit |
 | 8 | MPR121 Touch-Breakout I²C | 1 | 6,04 | Amazon | Clone reicht |
+| 9a | MX-Switches linear (Pack) | 10+ | 7,04 | Amazon | |
+| 9b | ~~Kailh-Hot-Swap-Sockel~~ | — | — | gestrichen | keine mit Prime; außerdem SMD → Switches werden direkt THT gelötet (Entscheidung 24.08.) |
+| 9c | Keycaps blank | 10 | 10,04 | Amazon | |

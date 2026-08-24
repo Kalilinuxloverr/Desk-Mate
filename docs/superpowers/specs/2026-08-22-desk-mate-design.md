@@ -75,7 +75,7 @@ Frage 4 (UART vs. ESP-NOW) entfiel mit dem C3. Jede Entscheidung hat eine Notiz 
 
 **Frontpanel (Deck)** — 2 Lagen, deutlich kleiner als ursprünglich geplant (Fader sitzen NICHT auf dem PCB)
 - Fader: **Behringer X32-Ersatzfader, 100 mm, 5er-Set** (entschieden 2026-08-23, ersetzt MF60T 60 mm) — Metallrahmen wird ans Gehäuse-Panel geschraubt, Anschluss über die mitgelieferten Kabel auf 4× Header am PCB (Motor 2-polig, Poti/Touch mehradrig — Pinout bei Charakterisierung). Kein Fader-Footprint mehr → größtes Footprint-Risiko eliminiert. Deck wird durch den 100-mm-Fahrweg ~4–5 cm höher als mit 60ern
-- 10× MX-kompatibler Schalter-Footprint (THT, mit Hot-Swap-Option), keine Dioden (kein Matrix-Scan, direkt am Expander)
+- 10× MX-kompatibler Schalter-Footprint (**THT, direkt gelötet** — Hot-Swap-Sockel gestrichen 2026-08-24: sind SMD), keine Dioden (kein Matrix-Scan, direkt am Expander)
 - EC11-Encoder mit Taster
 - MCP23017 (DIP-28) — Tasten 0–9, Encoder A/B/SW, Display-RST, Display-BL (on/off); INT_A/B → IDC
 - MPR121-Breakout-Sockel (I²C) — Fader-Touch 0–3 (Kanal 4–11 frei, z. B. Touch am Kopf)
