@@ -12,3 +12,4 @@
 | 5b | Aluknopf 6-mm-Achse | 1 | offen | Amazon | Optik-Kür, Leon sucht aus |
 | 6 | MT3608 Step-Up (Pack) | 1 Pack | 6,04 | Amazon | VM-Boost-Reserve für Fader-Motoren |
 | 7 | USB-C-Panel-Verlängerung (Buchse m. Flansch → Stecker) | 1 | 8,05 | Amazon | Daten-Port Rückwand → DevKit |
+| 8 | MPR121 Touch-Breakout I²C | 1 | 6,04 | Amazon | Clone reicht |

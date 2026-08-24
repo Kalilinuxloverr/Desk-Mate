@@ -40,7 +40,7 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 | — | DSA-Blank-Keycaps | — | 10 | [Keycapsss](https://keycapsss.com/keyboard-parts/keycaps/132/dsa-blank-pbt-1u-keycaps-for-mx-switches) / [eBay](https://www.ebay.de/itm/387005285864) | ~6 | ? | |
 | ENC1 | EC11-Encoder nackt (5er-Pack) | THT | 1 Pack | Amazon | **7,04** | im Warenkorb 24.08.; Aluknopf separat (offen) |
 | U8 | MCP23017-E/SP + DIP-28-Sockel | DIP-28 | 1 | [Reichelt](https://www.reichelt.com/de/en/i-o-extension-16bit-1-8-5v-serial-i2c-dip-28-mcp-23017-e-sp-p140074.html) | 1,90 | ? | |
-| U9 | MPR121-Breakout | Sockel | 1 | [BerryBase (Adafruit)](https://www.berrybase.de/en/adafruit-12-key-capacitive-touch-sensor-breakout-mpr121) | 8,75 | ? | Clone ~2 € geht; ADDR=GND |
+| U9 | MPR121-Breakout (Clone) | Sockel | 1 | Amazon | **6,04** | im Warenkorb 24.08.; ADDR=GND |
 | Q1 | BC337 (Backlight-Schalter) | TO-92 | 1 | Reichelt | ~0,10 | ? | |
 | DSP1 | ILI9341 2,8" SPI 320×240 | Steckleiste 14-Pin | 1 | Amazon | **14,11** | im Warenkorb 24.08. | EU-Ware meist MIT Touch — egal, Touch-Pins bleiben offen |
 | — | RC-Filter: 4× 1 kΩ + 4× 100 nF · Encoder 2× 10 nF · Pull-up 10 kΩ | axial/RM5 | — | Sortiment | ~0,50 | ? | |
