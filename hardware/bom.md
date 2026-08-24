@@ -59,7 +59,7 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 
 | Bauteil | Stück | Quelle | Preis € | Bestand | Hinweis |
 |---|---|---|---|---|---|
-| Panel-Mount-USB-C-Verlängerung (Buchse→Stecker, ~30 cm) | 1 | Amazon/AliExpress | ~5 | ? | Daten-Port Gehäuserückwand → DevKit-Buchse |
+| Panel-Mount-USB-C-Verlängerung (Buchse→Stecker, ~30 cm) | 1 | Amazon | **8,05** | im Warenkorb 24.08. | Daten-Port Gehäuserückwand → DevKit-Buchse |
 | Netzteil 5,1 V/3 A USB-C (Raspberry Pi 15 W) | 1 | [BerryBase/eBay](https://www.ebay.de/itm/177181865648) | ~10 | ? | No-Name „3 A“ liefert oft weniger |
 | Buchsenleisten 1×40 zum Schneiden (für 1×22, 1×8) | 4 | Reichelt/AliExpress | ~3 | ? | 22er gibt es nicht fertig |
 | USB-C-Kabel | 2 | — | ~5 | vermutlich ✔ | |
