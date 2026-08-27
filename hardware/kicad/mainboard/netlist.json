@@ -1,0 +1,2051 @@
+{
+ "board": "mainboard",
+ "w": 100.0,
+ "h": 100.0,
+ "sheet_uuid": "6a9f9a3d-4154-5744-b824-92ffbfc6cb39",
+ "parts": [
+  {
+   "ref": "J1",
+   "value": "USB-C 5V/3A (GCT USB4085)",
+   "footprint": "Connector_USB:USB_C_Receptacle_GCT_USB4085",
+   "uuid": "50cde29e-a42b-5f6f-8773-0ff042d8df05",
+   "dnp": false,
+   "pads": {
+    "A1": "GND",
+    "A4": "VBUS",
+    "A5": "CC1",
+    "A9": "VBUS",
+    "A12": "GND",
+    "B1": "GND",
+    "B4": "VBUS",
+    "B5": "CC2",
+    "B9": "VBUS",
+    "B12": "GND",
+    "SH": "GND"
+   },
+   "pcb": {
+    "x": 55,
+    "y": 5.6,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R1",
+   "value": "5k1",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "346f1763-6a28-553c-98ea-f19f3a9a89b3",
+   "dnp": false,
+   "pads": {
+    "1": "CC1",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 47,
+    "y": 9,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "R2",
+   "value": "5k1",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "67aa3fd3-6652-57f9-b7d0-4ae9ec7e5b7c",
+   "dnp": false,
+   "pads": {
+    "1": "CC2",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 40,
+    "y": 17.5,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "F1",
+   "value": "3A RXEF300",
+   "footprint": "deskmate:Polyfuse_Radial_P5.08mm",
+   "uuid": "fbe8c267-799b-5a19-96fc-5fee77cb7b68",
+   "dnp": false,
+   "pads": {
+    "1": "VBUS",
+    "2": "VBUS_F"
+   },
+   "pcb": {
+    "x": 55,
+    "y": 13.5,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "D1",
+   "value": "SB540",
+   "footprint": "Diode_THT:D_DO-201_P15.24mm_Horizontal",
+   "uuid": "3cefc3cc-7ed3-5ebf-9ec3-6d53c2cfbde6",
+   "dnp": false,
+   "pads": {
+    "1": "5V",
+    "2": "VBUS_F"
+   },
+   "pcb": {
+    "x": 57,
+    "y": 19,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R3",
+   "value": "10k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "8d39c77d-8d03-5ecb-84fe-6c6292edf8ca",
+   "dnp": false,
+   "pads": {
+    "1": "VBUS_F",
+    "2": "PSU_SENSE"
+   },
+   "pcb": {
+    "x": 40,
+    "y": 21.5,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R4",
+   "value": "15k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "bb4fc73c-013d-5f87-b6d8-ce7ff9a52edb",
+   "dnp": false,
+   "pads": {
+    "1": "PSU_SENSE",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 40,
+    "y": 25.5,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C1",
+   "value": "1000u/10V",
+   "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+   "uuid": "05775d0f-2dc7-5ba5-bf50-47432f37d472",
+   "dnp": false,
+   "pads": {
+    "1": "5V",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 73,
+    "y": 12,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "U2",
+   "value": "LD1117V33",
+   "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
+   "uuid": "555caad9-9d5a-53ed-9214-e8ca41a7ea5a",
+   "dnp": false,
+   "pads": {
+    "1": "GND",
+    "2": "3V3",
+    "3": "5V"
+   },
+   "pcb": {
+    "x": 73,
+    "y": 22,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C6",
+   "value": "100n",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "1998d3bf-3a74-5dff-874d-f5ed9b5eaac0",
+   "dnp": false,
+   "pads": {
+    "1": "5V",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 55,
+    "y": 25,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C11",
+   "value": "10u",
+   "footprint": "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm",
+   "uuid": "ca91cfb5-4759-52d6-a266-37a84b3de166",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 83,
+    "y": 12,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C7",
+   "value": "100n",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "93ee7444-15bb-539b-8e64-0b316ffb44dc",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 83,
+    "y": 18,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "TP1",
+   "value": "5V",
+   "footprint": "TestPoint:TestPoint_THTPad_1.5x1.5mm_Drill0.7mm",
+   "uuid": "61e1a4e2-4827-5101-bcf2-0a237533a36f",
+   "dnp": false,
+   "pads": {
+    "1": "5V"
+   },
+   "pcb": {
+    "x": 64,
+    "y": 4,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "TP2",
+   "value": "3V3",
+   "footprint": "TestPoint:TestPoint_THTPad_1.5x1.5mm_Drill0.7mm",
+   "uuid": "0488a442-f40a-5d26-828c-029e98c3aeef",
+   "dnp": false,
+   "pads": {
+    "1": "3V3"
+   },
+   "pcb": {
+    "x": 67,
+    "y": 4,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "TP3",
+   "value": "GND",
+   "footprint": "TestPoint:TestPoint_THTPad_1.5x1.5mm_Drill0.7mm",
+   "uuid": "575c9644-6943-5cf0-931d-6351af32c061",
+   "dnp": false,
+   "pads": {
+    "1": "GND"
+   },
+   "pcb": {
+    "x": 70,
+    "y": 4,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "U1",
+   "value": "ESP32-S3-DevKitC-1-N16R8",
+   "footprint": "deskmate:ESP32-S3-DevKitC-1_Socket",
+   "uuid": "e99e1cd8-3e7a-59c5-be99-604f3a5173b6",
+   "dnp": false,
+   "pads": {
+    "3": "RST_N",
+    "4": "FADER3_WIPER",
+    "5": "FADER4_WIPER",
+    "6": "FADER1_PWM",
+    "7": "FADER1_DIR",
+    "8": "SERVO_TILT",
+    "9": "SPI_MOSI",
+    "10": "I2C_SDA",
+    "11": "I2C_SCL",
+    "12": "FADER2_PWM",
+    "15": "FADER2_DIR",
+    "16": "FADER3_PWM",
+    "17": "FADER3_DIR",
+    "18": "FADER4_PWM",
+    "19": "FADER4_DIR",
+    "20": "SERVO_PAN",
+    "21": "5V",
+    "22": "GND",
+    "23": "GND",
+    "24": "UART0_TX",
+    "25": "UART0_RX",
+    "26": "FADER1_WIPER",
+    "27": "FADER2_WIPER",
+    "28": "CS_EYE_L",
+    "29": "CS_BELLY",
+    "30": "SPI_DC",
+    "31": "SPI_SCK",
+    "32": "WS2812_DATA",
+    "36": "BOOT_N",
+    "37": "BL_PWM_45",
+    "38": "PSU_SENSE",
+    "39": "CS_EYE_R",
+    "40": "IO_INT",
+    "43": "GND",
+    "44": "GND"
+   },
+   "pcb": {
+    "x": 18,
+    "y": 42,
+    "rot": 180
+   }
+  },
+  {
+   "ref": "J8",
+   "value": "RST/BOOT extern",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical",
+   "uuid": "d1fa516e-614b-58d0-b78c-21a87f750f48",
+   "dnp": false,
+   "pads": {
+    "1": "RST_N",
+    "2": "GND",
+    "3": "BOOT_N",
+    "4": "GND"
+   },
+   "pcb": {
+    "x": 40,
+    "y": 63,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R6",
+   "value": "4k7",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "93477ee9-6b32-5710-8e42-613e8a576478",
+   "dnp": false,
+   "pads": {
+    "1": "I2C_SDA",
+    "2": "3V3"
+   },
+   "pcb": {
+    "x": 40,
+    "y": 34,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R7",
+   "value": "4k7",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "dc354eb8-3d73-54ce-b3d5-1f08b70cd5dd",
+   "dnp": false,
+   "pads": {
+    "1": "I2C_SCL",
+    "2": "3V3"
+   },
+   "pcb": {
+    "x": 40,
+    "y": 38,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R8",
+   "value": "10k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "4ae59b61-9972-5f83-ad23-edc771095ab5",
+   "dnp": false,
+   "pads": {
+    "1": "IO_INT",
+    "2": "3V3"
+   },
+   "pcb": {
+    "x": 40,
+    "y": 42,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "JP1",
+   "value": "BL45 (Strapping! offen lassen ausser Backlight-PWM)",
+   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
+   "uuid": "b4bee446-d7fb-5407-835c-a7ee39bb1682",
+   "dnp": false,
+   "pads": {
+    "1": "BL_PWM_45",
+    "2": "BELLY_BL_PWM"
+   },
+   "pcb": {
+    "x": 40,
+    "y": 48,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "JP2",
+   "value": "C3 TX->S3 RX0",
+   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
+   "uuid": "4cff45b3-f494-5f50-a3e1-d90d2b82e2bd",
+   "dnp": false,
+   "pads": {
+    "1": "C3_TX",
+    "2": "UART0_RX"
+   },
+   "pcb": {
+    "x": 69,
+    "y": 66,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "JP3",
+   "value": "S3 TX0->C3 RX",
+   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
+   "uuid": "57926916-c9e1-560e-88c3-5642ed6c42ae",
+   "dnp": false,
+   "pads": {
+    "1": "UART0_TX",
+    "2": "C3_RX"
+   },
+   "pcb": {
+    "x": 69,
+    "y": 70,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "U3",
+   "value": "DRV8833 Pololu #2130",
+   "footprint": "deskmate:DRV8833_Socket",
+   "uuid": "244e051d-04ba-5eaa-b5c6-f777cdb05505",
+   "dnp": false,
+   "pads": {
+    "1": "GND",
+    "3": "FADER2_PWM",
+    "4": "FADER2_DIR",
+    "5": "FADER1_DIR",
+    "6": "FADER1_PWM",
+    "7": "DRV_SLEEP",
+    "9": "GND",
+    "10": "VM",
+    "11": "MOT2A",
+    "12": "MOT2B",
+    "13": "MOT1B",
+    "14": "MOT1A"
+   },
+   "pcb": {
+    "x": 53,
+    "y": 45,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "U4",
+   "value": "DRV8833 Pololu #2130 (Fader 3/4)",
+   "footprint": "deskmate:DRV8833_Socket",
+   "uuid": "aeaff1ff-74c3-53e1-9bcf-6d0cf448e657",
+   "dnp": false,
+   "pads": {
+    "1": "GND",
+    "3": "FADER4_PWM",
+    "4": "FADER4_DIR",
+    "5": "FADER3_DIR",
+    "6": "FADER3_PWM",
+    "7": "DRV_SLEEP",
+    "9": "GND",
+    "10": "VM",
+    "11": "MOT4A",
+    "12": "MOT4B",
+    "13": "MOT3B",
+    "14": "MOT3A"
+   },
+   "pcb": {
+    "x": 69,
+    "y": 45,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C2",
+   "value": "100u",
+   "footprint": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+   "uuid": "cc60d2ab-4355-5aa3-8684-823d23689c45",
+   "dnp": false,
+   "pads": {
+    "1": "VM",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 53,
+    "y": 60,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C3",
+   "value": "100u",
+   "footprint": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+   "uuid": "39fc3e22-a93e-5b69-a1a2-fa52f9f948f3",
+   "dnp": false,
+   "pads": {
+    "1": "VM",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 69,
+    "y": 60,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "JP4",
+   "value": "VM: 1=5V 3=Boost",
+   "footprint": "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels",
+   "uuid": "0336a215-fd8a-5b0f-a999-4726fa3e1561",
+   "dnp": false,
+   "pads": {
+    "1": "5V",
+    "2": "VM",
+    "3": "VBOOST"
+   },
+   "pcb": {
+    "x": 58,
+    "y": 31,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "JP5",
+   "value": "nSLEEP an 3V3",
+   "footprint": "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm",
+   "uuid": "8c5f33d2-a522-502d-9730-c831b854277b",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "DRV_SLEEP"
+   },
+   "pcb": {
+    "x": 66,
+    "y": 31,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "U5",
+   "value": "MT3608 Boost ~9V (optional, 4 Draehte)",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+   "uuid": "6e11a730-8dfe-5f2f-970d-10d826c703d2",
+   "dnp": true,
+   "pads": {
+    "1": "5V",
+    "2": "GND",
+    "3": "VBOOST",
+    "4": "GND"
+   },
+   "pcb": {
+    "x": 78,
+    "y": 34,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "J3",
+   "value": "Servo Pan (GND/5V/Sig)",
+   "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+   "uuid": "ad3f2460-139d-5982-8481-15da098da1cf",
+   "dnp": false,
+   "pads": {
+    "1": "GND",
+    "2": "5V",
+    "3": "SERVO_PAN"
+   },
+   "pcb": {
+    "x": 95,
+    "y": 41,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "J4",
+   "value": "Servo Tilt (GND/5V/Sig)",
+   "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+   "uuid": "4796865f-5d67-5676-a9af-f5b1cbe9cdfe",
+   "dnp": false,
+   "pads": {
+    "1": "GND",
+    "2": "5V",
+    "3": "SERVO_TILT"
+   },
+   "pcb": {
+    "x": 95,
+    "y": 53,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "C4",
+   "value": "470u",
+   "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+   "uuid": "2ac55bc0-d550-525a-90ac-ab55d28c3f98",
+   "dnp": false,
+   "pads": {
+    "1": "5V",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 85,
+    "y": 36,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "J5",
+   "value": "ARGB 5V/GND/Data",
+   "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+   "uuid": "80c3d1d1-d41e-5f65-a1ab-941566653422",
+   "dnp": false,
+   "pads": {
+    "1": "5V",
+    "2": "GND",
+    "3": "WS_DATA_OUT"
+   },
+   "pcb": {
+    "x": 95,
+    "y": 65,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "R5",
+   "value": "330",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "ab22171c-e23d-587a-bef9-683d84a771e5",
+   "dnp": false,
+   "pads": {
+    "1": "WS2812_DATA",
+    "2": "WS_DATA_OUT"
+   },
+   "pcb": {
+    "x": 89,
+    "y": 48,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "C5",
+   "value": "1000u",
+   "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+   "uuid": "60a15e9e-0377-5846-a035-ba16b13b4a09",
+   "dnp": false,
+   "pads": {
+    "1": "5V",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 86,
+    "y": 60,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "J6",
+   "value": "BME680 (VCC GND SCL SDA SDO CS)",
+   "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical",
+   "uuid": "1c0bdbd4-cadf-5129-9756-7d9fbfc9329d",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "GND",
+    "3": "I2C_SCL",
+    "4": "I2C_SDA"
+   },
+   "pcb": {
+    "x": 82,
+    "y": 4,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "J7",
+   "value": "Augen-Kabel",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+   "uuid": "f5a01a48-896a-58b9-99ac-aceba5a74084",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "3V3",
+    "3": "GND",
+    "4": "GND",
+    "5": "SPI_MOSI",
+    "6": "SPI_SCK",
+    "7": "SPI_DC",
+    "8": "CS_EYE_L",
+    "9": "CS_EYE_R",
+    "10": "GND"
+   },
+   "pcb": {
+    "x": 95,
+    "y": 21.5,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "J2",
+   "value": "IDC 2x15 -> Frontpanel",
+   "footprint": "Connector_IDC:IDC-Header_2x15_P2.54mm_Vertical",
+   "uuid": "9af64b94-5464-5f66-913a-e618952a134f",
+   "dnp": false,
+   "pads": {
+    "1": "5V",
+    "2": "5V",
+    "3": "GND",
+    "4": "GND",
+    "5": "3V3",
+    "6": "3V3",
+    "7": "MOT1A",
+    "8": "MOT1B",
+    "9": "MOT2A",
+    "10": "MOT2B",
+    "11": "MOT3A",
+    "12": "MOT3B",
+    "13": "MOT4A",
+    "14": "MOT4B",
+    "15": "GND",
+    "16": "GND",
+    "17": "FADER1_WIPER",
+    "18": "FADER2_WIPER",
+    "19": "FADER3_WIPER",
+    "20": "FADER4_WIPER",
+    "21": "GND",
+    "22": "I2C_SDA",
+    "23": "I2C_SCL",
+    "24": "IO_INT",
+    "25": "SPI_MOSI",
+    "26": "SPI_SCK",
+    "27": "SPI_DC",
+    "28": "CS_BELLY",
+    "29": "BELLY_BL_PWM",
+    "30": "GND"
+   },
+   "pcb": {
+    "x": 52,
+    "y": 95,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "U7",
+   "value": "A4988/TMC2209 Reserve",
+   "footprint": "deskmate:A4988_Socket",
+   "uuid": "55fa4ecc-b7ce-557a-86c6-e914a0bbfc83",
+   "dnp": true,
+   "pads": {
+    "1": "STEP_EN",
+    "5": "STEP_RST",
+    "6": "STEP_RST",
+    "7": "STEP_STEP",
+    "8": "STEP_DIR",
+    "9": "VM",
+    "10": "GND",
+    "11": "STEP_2B",
+    "12": "STEP_2A",
+    "13": "STEP_1A",
+    "14": "STEP_1B",
+    "15": "3V3",
+    "16": "GND"
+   },
+   "pcb": {
+    "x": 50,
+    "y": 78,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "J10",
+   "value": "Stepper 1A 1B 2A 2B",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+   "uuid": "1ca42688-9ce7-5e7f-bd14-dc81d206477b",
+   "dnp": true,
+   "pads": {
+    "1": "STEP_1A",
+    "2": "STEP_1B",
+    "3": "STEP_2A",
+    "4": "STEP_2B"
+   },
+   "pcb": {
+    "x": 50,
+    "y": 65.5,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "C8",
+   "value": "100u",
+   "footprint": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+   "uuid": "b39fc450-7201-5e23-9d51-40f0319698fb",
+   "dnp": false,
+   "pads": {
+    "1": "VM",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 62,
+    "y": 72,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "JP6",
+   "value": "STEP<-FADER3_PWM",
+   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
+   "uuid": "ec8723e8-4f14-55e8-ab36-f501714dda37",
+   "dnp": false,
+   "pads": {
+    "1": "FADER3_PWM",
+    "2": "STEP_STEP"
+   },
+   "pcb": {
+    "x": 69,
+    "y": 76,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "JP7",
+   "value": "DIR<-FADER3_DIR",
+   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
+   "uuid": "f518addc-6fd0-5d62-ab4d-4428dc04e693",
+   "dnp": false,
+   "pads": {
+    "1": "FADER3_DIR",
+    "2": "STEP_DIR"
+   },
+   "pcb": {
+    "x": 69,
+    "y": 80,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "JP8",
+   "value": "EN<-FADER4_PWM",
+   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
+   "uuid": "2549cd33-c20a-5c17-bc9d-327699adcc05",
+   "dnp": false,
+   "pads": {
+    "1": "FADER4_PWM",
+    "2": "STEP_EN"
+   },
+   "pcb": {
+    "x": 69,
+    "y": 84,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "U6",
+   "value": "ESP32-C3 SuperMini Reserve",
+   "footprint": "deskmate:ESP32-C3_SuperMini",
+   "uuid": "b0f3cc46-24d9-5e6a-a3d8-cdd4f1755236",
+   "dnp": true,
+   "pads": {
+    "7": "C3_RX",
+    "8": "C3_TX",
+    "9": "5V",
+    "10": "GND"
+   },
+   "pcb": {
+    "x": 84,
+    "y": 80,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "H1",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "0373bc91-5ec5-582f-ba66-82e1bb165311",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 4,
+    "y": 4,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H2",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "daafcef2-4bc7-5419-a258-456c5428dc01",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 96,
+    "y": 4,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H3",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "4348ee25-3c07-5dd1-b4e4-b33f96793cc9",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 4,
+    "y": 96,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H4",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "e494e8e8-bf0b-544f-b04c-6a199d48c803",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 96,
+    "y": 96,
+    "rot": 0
+   }
+  }
+ ],
+ "nets": {
+  "GND": [
+   [
+    "J1",
+    "A1"
+   ],
+   [
+    "J1",
+    "A12"
+   ],
+   [
+    "J1",
+    "B1"
+   ],
+   [
+    "J1",
+    "B12"
+   ],
+   [
+    "J1",
+    "SH"
+   ],
+   [
+    "R1",
+    "2"
+   ],
+   [
+    "R2",
+    "2"
+   ],
+   [
+    "R4",
+    "2"
+   ],
+   [
+    "C1",
+    "2"
+   ],
+   [
+    "U2",
+    "1"
+   ],
+   [
+    "C6",
+    "2"
+   ],
+   [
+    "C11",
+    "2"
+   ],
+   [
+    "C7",
+    "2"
+   ],
+   [
+    "TP3",
+    "1"
+   ],
+   [
+    "U1",
+    "22"
+   ],
+   [
+    "U1",
+    "23"
+   ],
+   [
+    "U1",
+    "43"
+   ],
+   [
+    "U1",
+    "44"
+   ],
+   [
+    "J8",
+    "2"
+   ],
+   [
+    "J8",
+    "4"
+   ],
+   [
+    "U3",
+    "1"
+   ],
+   [
+    "U3",
+    "9"
+   ],
+   [
+    "U4",
+    "1"
+   ],
+   [
+    "U4",
+    "9"
+   ],
+   [
+    "C2",
+    "2"
+   ],
+   [
+    "C3",
+    "2"
+   ],
+   [
+    "U5",
+    "2"
+   ],
+   [
+    "U5",
+    "4"
+   ],
+   [
+    "J3",
+    "1"
+   ],
+   [
+    "J4",
+    "1"
+   ],
+   [
+    "C4",
+    "2"
+   ],
+   [
+    "J5",
+    "2"
+   ],
+   [
+    "C5",
+    "2"
+   ],
+   [
+    "J6",
+    "2"
+   ],
+   [
+    "J7",
+    "3"
+   ],
+   [
+    "J7",
+    "4"
+   ],
+   [
+    "J7",
+    "10"
+   ],
+   [
+    "J2",
+    "3"
+   ],
+   [
+    "J2",
+    "4"
+   ],
+   [
+    "J2",
+    "15"
+   ],
+   [
+    "J2",
+    "16"
+   ],
+   [
+    "J2",
+    "21"
+   ],
+   [
+    "J2",
+    "30"
+   ],
+   [
+    "U7",
+    "10"
+   ],
+   [
+    "U7",
+    "16"
+   ],
+   [
+    "C8",
+    "2"
+   ],
+   [
+    "U6",
+    "10"
+   ]
+  ],
+  "VBUS": [
+   [
+    "J1",
+    "A4"
+   ],
+   [
+    "J1",
+    "A9"
+   ],
+   [
+    "J1",
+    "B4"
+   ],
+   [
+    "J1",
+    "B9"
+   ],
+   [
+    "F1",
+    "1"
+   ]
+  ],
+  "CC1": [
+   [
+    "J1",
+    "A5"
+   ],
+   [
+    "R1",
+    "1"
+   ]
+  ],
+  "CC2": [
+   [
+    "J1",
+    "B5"
+   ],
+   [
+    "R2",
+    "1"
+   ]
+  ],
+  "VBUS_F": [
+   [
+    "F1",
+    "2"
+   ],
+   [
+    "D1",
+    "2"
+   ],
+   [
+    "R3",
+    "1"
+   ]
+  ],
+  "5V": [
+   [
+    "D1",
+    "1"
+   ],
+   [
+    "C1",
+    "1"
+   ],
+   [
+    "U2",
+    "3"
+   ],
+   [
+    "C6",
+    "1"
+   ],
+   [
+    "TP1",
+    "1"
+   ],
+   [
+    "U1",
+    "21"
+   ],
+   [
+    "JP4",
+    "1"
+   ],
+   [
+    "U5",
+    "1"
+   ],
+   [
+    "J3",
+    "2"
+   ],
+   [
+    "J4",
+    "2"
+   ],
+   [
+    "C4",
+    "1"
+   ],
+   [
+    "J5",
+    "1"
+   ],
+   [
+    "C5",
+    "1"
+   ],
+   [
+    "J2",
+    "1"
+   ],
+   [
+    "J2",
+    "2"
+   ],
+   [
+    "U6",
+    "9"
+   ]
+  ],
+  "PSU_SENSE": [
+   [
+    "R3",
+    "2"
+   ],
+   [
+    "R4",
+    "1"
+   ],
+   [
+    "U1",
+    "38"
+   ]
+  ],
+  "3V3": [
+   [
+    "U2",
+    "2"
+   ],
+   [
+    "C11",
+    "1"
+   ],
+   [
+    "C7",
+    "1"
+   ],
+   [
+    "TP2",
+    "1"
+   ],
+   [
+    "R6",
+    "2"
+   ],
+   [
+    "R7",
+    "2"
+   ],
+   [
+    "R8",
+    "2"
+   ],
+   [
+    "JP5",
+    "1"
+   ],
+   [
+    "J6",
+    "1"
+   ],
+   [
+    "J7",
+    "1"
+   ],
+   [
+    "J7",
+    "2"
+   ],
+   [
+    "J2",
+    "5"
+   ],
+   [
+    "J2",
+    "6"
+   ],
+   [
+    "U7",
+    "15"
+   ]
+  ],
+  "RST_N": [
+   [
+    "U1",
+    "3"
+   ],
+   [
+    "J8",
+    "1"
+   ]
+  ],
+  "FADER3_WIPER": [
+   [
+    "U1",
+    "4"
+   ],
+   [
+    "J2",
+    "19"
+   ]
+  ],
+  "FADER4_WIPER": [
+   [
+    "U1",
+    "5"
+   ],
+   [
+    "J2",
+    "20"
+   ]
+  ],
+  "FADER1_PWM": [
+   [
+    "U1",
+    "6"
+   ],
+   [
+    "U3",
+    "6"
+   ]
+  ],
+  "FADER1_DIR": [
+   [
+    "U1",
+    "7"
+   ],
+   [
+    "U3",
+    "5"
+   ]
+  ],
+  "SERVO_TILT": [
+   [
+    "U1",
+    "8"
+   ],
+   [
+    "J4",
+    "3"
+   ]
+  ],
+  "SPI_MOSI": [
+   [
+    "U1",
+    "9"
+   ],
+   [
+    "J7",
+    "5"
+   ],
+   [
+    "J2",
+    "25"
+   ]
+  ],
+  "I2C_SDA": [
+   [
+    "U1",
+    "10"
+   ],
+   [
+    "R6",
+    "1"
+   ],
+   [
+    "J6",
+    "4"
+   ],
+   [
+    "J2",
+    "22"
+   ]
+  ],
+  "I2C_SCL": [
+   [
+    "U1",
+    "11"
+   ],
+   [
+    "R7",
+    "1"
+   ],
+   [
+    "J6",
+    "3"
+   ],
+   [
+    "J2",
+    "23"
+   ]
+  ],
+  "FADER2_PWM": [
+   [
+    "U1",
+    "12"
+   ],
+   [
+    "U3",
+    "3"
+   ]
+  ],
+  "FADER2_DIR": [
+   [
+    "U1",
+    "15"
+   ],
+   [
+    "U3",
+    "4"
+   ]
+  ],
+  "FADER3_PWM": [
+   [
+    "U1",
+    "16"
+   ],
+   [
+    "U4",
+    "6"
+   ],
+   [
+    "JP6",
+    "1"
+   ]
+  ],
+  "FADER3_DIR": [
+   [
+    "U1",
+    "17"
+   ],
+   [
+    "U4",
+    "5"
+   ],
+   [
+    "JP7",
+    "1"
+   ]
+  ],
+  "FADER4_PWM": [
+   [
+    "U1",
+    "18"
+   ],
+   [
+    "U4",
+    "3"
+   ],
+   [
+    "JP8",
+    "1"
+   ]
+  ],
+  "FADER4_DIR": [
+   [
+    "U1",
+    "19"
+   ],
+   [
+    "U4",
+    "4"
+   ]
+  ],
+  "SERVO_PAN": [
+   [
+    "U1",
+    "20"
+   ],
+   [
+    "J3",
+    "3"
+   ]
+  ],
+  "UART0_TX": [
+   [
+    "U1",
+    "24"
+   ],
+   [
+    "JP3",
+    "1"
+   ]
+  ],
+  "UART0_RX": [
+   [
+    "U1",
+    "25"
+   ],
+   [
+    "JP2",
+    "2"
+   ]
+  ],
+  "FADER1_WIPER": [
+   [
+    "U1",
+    "26"
+   ],
+   [
+    "J2",
+    "17"
+   ]
+  ],
+  "FADER2_WIPER": [
+   [
+    "U1",
+    "27"
+   ],
+   [
+    "J2",
+    "18"
+   ]
+  ],
+  "CS_EYE_L": [
+   [
+    "U1",
+    "28"
+   ],
+   [
+    "J7",
+    "8"
+   ]
+  ],
+  "CS_BELLY": [
+   [
+    "U1",
+    "29"
+   ],
+   [
+    "J2",
+    "28"
+   ]
+  ],
+  "SPI_DC": [
+   [
+    "U1",
+    "30"
+   ],
+   [
+    "J7",
+    "7"
+   ],
+   [
+    "J2",
+    "27"
+   ]
+  ],
+  "SPI_SCK": [
+   [
+    "U1",
+    "31"
+   ],
+   [
+    "J7",
+    "6"
+   ],
+   [
+    "J2",
+    "26"
+   ]
+  ],
+  "WS2812_DATA": [
+   [
+    "U1",
+    "32"
+   ],
+   [
+    "R5",
+    "1"
+   ]
+  ],
+  "BOOT_N": [
+   [
+    "U1",
+    "36"
+   ],
+   [
+    "J8",
+    "3"
+   ]
+  ],
+  "BL_PWM_45": [
+   [
+    "U1",
+    "37"
+   ],
+   [
+    "JP1",
+    "1"
+   ]
+  ],
+  "CS_EYE_R": [
+   [
+    "U1",
+    "39"
+   ],
+   [
+    "J7",
+    "9"
+   ]
+  ],
+  "IO_INT": [
+   [
+    "U1",
+    "40"
+   ],
+   [
+    "R8",
+    "1"
+   ],
+   [
+    "J2",
+    "24"
+   ]
+  ],
+  "BELLY_BL_PWM": [
+   [
+    "JP1",
+    "2"
+   ],
+   [
+    "J2",
+    "29"
+   ]
+  ],
+  "C3_TX": [
+   [
+    "JP2",
+    "1"
+   ],
+   [
+    "U6",
+    "8"
+   ]
+  ],
+  "C3_RX": [
+   [
+    "JP3",
+    "2"
+   ],
+   [
+    "U6",
+    "7"
+   ]
+  ],
+  "DRV_SLEEP": [
+   [
+    "U3",
+    "7"
+   ],
+   [
+    "U4",
+    "7"
+   ],
+   [
+    "JP5",
+    "2"
+   ]
+  ],
+  "VM": [
+   [
+    "U3",
+    "10"
+   ],
+   [
+    "U4",
+    "10"
+   ],
+   [
+    "C2",
+    "1"
+   ],
+   [
+    "C3",
+    "1"
+   ],
+   [
+    "JP4",
+    "2"
+   ],
+   [
+    "U7",
+    "9"
+   ],
+   [
+    "C8",
+    "1"
+   ]
+  ],
+  "MOT2A": [
+   [
+    "U3",
+    "11"
+   ],
+   [
+    "J2",
+    "9"
+   ]
+  ],
+  "MOT2B": [
+   [
+    "U3",
+    "12"
+   ],
+   [
+    "J2",
+    "10"
+   ]
+  ],
+  "MOT1B": [
+   [
+    "U3",
+    "13"
+   ],
+   [
+    "J2",
+    "8"
+   ]
+  ],
+  "MOT1A": [
+   [
+    "U3",
+    "14"
+   ],
+   [
+    "J2",
+    "7"
+   ]
+  ],
+  "MOT4A": [
+   [
+    "U4",
+    "11"
+   ],
+   [
+    "J2",
+    "13"
+   ]
+  ],
+  "MOT4B": [
+   [
+    "U4",
+    "12"
+   ],
+   [
+    "J2",
+    "14"
+   ]
+  ],
+  "MOT3B": [
+   [
+    "U4",
+    "13"
+   ],
+   [
+    "J2",
+    "12"
+   ]
+  ],
+  "MOT3A": [
+   [
+    "U4",
+    "14"
+   ],
+   [
+    "J2",
+    "11"
+   ]
+  ],
+  "VBOOST": [
+   [
+    "JP4",
+    "3"
+   ],
+   [
+    "U5",
+    "3"
+   ]
+  ],
+  "WS_DATA_OUT": [
+   [
+    "J5",
+    "3"
+   ],
+   [
+    "R5",
+    "2"
+   ]
+  ],
+  "STEP_EN": [
+   [
+    "U7",
+    "1"
+   ],
+   [
+    "JP8",
+    "2"
+   ]
+  ],
+  "STEP_RST": [
+   [
+    "U7",
+    "5"
+   ],
+   [
+    "U7",
+    "6"
+   ]
+  ],
+  "STEP_STEP": [
+   [
+    "U7",
+    "7"
+   ],
+   [
+    "JP6",
+    "2"
+   ]
+  ],
+  "STEP_DIR": [
+   [
+    "U7",
+    "8"
+   ],
+   [
+    "JP7",
+    "2"
+   ]
+  ],
+  "STEP_2B": [
+   [
+    "U7",
+    "11"
+   ],
+   [
+    "J10",
+    "4"
+   ]
+  ],
+  "STEP_2A": [
+   [
+    "U7",
+    "12"
+   ],
+   [
+    "J10",
+    "3"
+   ]
+  ],
+  "STEP_1A": [
+   [
+    "U7",
+    "13"
+   ],
+   [
+    "J10",
+    "1"
+   ]
+  ],
+  "STEP_1B": [
+   [
+    "U7",
+    "14"
+   ],
+   [
+    "J10",
+    "2"
+   ]
+  ]
+ },
+ "netclasses": {
+  "Power": [
+   [
+    "5V",
+    "VBUS",
+    "VBUS_F",
+    "VM",
+    "VBOOST",
+    "GND"
+   ],
+   1.0
+  ],
+  "Motor": [
+   [
+    "MOT1A",
+    "MOT1B",
+    "MOT2A",
+    "MOT2B",
+    "MOT3A",
+    "MOT3B",
+    "MOT4A",
+    "MOT4B"
+   ],
+   0.6
+  ],
+  "Power3V3": [
+   [
+    "3V3"
+   ],
+   0.6
+  ]
+ },
+ "keepout": [
+  [
+   2,
+   70,
+   34,
+   88
+  ]
+ ],
+ "pre_tracks": [
+  [
+   "CC1",
+   0.2,
+   "F.Cu",
+   [
+    [
+     53.73,
+     1.57
+    ],
+    [
+     53.73,
+     0.65
+    ],
+    [
+     51.4,
+     0.65
+    ],
+    [
+     51.4,
+     8.5
+    ],
+    [
+     47.0,
+     8.5
+    ],
+    [
+     "R1",
+     "1"
+    ]
+   ]
+  ],
+  [
+   "GND",
+   0.4,
+   "F.Cu",
+   [
+    [
+     "U1",
+     "23"
+    ],
+    [
+     3.0,
+     68.67
+    ]
+   ]
+  ],
+  [
+   "VBUS",
+   0.3,
+   "B.Cu",
+   [
+    [
+     52.88,
+     1.57
+    ],
+    [
+     52.88,
+     0.65
+    ],
+    [
+     57.12,
+     0.65
+    ],
+    [
+     57.12,
+     1.57
+    ],
+    [
+     57.12,
+     2.92
+    ]
+   ]
+  ],
+  [
+   "VBUS",
+   0.3,
+   "B.Cu",
+   [
+    [
+     52.88,
+     1.57
+    ],
+    [
+     52.88,
+     2.92
+    ]
+   ]
+  ],
+  [
+   "GND",
+   0.3,
+   "B.Cu",
+   [
+    [
+     52.02,
+     1.57
+    ],
+    [
+     52.02,
+     2.92
+    ]
+   ]
+  ],
+  [
+   "GND",
+   0.3,
+   "B.Cu",
+   [
+    [
+     57.98,
+     1.57
+    ],
+    [
+     57.98,
+     2.92
+    ]
+   ]
+  ]
+ ]
+}

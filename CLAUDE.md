@@ -20,9 +20,10 @@ Desk-Mate ist ein Wall-E-artiger Schreibtisch-Begleiter: Ampel für Claude Code 
 sh tools/test-check-secrets.sh     # Secret-Check
 sh tools/test-session-hooks.sh     # Zeiterfassung
 sh tools/test-pins.sh              # Pin-Map-Regeln (pins.h)
+sh tools/test-kicad.sh             # ERC + DRC + Netzlisten-Abgleich der drei KiCad-Projekte
 ```
 
-Kommt mit den Phasen dazu: `kicad-cli sch erc` / `pcb drc` (Phase 2), `arduino-cli compile` (Phase 3), `xcodebuild` (Phase 4). Neue Befehle hier eintragen, sobald sie existieren.
+Kommt mit den Phasen dazu: `arduino-cli compile` (Phase 3), `xcodebuild` (Phase 4). Neue Befehle hier eintragen, sobald sie existieren.
 
 ## Bekannte Fallen (teuer erkauft — nicht wieder reintappen!)
 
@@ -40,12 +41,18 @@ Startbestand aus ESP32-Kühler und VVVF; Desk-Mate-eigene Fallen werden hier num
 10. **Motoren/Servos am Rechner-USB** = Brownout und „Gerät nicht erkannt“. Deshalb zwei USB-C-Buchsen; ohne Netzteil (`PSU_SENSE` low) nur gedrosselt fahren.
 11. **ILI9341-Backlight** zieht bis 150 mA — nie direkt aus einem MCP23017-Pin, immer Transistor.
 12. **Kapazitives Touch über Flachband** ist unzuverlässig — deshalb MPR121 auf dem Frontpanel, nicht die S3-Touch-Pins.
+13. **GPIO45 darf keinen externen Pull-up sehen** (VDD_SPI-Strapping → 1,8 V → Flash tot). Deshalb Backlight-Steuerung zweistufig (BC337 low-side → BC327 high-side): die Steuerleitung sieht nur Basiswiderstand + Pull-down, nie einen Pull-up. Gilt für alles, was je über JP1 an GPIO45 hängt.
+14. **DevKitC-1: Pin 1 beider Header liegt am Antennen-Ende**, nicht am USB-Ende (Espressif zeichnet mit Antenne oben). Footprint `ESP32-S3-DevKitC-1_Socket` ist so gebaut; beim Nachmessen nicht erschrecken.
+15. **Modul-Lochraster vor dem Footprint prüfen** — MT3608-Module (6,45–6,8 mm Paarabstand) und viele Breakouts sind nicht 2,54-kompatibel. Regel: nur Module mit belegter Maßzeichnung bekommen einen Sockel, der Rest bekommt eine Stiftleiste + Drähte.
+16. **Freerouting headless nur mit `-Djava.awt.headless=true`** — sonst hängt der Java-Prozess nach „Optimization was completed“ ewig in einem unsichtbaren Dialog (0 % CPU, keine .ses). `build_pcb.py` setzt das Flag.
+17. **`pcbnew` (KiCad-Python) `board.Save()` schreibt die `.kicad_pro` mit Default-Netzklassen zurück** (0,2/0,2) — Projektregeln danach restaurieren (macht `build_pcb.py`) und eine Platine nur unter ihrem Projektnamen laden, sonst fehlen die Netzklassen beim DSN-Export. Außerdem: Anführungszeichen in Bauteilwerten (`2.8"`) zerstören die DSN-Datei.
 
 ## Konventionen
 
 - Deutsch für Menschen (Doku, Commits, Kommentare, UI), Englisch für Bezeichner, Netznamen, JSON-Keys, MQTT-Topics.
 - Commits: Satzform, ergebnisorientiert, kein Präfix, Umlaute dürfen ASCII-gefaltet sein (`Ueberlauf`).
 - Dateien: Specs/Pläne `YYYY-MM-DD-<thema>.md`; CAD-Teile deutsch (`Kopf_Schale_vorne.stl`), je Teil STEP + STL; Sketch-Ordner snake_case.
+- KiCad: Erstversion aus `hardware/kicad/gen/` generiert (Bauteil→Pin→Netz→Position in `boards.py`). Sobald in der GUI editiert wurde, sind `.kicad_sch`/`.kicad_pcb` die Wahrheit — Generator nicht mehr blind laufen lassen (`build_pcb.py` braucht `--force`). Sockel-Maße mit Quellen: `vault/Hardware/Module-Masse.md`.
 - Pin-Map: `firmware/arduino/deskmate/pins.h` ist die Wahrheit (verifiziert, Test `tools/test-pins.sh`); Spec §2.3 und `vault/Hardware/Pin-Map.md` werden bei Änderungen nachgezogen.
 - Through-Hole oder gesteckte Breakouts. Kein SMD auf unseren Platinen.
 - `// ponytail:`-Kommentare markieren bewusste Vereinfachungen und nennen den Ausbaupfad.

@@ -112,7 +112,7 @@ tmp="$(mktemp -d)"; trap 'rm -rf "$tmp"' EXIT
 cd "$tmp" && git init -q -b main && git config user.email t@t && git config user.name t
 cp "$here/check-secrets.sh" .
 
-printf 'password = "hunter2hunter2"\n' > leak.txt && git add leak.txt
+printf 'password = "<hunter2hunter2>"\n' > leak.txt && git add leak.txt
 if sh check-secrets.sh >/dev/null 2>&1; then echo "FAIL: Secret nicht erkannt"; exit 1; fi
 git rm -q --cached leak.txt
 
@@ -360,6 +360,8 @@ exit 0
 ## Phase 2 — KiCad (drei Designs) bis JLCPCB-Bestellung
 
 Werkzeug: KiCad 10 GUI für Schaltplan/Layout, `KICAD=/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli` für Prüfungen und Export. Skill `kicad` laden, bevor Task 11 beginnt; jede Review-Runde mit dem Skill gegen Spec §2 fahren.
+
+**Stand 2026-08-27:** Tasks 11–16 als Erstversion per Generator (`hardware/kicad/gen/`) erledigt — Bibliothek, drei Schaltpläne (ERC sauber), drei Layouts (Freerouting, DRC), `tools/test-kicad.sh`. Offen vor Task 17: Leons Freigabe der Frontpanel-Anordnung, Nachmessen der Module (Spec §8.8), Fader-Charakterisierung.
 
 ### Task 11: KiCad-Projekte und Bibliothek anlegen
 

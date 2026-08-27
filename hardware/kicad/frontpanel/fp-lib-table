@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "deskmate")(type "KiCad")(uri "${KIPRJMOD}/../lib/deskmate.pretty")(options "")(descr "Desk-Mate Projektbibliothek"))
+)

@@ -4,15 +4,16 @@
 
 Ein kleiner Wall-E-artiger Schreibtisch-Begleiter: eine Ampel für alles, was dich braucht (Claude Code, Browser-Downloads, Steam), ein Deck mit Motorfadern und Soft-Keys, ein Kopf mit zwei Augen-Displays. Verbunden per USB, BLE und WiFi; steuerbar vom Mac, vom Handy und über das Haus-MQTT. Alles Through-Hole, alles 3D-gedruckt, alles dokumentiert — inklusive Arbeitszeit.
 
-**Zwischenstand (2026-08-23):**
+**Zwischenstand (2026-08-27):**
 
 | Schritt | Stand |
 |---|---|
 | Design-Spec (18 Grill-Fragen) | ✅ [`docs/superpowers/specs/`](docs/superpowers/specs/2026-08-22-desk-mate-design.md) |
 | Pin-Map gegen Datenblatt + DevKit-Schaltplan verifiziert | ✅ [`firmware/arduino/deskmate/pins.h`](firmware/arduino/deskmate/pins.h) |
-| Stückliste mit Quellen und Preisen (~100–160 €) | ✅ [`hardware/bom.md`](hardware/bom.md) |
-| KiCad: Mainboard · Frontpanel · Augen-Adapter | 🔜 als Nächstes |
-| Platinen-Bestellung (JLCPCB) · Firmware · Agent/App | ⬜ danach |
+| Stückliste mit Quellen und Preisen, Teile bestellt (Amazon ~142 €) | ✅ [`hardware/bom.md`](hardware/bom.md) |
+| KiCad: Mainboard 100×100 · Frontpanel 120×136 · Augen-Adapter 42×30 — ERC/DRC sauber, Gerber exportiert | ✅ [`hardware/kicad/`](hardware/kicad/README.md) |
+| Platinen-Bestellung (JLCPCB) | 🔜 nach Nachmessen der Module + Fader-Charakterisierung |
+| Firmware · Agent/App · Gehäuse | ⬜ danach |
 
 Arbeitszeit und Tagesprotokolle: [`vault/Log/`](vault/Log/) · Projektseite: Portfolio-Eintrag P12.
 
@@ -55,6 +56,14 @@ Arbeitszeit und Tagesprotokolle: [`vault/Log/`](vault/Log/) · Projektseite: Por
 | `server/` | Vercel-Function für Push |
 | `tools/` | Session-Hooks, Secret-Check |
 
+## Hardware
+
+| Mainboard (Base) | Frontpanel (Deck) | Augen-Adapter |
+|---|---|---|
+| ![Mainboard](hardware/kicad/mainboard/fab/mainboard-top.png) | ![Frontpanel](hardware/kicad/frontpanel/fab/frontpanel-top.png) | ![Augen-Adapter](hardware/kicad/eye-adapter/fab/eye-adapter-top.png) |
+
+Drei Through-Hole-Platinen, alle Module gesteckt (ESP32-S3-DevKitC-1, Pololu DRV8833, MPR121, Displays). Schaltpläne als PDF, STEP-Modelle und JLCPCB-Gerber-Zips liegen in `hardware/kicad/<board>/fab/`; Aufbau und Entwurfsregeln in [`hardware/kicad/README.md`](hardware/kicad/README.md), Bestellanleitung in [`docs/anleitung/01-platinen.md`](docs/anleitung/01-platinen.md).
+
 ## Bauen
 
 Nach dem Klonen einmalig:
@@ -63,9 +72,11 @@ Nach dem Klonen einmalig:
 git config core.hooksPath tools/githooks   # Secret-Check vor jedem Commit
 sh tools/test-check-secrets.sh             # muss "OK" sagen
 sh tools/test-session-hooks.sh             # muss "OK" sagen
+sh tools/test-pins.sh                      # Pin-Map-Regeln
+sh tools/test-kicad.sh                     # ERC + DRC + Netzliste (braucht KiCad 10 unter /Applications)
 ```
 
-Firmware-, App- und KiCad-Befehle kommen mit den jeweiligen Phasen dazu (siehe `CLAUDE.md`).
+KiCad-Dateien neu erzeugen/exportieren: siehe [`hardware/kicad/README.md`](hardware/kicad/README.md). Firmware- und App-Befehle kommen mit den jeweiligen Phasen dazu (siehe `CLAUDE.md`).
 
 ## Lizenz
 

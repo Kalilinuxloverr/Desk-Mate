@@ -34,3 +34,8 @@ node_modules/
 
 # macOS
 .DS_Store
+fp-info-cache
+hardware/kicad/**/*.dsn
+hardware/kicad/**/*.ses
+hardware/kicad/**/freerouting.log
+hardware/kicad/**/fab/gerber/

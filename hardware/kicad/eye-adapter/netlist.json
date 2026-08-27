@@ -1,0 +1,321 @@
+{
+ "board": "eye-adapter",
+ "w": 42.0,
+ "h": 30.0,
+ "sheet_uuid": "1ad1b392-8785-5583-b81e-bfec55096ce8",
+ "parts": [
+  {
+   "ref": "J11",
+   "value": "vom Mainboard J7",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+   "uuid": "e0ba15a0-8c75-5ca5-b416-3f9afdd4642a",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "3V3",
+    "3": "GND",
+    "4": "GND",
+    "5": "SPI_MOSI",
+    "6": "SPI_SCK",
+    "7": "SPI_DC",
+    "8": "CS_EYE_L",
+    "9": "CS_EYE_R",
+    "10": "GND"
+   },
+   "pcb": {
+    "x": 21,
+    "y": 4,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "J12",
+   "value": "GC9A01 links",
+   "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical",
+   "uuid": "ce80cb85-7aaf-5e2a-8035-3bae1dcb2ab9",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "GND",
+    "3": "SPI_SCK",
+    "4": "SPI_MOSI",
+    "5": "EYE_RST",
+    "6": "SPI_DC",
+    "7": "CS_EYE_L"
+   },
+   "pcb": {
+    "x": 11,
+    "y": 24,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "J13",
+   "value": "GC9A01 rechts",
+   "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical",
+   "uuid": "70679abe-e021-5cdb-92e2-e0c4aff6381f",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "GND",
+    "3": "SPI_SCK",
+    "4": "SPI_MOSI",
+    "5": "EYE_RST",
+    "6": "SPI_DC",
+    "7": "CS_EYE_R"
+   },
+   "pcb": {
+    "x": 31,
+    "y": 24,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "R17",
+   "value": "10k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+   "uuid": "4aa3c58b-25d0-573f-a990-f7f96f6a3f7e",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "EYE_RST"
+   },
+   "pcb": {
+    "x": 7,
+    "y": 13,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C19",
+   "value": "1u",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "06e7a41b-d05a-5f78-b38f-32ec122e5956",
+   "dnp": false,
+   "pads": {
+    "1": "EYE_RST",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 16.5,
+    "y": 13,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C20",
+   "value": "100n",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "305ae29b-f951-5500-9b60-f01e2ddbde11",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 24.5,
+    "y": 13,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C21",
+   "value": "100n",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "2cd85d48-f417-5bdb-94c1-d00c27e2dd38",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 32.5,
+    "y": 13,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H13",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "55c9b351-92af-5453-b319-14f98775ce10",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 4,
+    "y": 4,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H14",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "2b2d42e2-3d43-50b4-a8e5-2338f9d2e28b",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 38,
+    "y": 4,
+    "rot": 0
+   }
+  }
+ ],
+ "nets": {
+  "3V3": [
+   [
+    "J11",
+    "1"
+   ],
+   [
+    "J11",
+    "2"
+   ],
+   [
+    "J12",
+    "1"
+   ],
+   [
+    "J13",
+    "1"
+   ],
+   [
+    "R17",
+    "1"
+   ],
+   [
+    "C20",
+    "1"
+   ],
+   [
+    "C21",
+    "1"
+   ]
+  ],
+  "GND": [
+   [
+    "J11",
+    "3"
+   ],
+   [
+    "J11",
+    "4"
+   ],
+   [
+    "J11",
+    "10"
+   ],
+   [
+    "J12",
+    "2"
+   ],
+   [
+    "J13",
+    "2"
+   ],
+   [
+    "C19",
+    "2"
+   ],
+   [
+    "C20",
+    "2"
+   ],
+   [
+    "C21",
+    "2"
+   ]
+  ],
+  "SPI_MOSI": [
+   [
+    "J11",
+    "5"
+   ],
+   [
+    "J12",
+    "4"
+   ],
+   [
+    "J13",
+    "4"
+   ]
+  ],
+  "SPI_SCK": [
+   [
+    "J11",
+    "6"
+   ],
+   [
+    "J12",
+    "3"
+   ],
+   [
+    "J13",
+    "3"
+   ]
+  ],
+  "SPI_DC": [
+   [
+    "J11",
+    "7"
+   ],
+   [
+    "J12",
+    "6"
+   ],
+   [
+    "J13",
+    "6"
+   ]
+  ],
+  "CS_EYE_L": [
+   [
+    "J11",
+    "8"
+   ],
+   [
+    "J12",
+    "7"
+   ]
+  ],
+  "CS_EYE_R": [
+   [
+    "J11",
+    "9"
+   ],
+   [
+    "J13",
+    "7"
+   ]
+  ],
+  "EYE_RST": [
+   [
+    "J12",
+    "5"
+   ],
+   [
+    "J13",
+    "5"
+   ],
+   [
+    "R17",
+    "2"
+   ],
+   [
+    "C19",
+    "1"
+   ]
+  ]
+ },
+ "netclasses": {
+  "Power3V3": [
+   [
+    "3V3",
+    "GND"
+   ],
+   0.6
+  ]
+ },
+ "keepout": [],
+ "pre_tracks": []
+}

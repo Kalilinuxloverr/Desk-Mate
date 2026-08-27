@@ -1,0 +1,1662 @@
+{
+ "board": "frontpanel",
+ "w": 120.0,
+ "h": 136.0,
+ "sheet_uuid": "75252f1c-7e36-5f0a-8033-cfbc3e637dfd",
+ "parts": [
+  {
+   "ref": "J9",
+   "value": "IDC 2x15 <- Mainboard",
+   "footprint": "Connector_IDC:IDC-Header_2x15_P2.54mm_Vertical",
+   "uuid": "b531597c-ab6b-52e8-aa4b-fdf12381c550",
+   "dnp": false,
+   "pads": {
+    "1": "5V",
+    "2": "5V",
+    "3": "GND",
+    "4": "GND",
+    "5": "3V3",
+    "6": "3V3",
+    "7": "MOT1A",
+    "8": "MOT1B",
+    "9": "MOT2A",
+    "10": "MOT2B",
+    "11": "MOT3A",
+    "12": "MOT3B",
+    "13": "MOT4A",
+    "14": "MOT4B",
+    "15": "GND",
+    "16": "GND",
+    "17": "FADER1_WIPER",
+    "18": "FADER2_WIPER",
+    "19": "FADER3_WIPER",
+    "20": "FADER4_WIPER",
+    "21": "GND",
+    "22": "I2C_SDA",
+    "23": "I2C_SCL",
+    "24": "IO_INT",
+    "25": "SPI_MOSI",
+    "26": "SPI_SCK",
+    "27": "SPI_DC",
+    "28": "CS_BELLY",
+    "29": "BELLY_BL_PWM",
+    "30": "GND"
+   },
+   "pcb": {
+    "x": 60,
+    "y": 130,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "U8",
+   "value": "MCP23017-E/SP",
+   "footprint": "Package_DIP:DIP-28_W7.62mm_Socket",
+   "uuid": "effbb28d-c502-56f2-bce2-275ece400d1f",
+   "dnp": false,
+   "pads": {
+    "1": "KEY9",
+    "2": "KEY10",
+    "3": "ENC_A",
+    "4": "ENC_B",
+    "5": "ENC_SW",
+    "6": "DISP_RST",
+    "7": "BL_EN_MCP",
+    "9": "3V3",
+    "10": "GND",
+    "12": "I2C_SCL",
+    "13": "I2C_SDA",
+    "15": "GND",
+    "16": "GND",
+    "17": "GND",
+    "18": "3V3",
+    "19": "INTB",
+    "20": "INTA",
+    "21": "KEY1",
+    "22": "KEY2",
+    "23": "KEY3",
+    "24": "KEY4",
+    "25": "KEY5",
+    "26": "KEY6",
+    "27": "KEY7",
+    "28": "KEY8"
+   },
+   "pcb": {
+    "x": 18,
+    "y": 100,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C12",
+   "value": "100n",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "44e8ceca-e84f-5b99-9652-ef908388f5ce",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 18,
+    "y": 79,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "JP9",
+   "value": "INTA->IO_INT",
+   "footprint": "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm",
+   "uuid": "b81fc8b9-af94-5f26-9288-8aa7fa994f35",
+   "dnp": false,
+   "pads": {
+    "1": "INTA",
+    "2": "IO_INT"
+   },
+   "pcb": {
+    "x": 30,
+    "y": 84,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "JP10",
+   "value": "INTB->IO_INT",
+   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
+   "uuid": "2e3d814d-baac-5675-a79e-55ba78a2108b",
+   "dnp": false,
+   "pads": {
+    "1": "INTB",
+    "2": "IO_INT"
+   },
+   "pcb": {
+    "x": 30,
+    "y": 88,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "SW1",
+   "value": "Soft-Key 1",
+   "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+   "uuid": "07ff061d-7881-5aa8-b1e0-9431389a2243",
+   "dnp": false,
+   "pads": {
+    "1": "KEY1",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 12.375,
+    "y": 70.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "SW2",
+   "value": "Soft-Key 2",
+   "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+   "uuid": "f991e44f-2820-5896-b590-110dab52a850",
+   "dnp": false,
+   "pads": {
+    "1": "KEY2",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 31.424999999999997,
+    "y": 70.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "SW3",
+   "value": "Soft-Key 3",
+   "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+   "uuid": "86391d07-dc1a-5d5c-81da-59d35e259806",
+   "dnp": false,
+   "pads": {
+    "1": "KEY3",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 50.475,
+    "y": 70.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "SW4",
+   "value": "Soft-Key 4",
+   "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+   "uuid": "911e67c7-3abb-50f5-83fa-b3a9beeae8c6",
+   "dnp": false,
+   "pads": {
+    "1": "KEY4",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 69.525,
+    "y": 70.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "SW5",
+   "value": "Soft-Key 5",
+   "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+   "uuid": "a46cc2ef-ce94-54eb-abb2-343d19bf3c6a",
+   "dnp": false,
+   "pads": {
+    "1": "KEY5",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 88.575,
+    "y": 70.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "SW6",
+   "value": "Soft-Key 6",
+   "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+   "uuid": "30833805-1f3e-5808-ac0d-49136b5270bb",
+   "dnp": false,
+   "pads": {
+    "1": "KEY6",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 107.625,
+    "y": 70.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "SW7",
+   "value": "Makro 1",
+   "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+   "uuid": "5c3e7cfb-5d07-55f1-bee6-8e72b3237ae3",
+   "dnp": false,
+   "pads": {
+    "1": "KEY7",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 50.475,
+    "y": 96.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "SW8",
+   "value": "Makro 2",
+   "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+   "uuid": "64d0bbf5-786f-5b8f-b004-2958aac9ba13",
+   "dnp": false,
+   "pads": {
+    "1": "KEY8",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 69.525,
+    "y": 96.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "SW9",
+   "value": "Makro 3",
+   "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+   "uuid": "e3c5fab4-e4c9-518c-8f86-a7a0f7006702",
+   "dnp": false,
+   "pads": {
+    "1": "KEY9",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 50.475,
+    "y": 115.05,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "SW10",
+   "value": "Makro 4",
+   "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+   "uuid": "4723bc1a-7956-559f-954f-54850e7be939",
+   "dnp": false,
+   "pads": {
+    "1": "KEY10",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 69.525,
+    "y": 115.05,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "ENC1",
+   "value": "EC11 mit Taster",
+   "footprint": "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm",
+   "uuid": "1f8c2c1d-9acb-5054-9d67-3d8b0c7c1c5c",
+   "dnp": false,
+   "pads": {
+    "A": "ENC_A",
+    "B": "ENC_B",
+    "C": "GND",
+    "S1": "ENC_SW",
+    "S2": "GND"
+   },
+   "pcb": {
+    "x": 100,
+    "y": 108,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C13",
+   "value": "10n",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "d13c26a2-ebad-5419-9f79-ac96ede0d0d7",
+   "dnp": false,
+   "pads": {
+    "1": "ENC_A",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 95,
+    "y": 128,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "C14",
+   "value": "10n",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "2727a15d-6733-565b-a9cc-45c39e2a441b",
+   "dnp": false,
+   "pads": {
+    "1": "ENC_B",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 105,
+    "y": 128,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "DSP1",
+   "value": "ILI9341 2.8in SPI",
+   "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x14_P2.54mm_Vertical",
+   "uuid": "910ad87b-287c-58a2-acfa-579f30122a03",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "GND",
+    "3": "CS_BELLY",
+    "4": "DISP_RST",
+    "5": "SPI_DC",
+    "6": "SPI_MOSI",
+    "7": "SPI_SCK",
+    "8": "BELLY_BL"
+   },
+   "pcb": {
+    "x": 19.0,
+    "y": 31.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "Q1",
+   "value": "BC327",
+   "footprint": "Package_TO_SOT_THT:TO-92_Inline",
+   "uuid": "ada542e1-be48-576e-a473-abf3171b6d31",
+   "dnp": false,
+   "pads": {
+    "1": "BELLY_BL",
+    "2": "BL_BASE",
+    "3": "3V3"
+   },
+   "pcb": {
+    "x": 40,
+    "y": 30,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "Q2",
+   "value": "BC337",
+   "footprint": "Package_TO_SOT_THT:TO-92_Inline",
+   "uuid": "d033816c-cfe1-52b6-94dd-2b3dd067844a",
+   "dnp": false,
+   "pads": {
+    "1": "BL_Q2C",
+    "2": "BL_Q2B",
+    "3": "GND"
+   },
+   "pcb": {
+    "x": 50,
+    "y": 30,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R9",
+   "value": "1k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "8dbcd1d2-1fc6-59db-a75f-fbe598cb4bc8",
+   "dnp": false,
+   "pads": {
+    "1": "BL_DRV",
+    "2": "BL_Q2B"
+   },
+   "pcb": {
+    "x": 40,
+    "y": 20,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R12",
+   "value": "100k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "071d77db-cb8b-590a-93bc-fe2e417de4e7",
+   "dnp": false,
+   "pads": {
+    "1": "BL_DRV",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 54,
+    "y": 20,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R11",
+   "value": "1k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "cf4e48fa-b765-500d-afd8-dfc8c5c1df0a",
+   "dnp": false,
+   "pads": {
+    "1": "BL_Q2C",
+    "2": "BL_BASE"
+   },
+   "pcb": {
+    "x": 68,
+    "y": 20,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R10",
+   "value": "10k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "b529ffb6-462d-50ea-9ced-928bffdfc0b1",
+   "dnp": false,
+   "pads": {
+    "1": "BL_BASE",
+    "2": "3V3"
+   },
+   "pcb": {
+    "x": 82,
+    "y": 20,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "JP11",
+   "value": "BL: 1=MCP 3=GPIO45",
+   "footprint": "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels",
+   "uuid": "d861ceef-132e-5259-be7d-1fdc7df3cdac",
+   "dnp": false,
+   "pads": {
+    "1": "BL_EN_MCP",
+    "2": "BL_DRV",
+    "3": "BELLY_BL_PWM"
+   },
+   "pcb": {
+    "x": 30,
+    "y": 20,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "J14",
+   "value": "Fader 1 (MOT+ MOT- GND 3V3 WIPER GND TOUCH GND)",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+   "uuid": "95dd9031-1424-5059-a90c-3657fe757962",
+   "dnp": false,
+   "pads": {
+    "1": "MOT1A",
+    "2": "MOT1B",
+    "3": "GND",
+    "4": "3V3",
+    "5": "WIPER1_RAW",
+    "6": "GND",
+    "7": "TOUCH1",
+    "8": "GND"
+   },
+   "pcb": {
+    "x": 6,
+    "y": 90,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "J15",
+   "value": "Fader 2 (MOT+ MOT- GND 3V3 WIPER GND TOUCH GND)",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+   "uuid": "e4595830-919c-5ff2-a602-3aca8264ac67",
+   "dnp": false,
+   "pads": {
+    "1": "MOT2A",
+    "2": "MOT2B",
+    "3": "GND",
+    "4": "3V3",
+    "5": "WIPER2_RAW",
+    "6": "GND",
+    "7": "TOUCH2",
+    "8": "GND"
+   },
+   "pcb": {
+    "x": 114,
+    "y": 88,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "J16",
+   "value": "Fader 3 (MOT+ MOT- GND 3V3 WIPER GND TOUCH GND)",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+   "uuid": "315ad66a-b80e-53b9-bd47-68629e1a9172",
+   "dnp": false,
+   "pads": {
+    "1": "MOT3A",
+    "2": "MOT3B",
+    "3": "GND",
+    "4": "3V3",
+    "5": "WIPER3_RAW",
+    "6": "GND",
+    "7": "TOUCH3",
+    "8": "GND"
+   },
+   "pcb": {
+    "x": 6,
+    "y": 112,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "J17",
+   "value": "Fader 4 (MOT+ MOT- GND 3V3 WIPER GND TOUCH GND)",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+   "uuid": "3bfdbfb4-af5b-5314-8718-6c381f341922",
+   "dnp": false,
+   "pads": {
+    "1": "MOT4A",
+    "2": "MOT4B",
+    "3": "GND",
+    "4": "3V3",
+    "5": "WIPER4_RAW",
+    "6": "GND",
+    "7": "TOUCH4",
+    "8": "GND"
+   },
+   "pcb": {
+    "x": 114,
+    "y": 110,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R13",
+   "value": "1k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "892392b5-a945-5abe-b25b-3de09f92f2a7",
+   "dnp": false,
+   "pads": {
+    "1": "WIPER1_RAW",
+    "2": "FADER1_WIPER"
+   },
+   "pcb": {
+    "x": 9,
+    "y": 30,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "C15",
+   "value": "100n",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "bc01456d-7f6b-5e9a-a097-f283162cba05",
+   "dnp": false,
+   "pads": {
+    "1": "FADER1_WIPER",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 9,
+    "y": 42,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R14",
+   "value": "1k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "83458237-3ed2-5ad3-9c7c-9f191bd7a3ac",
+   "dnp": false,
+   "pads": {
+    "1": "WIPER2_RAW",
+    "2": "FADER2_WIPER"
+   },
+   "pcb": {
+    "x": 111,
+    "y": 30,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "C16",
+   "value": "100n",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "9c229540-239c-53f0-b747-1a479073b178",
+   "dnp": false,
+   "pads": {
+    "1": "FADER2_WIPER",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 111,
+    "y": 42,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R15",
+   "value": "1k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "21fc7f69-71c8-5319-b9ac-83cf6b4175bd",
+   "dnp": false,
+   "pads": {
+    "1": "WIPER3_RAW",
+    "2": "FADER3_WIPER"
+   },
+   "pcb": {
+    "x": 9,
+    "y": 51,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "C17",
+   "value": "100n",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "55d90d5f-6074-5205-8118-67347820b91c",
+   "dnp": false,
+   "pads": {
+    "1": "FADER3_WIPER",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 9,
+    "y": 60,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "R16",
+   "value": "1k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "506bdd76-10f7-5485-960b-fdc39fa8ae37",
+   "dnp": false,
+   "pads": {
+    "1": "WIPER4_RAW",
+    "2": "FADER4_WIPER"
+   },
+   "pcb": {
+    "x": 111,
+    "y": 51,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "C18",
+   "value": "100n",
+   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "uuid": "6922cfa5-2bbb-555d-bc9e-a7fcb030fad5",
+   "dnp": false,
+   "pads": {
+    "1": "FADER4_WIPER",
+    "2": "GND"
+   },
+   "pcb": {
+    "x": 111,
+    "y": 60,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "U9",
+   "value": "MPR121 Breakout",
+   "footprint": "deskmate:MPR121_Breakout",
+   "uuid": "47091da9-3421-503a-bd27-fb364ff04044",
+   "dnp": false,
+   "pads": {
+    "1": "3V3",
+    "2": "IO_INT",
+    "3": "I2C_SCL",
+    "4": "I2C_SDA",
+    "5": "GND",
+    "6": "GND",
+    "7": "TOUCH1",
+    "8": "TOUCH2",
+    "9": "TOUCH3",
+    "10": "TOUCH4"
+   },
+   "pcb": {
+    "x": 92,
+    "y": 88,
+    "rot": 90
+   }
+  },
+  {
+   "ref": "H5",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "0eaead02-530a-5f5c-b36c-be61b562b21a",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 4,
+    "y": 4,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H6",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "67332cbe-1622-50ee-84a7-1935861015b2",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 116,
+    "y": 4,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H7",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "55a3f0f1-9098-58ae-bd2f-7bf3d9adaaba",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 4,
+    "y": 132,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H8",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "050d7d7f-c4bf-5e6a-8e00-5866db69bf81",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 116,
+    "y": 132,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H9",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "a86f75d3-7926-51fd-af42-6ac51f0f3787",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 21.96,
+    "y": 9.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H10",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "59576b40-a9d4-5e16-95e4-aff722c04b96",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 98.04,
+    "y": 9.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H11",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "af140a60-0d85-58dc-bec6-f322c63a9849",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 21.96,
+    "y": 53.0,
+    "rot": 0
+   }
+  },
+  {
+   "ref": "H12",
+   "value": "M3",
+   "footprint": "MountingHole:MountingHole_3.2mm_M3",
+   "uuid": "f07bd081-d874-5e65-a928-3130b0ac9be2",
+   "dnp": false,
+   "pads": {},
+   "pcb": {
+    "x": 98.04,
+    "y": 53.0,
+    "rot": 0
+   }
+  }
+ ],
+ "nets": {
+  "5V": [
+   [
+    "J9",
+    "1"
+   ],
+   [
+    "J9",
+    "2"
+   ]
+  ],
+  "GND": [
+   [
+    "J9",
+    "3"
+   ],
+   [
+    "J9",
+    "4"
+   ],
+   [
+    "J9",
+    "15"
+   ],
+   [
+    "J9",
+    "16"
+   ],
+   [
+    "J9",
+    "21"
+   ],
+   [
+    "J9",
+    "30"
+   ],
+   [
+    "U8",
+    "10"
+   ],
+   [
+    "U8",
+    "15"
+   ],
+   [
+    "U8",
+    "16"
+   ],
+   [
+    "U8",
+    "17"
+   ],
+   [
+    "C12",
+    "2"
+   ],
+   [
+    "SW1",
+    "2"
+   ],
+   [
+    "SW2",
+    "2"
+   ],
+   [
+    "SW3",
+    "2"
+   ],
+   [
+    "SW4",
+    "2"
+   ],
+   [
+    "SW5",
+    "2"
+   ],
+   [
+    "SW6",
+    "2"
+   ],
+   [
+    "SW7",
+    "2"
+   ],
+   [
+    "SW8",
+    "2"
+   ],
+   [
+    "SW9",
+    "2"
+   ],
+   [
+    "SW10",
+    "2"
+   ],
+   [
+    "ENC1",
+    "C"
+   ],
+   [
+    "ENC1",
+    "S2"
+   ],
+   [
+    "C13",
+    "2"
+   ],
+   [
+    "C14",
+    "2"
+   ],
+   [
+    "DSP1",
+    "2"
+   ],
+   [
+    "Q2",
+    "3"
+   ],
+   [
+    "R12",
+    "2"
+   ],
+   [
+    "J14",
+    "3"
+   ],
+   [
+    "J14",
+    "6"
+   ],
+   [
+    "J14",
+    "8"
+   ],
+   [
+    "J15",
+    "3"
+   ],
+   [
+    "J15",
+    "6"
+   ],
+   [
+    "J15",
+    "8"
+   ],
+   [
+    "J16",
+    "3"
+   ],
+   [
+    "J16",
+    "6"
+   ],
+   [
+    "J16",
+    "8"
+   ],
+   [
+    "J17",
+    "3"
+   ],
+   [
+    "J17",
+    "6"
+   ],
+   [
+    "J17",
+    "8"
+   ],
+   [
+    "C15",
+    "2"
+   ],
+   [
+    "C16",
+    "2"
+   ],
+   [
+    "C17",
+    "2"
+   ],
+   [
+    "C18",
+    "2"
+   ],
+   [
+    "U9",
+    "5"
+   ],
+   [
+    "U9",
+    "6"
+   ]
+  ],
+  "3V3": [
+   [
+    "J9",
+    "5"
+   ],
+   [
+    "J9",
+    "6"
+   ],
+   [
+    "U8",
+    "9"
+   ],
+   [
+    "U8",
+    "18"
+   ],
+   [
+    "C12",
+    "1"
+   ],
+   [
+    "DSP1",
+    "1"
+   ],
+   [
+    "Q1",
+    "3"
+   ],
+   [
+    "R10",
+    "2"
+   ],
+   [
+    "J14",
+    "4"
+   ],
+   [
+    "J15",
+    "4"
+   ],
+   [
+    "J16",
+    "4"
+   ],
+   [
+    "J17",
+    "4"
+   ],
+   [
+    "U9",
+    "1"
+   ]
+  ],
+  "MOT1A": [
+   [
+    "J9",
+    "7"
+   ],
+   [
+    "J14",
+    "1"
+   ]
+  ],
+  "MOT1B": [
+   [
+    "J9",
+    "8"
+   ],
+   [
+    "J14",
+    "2"
+   ]
+  ],
+  "MOT2A": [
+   [
+    "J9",
+    "9"
+   ],
+   [
+    "J15",
+    "1"
+   ]
+  ],
+  "MOT2B": [
+   [
+    "J9",
+    "10"
+   ],
+   [
+    "J15",
+    "2"
+   ]
+  ],
+  "MOT3A": [
+   [
+    "J9",
+    "11"
+   ],
+   [
+    "J16",
+    "1"
+   ]
+  ],
+  "MOT3B": [
+   [
+    "J9",
+    "12"
+   ],
+   [
+    "J16",
+    "2"
+   ]
+  ],
+  "MOT4A": [
+   [
+    "J9",
+    "13"
+   ],
+   [
+    "J17",
+    "1"
+   ]
+  ],
+  "MOT4B": [
+   [
+    "J9",
+    "14"
+   ],
+   [
+    "J17",
+    "2"
+   ]
+  ],
+  "FADER1_WIPER": [
+   [
+    "J9",
+    "17"
+   ],
+   [
+    "R13",
+    "2"
+   ],
+   [
+    "C15",
+    "1"
+   ]
+  ],
+  "FADER2_WIPER": [
+   [
+    "J9",
+    "18"
+   ],
+   [
+    "R14",
+    "2"
+   ],
+   [
+    "C16",
+    "1"
+   ]
+  ],
+  "FADER3_WIPER": [
+   [
+    "J9",
+    "19"
+   ],
+   [
+    "R15",
+    "2"
+   ],
+   [
+    "C17",
+    "1"
+   ]
+  ],
+  "FADER4_WIPER": [
+   [
+    "J9",
+    "20"
+   ],
+   [
+    "R16",
+    "2"
+   ],
+   [
+    "C18",
+    "1"
+   ]
+  ],
+  "I2C_SDA": [
+   [
+    "J9",
+    "22"
+   ],
+   [
+    "U8",
+    "13"
+   ],
+   [
+    "U9",
+    "4"
+   ]
+  ],
+  "I2C_SCL": [
+   [
+    "J9",
+    "23"
+   ],
+   [
+    "U8",
+    "12"
+   ],
+   [
+    "U9",
+    "3"
+   ]
+  ],
+  "IO_INT": [
+   [
+    "J9",
+    "24"
+   ],
+   [
+    "JP9",
+    "2"
+   ],
+   [
+    "JP10",
+    "2"
+   ],
+   [
+    "U9",
+    "2"
+   ]
+  ],
+  "SPI_MOSI": [
+   [
+    "J9",
+    "25"
+   ],
+   [
+    "DSP1",
+    "6"
+   ]
+  ],
+  "SPI_SCK": [
+   [
+    "J9",
+    "26"
+   ],
+   [
+    "DSP1",
+    "7"
+   ]
+  ],
+  "SPI_DC": [
+   [
+    "J9",
+    "27"
+   ],
+   [
+    "DSP1",
+    "5"
+   ]
+  ],
+  "CS_BELLY": [
+   [
+    "J9",
+    "28"
+   ],
+   [
+    "DSP1",
+    "3"
+   ]
+  ],
+  "BELLY_BL_PWM": [
+   [
+    "J9",
+    "29"
+   ],
+   [
+    "JP11",
+    "3"
+   ]
+  ],
+  "KEY9": [
+   [
+    "U8",
+    "1"
+   ],
+   [
+    "SW9",
+    "1"
+   ]
+  ],
+  "KEY10": [
+   [
+    "U8",
+    "2"
+   ],
+   [
+    "SW10",
+    "1"
+   ]
+  ],
+  "ENC_A": [
+   [
+    "U8",
+    "3"
+   ],
+   [
+    "ENC1",
+    "A"
+   ],
+   [
+    "C13",
+    "1"
+   ]
+  ],
+  "ENC_B": [
+   [
+    "U8",
+    "4"
+   ],
+   [
+    "ENC1",
+    "B"
+   ],
+   [
+    "C14",
+    "1"
+   ]
+  ],
+  "ENC_SW": [
+   [
+    "U8",
+    "5"
+   ],
+   [
+    "ENC1",
+    "S1"
+   ]
+  ],
+  "DISP_RST": [
+   [
+    "U8",
+    "6"
+   ],
+   [
+    "DSP1",
+    "4"
+   ]
+  ],
+  "BL_EN_MCP": [
+   [
+    "U8",
+    "7"
+   ],
+   [
+    "JP11",
+    "1"
+   ]
+  ],
+  "INTB": [
+   [
+    "U8",
+    "19"
+   ],
+   [
+    "JP10",
+    "1"
+   ]
+  ],
+  "INTA": [
+   [
+    "U8",
+    "20"
+   ],
+   [
+    "JP9",
+    "1"
+   ]
+  ],
+  "KEY1": [
+   [
+    "U8",
+    "21"
+   ],
+   [
+    "SW1",
+    "1"
+   ]
+  ],
+  "KEY2": [
+   [
+    "U8",
+    "22"
+   ],
+   [
+    "SW2",
+    "1"
+   ]
+  ],
+  "KEY3": [
+   [
+    "U8",
+    "23"
+   ],
+   [
+    "SW3",
+    "1"
+   ]
+  ],
+  "KEY4": [
+   [
+    "U8",
+    "24"
+   ],
+   [
+    "SW4",
+    "1"
+   ]
+  ],
+  "KEY5": [
+   [
+    "U8",
+    "25"
+   ],
+   [
+    "SW5",
+    "1"
+   ]
+  ],
+  "KEY6": [
+   [
+    "U8",
+    "26"
+   ],
+   [
+    "SW6",
+    "1"
+   ]
+  ],
+  "KEY7": [
+   [
+    "U8",
+    "27"
+   ],
+   [
+    "SW7",
+    "1"
+   ]
+  ],
+  "KEY8": [
+   [
+    "U8",
+    "28"
+   ],
+   [
+    "SW8",
+    "1"
+   ]
+  ],
+  "BELLY_BL": [
+   [
+    "DSP1",
+    "8"
+   ],
+   [
+    "Q1",
+    "1"
+   ]
+  ],
+  "BL_BASE": [
+   [
+    "Q1",
+    "2"
+   ],
+   [
+    "R11",
+    "2"
+   ],
+   [
+    "R10",
+    "1"
+   ]
+  ],
+  "BL_Q2C": [
+   [
+    "Q2",
+    "1"
+   ],
+   [
+    "R11",
+    "1"
+   ]
+  ],
+  "BL_Q2B": [
+   [
+    "Q2",
+    "2"
+   ],
+   [
+    "R9",
+    "2"
+   ]
+  ],
+  "BL_DRV": [
+   [
+    "R9",
+    "1"
+   ],
+   [
+    "R12",
+    "1"
+   ],
+   [
+    "JP11",
+    "2"
+   ]
+  ],
+  "WIPER1_RAW": [
+   [
+    "J14",
+    "5"
+   ],
+   [
+    "R13",
+    "1"
+   ]
+  ],
+  "TOUCH1": [
+   [
+    "J14",
+    "7"
+   ],
+   [
+    "U9",
+    "7"
+   ]
+  ],
+  "WIPER2_RAW": [
+   [
+    "J15",
+    "5"
+   ],
+   [
+    "R14",
+    "1"
+   ]
+  ],
+  "TOUCH2": [
+   [
+    "J15",
+    "7"
+   ],
+   [
+    "U9",
+    "8"
+   ]
+  ],
+  "WIPER3_RAW": [
+   [
+    "J16",
+    "5"
+   ],
+   [
+    "R15",
+    "1"
+   ]
+  ],
+  "TOUCH3": [
+   [
+    "J16",
+    "7"
+   ],
+   [
+    "U9",
+    "9"
+   ]
+  ],
+  "WIPER4_RAW": [
+   [
+    "J17",
+    "5"
+   ],
+   [
+    "R16",
+    "1"
+   ]
+  ],
+  "TOUCH4": [
+   [
+    "J17",
+    "7"
+   ],
+   [
+    "U9",
+    "10"
+   ]
+  ]
+ },
+ "netclasses": {
+  "Power": [
+   [
+    "5V",
+    "GND"
+   ],
+   0.8
+  ],
+  "Power3V3": [
+   [
+    "3V3",
+    "BELLY_BL"
+   ],
+   0.6
+  ],
+  "Motor": [
+   [
+    "MOT1A",
+    "MOT1B",
+    "MOT2A",
+    "MOT2B",
+    "MOT3A",
+    "MOT3B",
+    "MOT4A",
+    "MOT4B"
+   ],
+   0.6
+  ]
+ },
+ "keepout": [],
+ "pre_tracks": []
+}

@@ -21,3 +21,6 @@ Summe aller `dauer_min` in `Log/` — Dataview-Query, sobald das Plugin installi
 ```
 TABLE dauer_min FROM "Log" SORT file.name DESC
 ```
+
+- [[Module-Masse]] — Sockel-Maße der Module mit Quellen und Konfidenz
+- [[2026-08-27-kicad-generator]] — KiCad per Generator, Schaltungsdetails

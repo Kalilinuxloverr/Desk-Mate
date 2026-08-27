@@ -7,7 +7,7 @@ Noch gibt es nichts zu bauen — Desk-Mate ist in der Design-Phase. Diese Anleit
 | Nr | Kapitel | Status |
 |---|---|---|
 | 00 | Überblick, Werkzeug, Teile besorgen ([Stückliste](../../hardware/bom.md)) | Entwurf folgt mit der Bestellung |
-| 01 | Platinen bestellen (Gerber, JLCPCB) | nach KiCad |
+| 01 | [Platinen bestellen](01-platinen.md) (Gerber, JLCPCB) | Entwurf 27.08. |
 | 02 | Löten: Mainboard (alles Through-Hole) | nach Lieferung |
 | 03 | Löten: Frontpanel (Fader, Tasten, Encoder) | nach Lieferung |
 | 04 | 3D-Druck: Base, Bauch, Kopf, Visier | nach Gehäuse-Design |
