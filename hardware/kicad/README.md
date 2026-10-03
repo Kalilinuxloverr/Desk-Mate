@@ -2,14 +2,14 @@
 
 | Ordner | Platine | Maß | Inhalt |
 |---|---|---|---|
-| `mainboard/` | Base | 100 × 100 mm | S3-DevKit-Sockel, USB-C-Netzteilbuchse, Polyfuse + SB540, LD1117V33, 2× DRV8833-Sockel, Servo/ARGB/BME680/Augen-Stecker, IDC 2×15, Reserve (A4988, C3 SuperMini, MT3608-Header) |
+| `mainboard/` | Base | 100 × 100 mm | S3-DevKit-Sockel, USB-C-Netzteilbuchse, Polyfuse + SB540, LD1117V33, 2× DRV8833-Sockel, Servo/ARGB/BME680/Augen-Stecker, IDC 2×15, MT3608-Header (VM-Boost, optional) |
 | `frontpanel/` | Deck | 120 × 136 mm | 10× MX, EC11, MCP23017, MPR121-Sockel, ILI9341-Sockel + 4 Abstandshalter, 4× Fader-Header, Backlight-Schalter, IDC 2×15 |
-| `eye-adapter/` | Kopf | 42 × 30 mm | 10-Pin ein, 2× 7-Pin GC9A01, Reset-RC |
+| `eye-adapter/` | Kopf | 42 × 30 mm | 10-Pin ein (Pin 10 = DISP_RST), 2× 7-Pin GC9A01 |
 | `lib/` | — | — | Projektbibliothek `deskmate.kicad_sym` + `deskmate.pretty` (Modul-Sockel, Polyfuse) |
 | `gen/` | — | — | Generator (siehe unten) |
 | `<board>/fab/` | — | — | Gerber/Drill-Zip, STEP, Render — das geht zu JLCPCB |
 
-Regeln (JLCPCB 2-Lagen): Leiterbahn ≥ 0,2 mm, Abstand ≥ 0,2 mm, Via 0,8/0,4 mm, Rand 0,3 mm. Netzklassen: Power 1,5 mm (Mainboard) / 1,0 mm, Motor 0,8 mm, 3V3 0,8 mm, Default 0,3 mm. Massefläche beidseitig, Sperrzone unter der DevKit-Antenne.
+Regeln (JLCPCB 2-Lagen): Leiterbahn ≥ 0,2 mm, Abstand ≥ 0,127 mm, Via 0,8/0,4 mm, Rand 0,3 mm. Netzklassen (Breite / Abstand 0,13): Default 0,25, Power 1,0 (Mainboard) bzw. 0,8 (Frontpanel), Motor 0,6, Power3V3 0,6 — Werte stehen in `gen/boards.py` und `gen/build_sch.py`. Massefläche beidseitig, Sperrzone unter der DevKit-Antenne.
 
 ## Generator statt Handarbeit (Erstversion)
 
@@ -32,4 +32,4 @@ Der Schaltplan ist „Label-Stil“: jedes Pin trägt ein globales Label, keine 
 
 ## Was vor der Bestellung am echten Teil zu prüfen ist
 
-Siehe `vault/Hardware/Module-Masse.md` (Quellen + Konfidenz). Kurz: DevKit-Reihenabstand 22,86 (hoch), Pololu-Raster 10,16/12,70 (hoch), C3 SuperMini 15,24 (mittel — nachmessen), MPR121-Clone 17,78 (mittel — nachmessen), ILI9341 MSP2807-Löcher (hoch), X32-Fader-Pins (unbekannt — Drähte an Stiftleiste).
+Siehe `vault/Hardware/Module-Masse.md` (Quellen + Konfidenz). Kurz: DevKit-Reihenabstand 22,86 (hoch), Pololu-Raster 10,16 (hoch), MPR121-Clone 17,78 (mittel — nachmessen), ILI9341 MSP2807-Löcher (hoch), X32-Fader-Pins (unbekannt — Drähte an Stiftleiste).

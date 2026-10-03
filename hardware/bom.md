@@ -1,4 +1,4 @@
-# Stückliste (Stand 2026-08-27 nach KiCad, Preise inkl. MwSt., „~“ = ungefähr/unbestätigt)
+# Stückliste (Stand 2026-10-04 nach Reserve-Streichung, Preise inkl. MwSt., „~“ = ungefähr/unbestätigt)
 
 Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons Arduino-Box-Inventur gefüllt (`hardware/inventar.md`). Bestellvorschlag je Lieferant: `vault/Bestellungen/2026-08-23-bestellvorschlag.md`.
 
@@ -9,9 +9,7 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 | U1 | ESP32-S3-DevKitC-1-**N16R8** (Espressif Original) | Sockel 2× 1×22 | 1 | Amazon (Prime) | **19,99** | im Warenkorb 24.08. | Revision nach Lieferung prüfen (LED-Pin 38/48); Sockel wird am echten Board vermessen |
 | U2 | LD1117V33 | TO-220 | 1 | [Reichelt](https://www.reichelt.com/de/en/ldo-voltage-regulator-15-vin-3-3-vout-950-ma-to-220-ld1117v33-p216683.html) | 0,25 | ? | 3,3 V für Peripherie |
 | U3, U4 | DRV8833-Breakout | Sockel | 2 | **Bestand** (Arduino-Box) | 0 | ✔ | Amazon-Fallback 10,07 €. **nSLEEP prüfen**, Footprint nach den vorhandenen Modulen |
-| U5 | MT3608-Boost (VM-Rail 9 V, optional) | **4-Pin-Stiftleiste + Drähte** (Modul-Raster ist nicht 2,54) | 1 | Amazon (Pack) | **6,04** | im Warenkorb 24.08. | Vor Einbau auf 9 V trimmen; erst nach Fader-Charakterisierung; JP4 auf 3 |
-| U6 | C3-SuperMini-Reserve | Footprint, unbestückt | 0 | — | 0 | ✔ (vorhanden) | Lötjumper |
-| U7 | Stepper-Treiber-Reserve (A4988-Raster) | Footprint, unbestückt | 0 | — | 0 | — | Lötjumper |
+| U5 | MT3608-Boost (VM-Rail 9 V, optional) | **4-Pin-Stiftleiste + Drähte** (Modul-Raster ist nicht 2,54) | 1 | Amazon (Pack) | **6,04** | im Warenkorb 24.08. | Vor Einbau auf 9 V trimmen; erst nach Fader-Charakterisierung; JP1 auf 2-3 |
 | D1 | SB540 Schottky | DO-201 | 1 | Reichelt | ~0,30 | ? | J_PWR → Rail; DevKit-Diode ist der zweite Zweig |
 | F1 | Polyfuse 3 A (RXEF300) | radial | 1 | [Farnell](https://de.farnell.com/littelfuse/rxef300/polyswitch-sicherung-ptc-radial/dp/1345966) | ~0,50 | ? | |
 | J1 | USB-C-Buchse 16-Pin, THT-Shell (GCT USB4085-GF-A) | THT | 1 | [TME](https://www.tme.eu/en/details/usb4085-gf-a/usb-ieee1394-connectors/gct/) | ~1 | ? | Nur 5 V; 2× 5,1 kΩ an CC1/CC2 |
@@ -19,17 +17,15 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 | J3, J4 | Servo-Stecker JST-XH 3-Pin | THT | 2 | [eBay-Set](https://www.ebay.de/itm/335345792316) | ~2 | ? | |
 | J5 | ARGB-Stecker JST-XH 3-Pin (5V/GND/Data) | THT | 1 | dito | ~1 | ✔ Streifen (Drohne) | generisch für jeden 5-V-WS2812-Streifen |
 | J6 | BME680-Breakout-Sockel | 1×6 Buchse (VCC GND SCL SDA SDO CS) | 1 | — | 0 | ✔ BME680 | Pinreihenfolge am Modul prüfen |
-| J7 | Augen-Kabel-Stecker 10-Pin | 2,54 | 1 | Leistenware | ~0,50 | ? | |
+| J7 | Augen-Kabel-Stecker 10-Pin | 2,54 | 1 | Leistenware | ~0,50 | ? | Pin 10 = DISP_RST (seit 2026-10-04) |
 | J8 | Reset/Boot nach außen | 2×2 | 1 | Leistenware | ~0,20 | ? | |
 | C1 | 1000 µF/10 V (Rail) | radial | 1 | Reichelt | ~0,40 | ? | |
 | C2, C3 | 100 µF (je DRV8833-VM) | radial | 2 | Reichelt | ~0,40 | ? | |
 | C4 | 470 µF (Servo-Pfad) | radial | 1 | Reichelt | ~0,30 | ? | |
 | C5 | 1000 µF (ARGB) | radial | 1 | Reichelt | ~0,40 | ? | |
 | C6, C7 | 100 nF | RM 5 | 2 | Sortiment | ~0,20 | ? | |
-| C8 | 100 µF (A4988-Reserve) | radial | 0 | — | 0 | — | unbestückt |
 | C11 | 10 µF | radial | 1 | Sortiment | ~0,10 | ? | LD1117-Ausgang |
-| JP1–JP8 | Lötjumper (JP4 3-fach) | — | 8 | — | 0 | — | JP4 1-2 + JP5 ab Werk gebrückt; Rest offen |
-| J10 | Stepper-Header 1×4 (Reserve) | 2,54 | 0 | — | 0 | — | unbestückt |
+| JP1 | Lötjumper 3-fach (VM: 1-2 = 5 V, 2-3 = Boost) | — | 1 | — | 0 | — | 1-2 ab Werk gebrückt; einziger Jumper auf dem Board |
 | TP1–TP3 | Testpunkte 5V/3V3/GND | Ø1,5 Pad | 3 | — | 0 | — | Lötpunkt |
 | R1, R2 | 5,1 kΩ (CC) · R3 10 kΩ + R4 **15 kΩ** (PSU_SENSE → 3,0 V) · R5 330 Ω (ARGB) · R6/R7 4,7 kΩ (I²C) · R8 10 kΩ (IO_INT) | axial | 8 | Sortiment | ~0,50 | ? | Sortiment ~10 € falls Box leer |
 
@@ -47,12 +43,10 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 | U8 | MCP23017-E/SP + DIP-28-Sockel | DIP-28 | 1 | [Reichelt](https://www.reichelt.com/de/en/i-o-extension-16bit-1-8-5v-serial-i2c-dip-28-mcp-23017-e-sp-p140074.html) | 1,90 | ? | |
 | U9 | MPR121-Breakout (Clone) | Sockel | 1 | Amazon | **6,04** | im Warenkorb 24.08.; ADDR=GND |
 | Q1 | **BC327** (PNP, High-Side an 3V3) | TO-92 | 1 | Reichelt | ~0,10 | ? | Backlight 150 mA |
-| Q2 | BC337 (NPN, Vorstufe) | TO-92 | 1 | Reichelt | ~0,10 | ? | zweistufig wegen GPIO45-Strapping (Falle 13) |
 | DSP1 | ILI9341 2,8" SPI 320×240 | Steckleiste 14-Pin | 1 | Amazon | **14,11** | im Warenkorb 24.08. | EU-Ware meist MIT Touch — egal, Touch-Pins bleiben offen |
 | R13–R16, C15–C18 | Schleifer-RC 4× 1 kΩ + 4× 100 nF | axial/RM5 | 8 | Sortiment | ~0,50 | ? | |
-| R9, R11 1 kΩ · R10 10 kΩ · R12 100 kΩ | Backlight-Schalter | axial | 4 | Sortiment | ~0,20 | ? | |
+| R11 1 kΩ · R10, R17 10 kΩ | Backlight-Schalter (einstufig) + DISP_RST-Pull-up | axial | 3 | Sortiment | ~0,20 | ? | R17 ersetzt das Reset-RC auf dem Augen-Adapter |
 | C12 100 nF · C13, C14 10 nF | MCP-Abblock, Encoder-Entprellung | RM 5 | 3 | Sortiment | ~0,20 | ? | |
-| JP9–JP11 | Lötjumper (JP11 3-fach) | — | 3 | — | 0 | — | JP9 + JP11 1-2 ab Werk gebrückt |
 | — | Abstandshalter M3 × 11 mm + Schrauben (Display) | — | 4 | Reichelt/Set | ~2 | ? | MSP2807: Header ragt 11,17 mm unter das Modul |
 | J9/J10 | Steckleisten + IDC-Gegenstück | 2,54 | — | Leistenware | ~1 | ? | |
 
@@ -64,7 +58,7 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 | M1, M2 | MG90S Metallgetriebe | — | 2 | Amazon | **14,10** | im Warenkorb 24.08. |
 | — | Pan-Tilt-Halter für MG90S | 3D-Druck | 1 | Printables/Thingiverse („SG90 pan tilt“) | 0 | — | Schrauben liegen Servos bei; alternativ Kit ~3 € AliExpress |
 | J11–J13 | Stecker Augen-Adapter (10-Pin Stift ein, 2× 7-Pin Buchse aus) | 2,54 | 3 | Leistenware | ~1 | ? | |
-| R17 10 kΩ · C19 1 µF · C20, C21 100 nF | Reset-RC + Abblock | axial/RM5 | 4 | Sortiment | ~0,20 | ? | Reset nur per RC + Software |
+| C20, C21 100 nF | Abblock | RM 5 | 2 | Sortiment | ~0,10 | ? | Reset kommt als DISP_RST über das Augen-Kabel (Pin 10) |
 
 ## Sonstiges
 
@@ -81,7 +75,7 @@ Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons A
 |---|---|
 | BME680-Breakout | Base, J6 |
 | ARGB/WS2812-Streifen (Drohnen-Bestellung) | Mund/Ampel hinter dem Visier, J5 |
-| ESP32-C3 SuperMini | Reserve-Footprint U6 (unbestückt) |
+| ESP32-C3 SuperMini | nicht verbaut — Footprint gestrichen 2026-10-04 |
 | CYD ESP32-2432S028R | nicht verbaut — Testgerät für LovyanGFX-Entwicklung |
 
 ## Summe (Schätzung 2026-08-23)

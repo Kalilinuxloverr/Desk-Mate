@@ -6,7 +6,7 @@
 	(paper "A2")
 	(title_block
 		(title "Desk-Mate Mainboard (Base)")
-		(date "2026-08-27")
+		(date "2026-10-04")
 		(rev "1")
 		(company "Leon Fröhlich")
 		(comment 1 "Desk-Mate — generiert aus hardware/kicad/gen (GUI-Änderungen danach sind die Wahrheit)")
@@ -1035,222 +1035,6 @@
 						)
 					)
 					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Connector_Generic:Conn_01x04"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x04"
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x04_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3931,377 +3715,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Jumper:SolderJumper_2_Bridged"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "JP"
-				(at 0 2.032 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SolderJumper_2_Bridged"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Solder Jumper, 2-pole, closed/bridged"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "solder jumper SPST"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SolderJumper*Bridged*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Bridged_0_1"
-				(rectangle
-					(start -0.508 0.508)
-					(end 0.508 -0.508)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 1.016)
-						(xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 -1.016)
-					(mid -1.2656 0)
-					(end -0.254 1.016)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.2656 0)
-					(end 0.254 -1.016)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.016)
-						(xy 0.254 -1.016)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Bridged_1_1"
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 3.81)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Jumper:SolderJumper_2_Open"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "JP"
-				(at 0 2.032 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SolderJumper_2_Open"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Solder Jumper, 2-pole, open"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "solder jumper SPST"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SolderJumper*Open*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Open_0_1"
-				(polyline
-					(pts
-						(xy -0.254 1.016)
-						(xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 -1.016)
-					(mid -1.2656 0)
-					(end -0.254 1.016)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.2656 0)
-					(end 0.254 -1.016)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.016)
-						(xy 0.254 -1.016)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Open_1_1"
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 3.81)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Jumper:SolderJumper_3_Bridged12"
 			(pin_names
 				(offset 0)
@@ -4810,371 +4223,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "deskmate:A4988_Socket"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 0 13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "A4988_Socket"
-				(at 0 -13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 -16.51 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Stepper-Treiber-Sockel A4988/TMC2209-Raster, Reserve (unbestueckt)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "A4988_Socket_0_1"
-				(rectangle
-					(start -10.16 11.43)
-					(end 10.16 -11.43)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "A4988_Socket_1_1"
-				(pin passive line
-					(at -12.7 8.89 0)
-					(length 2.54)
-					(name "ENABLE"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 6.35 0)
-					(length 2.54)
-					(name "MS1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 3.81 0)
-					(length 2.54)
-					(name "MS2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 1.27 0)
-					(length 2.54)
-					(name "MS3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 -1.27 0)
-					(length 2.54)
-					(name "RESET"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 -3.81 0)
-					(length 2.54)
-					(name "SLEEP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 -6.35 0)
-					(length 2.54)
-					(name "STEP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 -8.89 0)
-					(length 2.54)
-					(name "DIR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 8.89 180)
-					(length 2.54)
-					(name "VMOT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 6.35 180)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 3.81 180)
-					(length 2.54)
-					(name "2B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 1.27 180)
-					(length 2.54)
-					(name "2A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -1.27 180)
-					(length 2.54)
-					(name "1A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -3.81 180)
-					(length 2.54)
-					(name "1B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -6.35 180)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -8.89 180)
-					(length 2.54)
-					(name "GND2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "deskmate:DRV8833_Breakout"
 			(pin_names
 				(offset 1.016)
@@ -5523,371 +4571,6 @@
 					(at 12.7 -8.89 180)
 					(length 2.54)
 					(name "BISEN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "deskmate:ESP32-C3_SuperMini"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 0 13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ESP32-C3_SuperMini"
-				(at 0 -13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 -16.51 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "ESP32-C3 SuperMini, Reserve-Satellit (unbestueckt)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "ESP32-C3_SuperMini_0_1"
-				(rectangle
-					(start -11.43 11.43)
-					(end 11.43 -11.43)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "ESP32-C3_SuperMini_1_1"
-				(pin passive line
-					(at -13.97 8.89 0)
-					(length 2.54)
-					(name "IO5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -13.97 6.35 0)
-					(length 2.54)
-					(name "IO6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -13.97 3.81 0)
-					(length 2.54)
-					(name "IO7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -13.97 1.27 0)
-					(length 2.54)
-					(name "IO8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -13.97 -1.27 0)
-					(length 2.54)
-					(name "IO9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -13.97 -3.81 0)
-					(length 2.54)
-					(name "IO10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -13.97 -6.35 0)
-					(length 2.54)
-					(name "IO20/RX"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -13.97 -8.89 0)
-					(length 2.54)
-					(name "IO21/TX"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 13.97 8.89 180)
-					(length 2.54)
-					(name "5V"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 13.97 6.35 180)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 13.97 3.81 180)
-					(length 2.54)
-					(name "3V3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 13.97 1.27 180)
-					(length 2.54)
-					(name "IO4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 13.97 -1.27 180)
-					(length 2.54)
-					(name "IO3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 13.97 -3.81 180)
-					(length 2.54)
-					(name "IO2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 13.97 -6.35 180)
-					(length 2.54)
-					(name "IO1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 13.97 -8.89 180)
-					(length 2.54)
-					(name "IO0"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -9169,7 +7852,7 @@
 			)
 		)
 	)
-	(text "MCU: ESP32-S3-DevKitC-1 gesteckt, USB-Ende zur Rueckwand, Antenne nach vorn ueber Kupfer-Sperrzone; DevKit-3V3 bleibt frei; 35-37 PSRAM, 19/20 USB, 0/3/46 Strapping"
+	(text "MCU: ESP32-S3-DevKitC-1 gesteckt, USB-Ende zur Rueckwand, Antenne nach vorn ueber Kupfer-Sperrzone; DevKit-3V3 bleibt frei; 35-37 PSRAM, 19/20 USB, 43/44 UART0 frei, 0/3/45/46 Strapping"
 		(exclude_from_sim no)
 		(at 20 100.1 0)
 		(effects
@@ -9633,51 +8316,13 @@
 			)
 		)
 	)
-	(global_label "UART0_TX"
-		(shape passive)
-		(at 66.04 113.03 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
+	(no_connect
+		(at 66.04 113.03)
 		(uuid "57fec94a-d5ec-54c3-995e-3326b4a5b606")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.04 113.03 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
-	(global_label "UART0_RX"
-		(shape passive)
-		(at 66.04 115.57 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
+	(no_connect
+		(at 66.04 115.57)
 		(uuid "ee2dd7d5-5b13-5d2c-98d0-25d05d094e74")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.04 115.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
 	(global_label "FADER1_WIPER"
 		(shape passive)
@@ -9875,28 +8520,9 @@
 			)
 		)
 	)
-	(global_label "BL_PWM_45"
-		(shape passive)
-		(at 66.04 146.05 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
+	(no_connect
+		(at 66.04 146.05)
 		(uuid "9d41bc1c-8e4b-5fc1-a267-d594ecad2d84")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.04 146.05 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
 	(global_label "PSU_SENSE"
 		(shape passive)
@@ -10783,385 +9409,7 @@
 			)
 		)
 	)
-	(global_label "BL_PWM_45"
-		(shape passive)
-		(at 228.6 110.49 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8328128f-0da7-5eb3-99fd-8de705047371")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 228.6 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "BELLY_BL_PWM"
-		(shape passive)
-		(at 238.76 110.49 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "68173644-2f24-5563-90be-5eba2c5563cb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 238.76 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 233.68 110.49 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b4bee446-d7fb-5407-835c-a7ee39bb1682")
-		(property "Reference" "JP1"
-			(at 233.68 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BL45 (Strapping! offen lassen ausser Backlight-PWM)"
-			(at 233.68 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 233.68 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 233.68 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 233.68 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b9d5f3a6-cb77-5ef0-b5db-77f11806c752")
-		)
-		(pin "2"
-			(uuid "080902b4-32b9-5dc6-b2a2-a9e8d2cfb1da")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "JP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "C3_TX"
-		(shape passive)
-		(at 267.97 110.49 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0ccc07c2-2a4c-57cb-af02-cefd7019a627")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 267.97 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "UART0_RX"
-		(shape passive)
-		(at 278.13 110.49 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "10b6119d-327d-5bd5-be52-0aad4d92f57e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 278.13 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 273.05 110.49 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4cff45b3-f494-5f50-a3e1-d90d2b82e2bd")
-		(property "Reference" "JP2"
-			(at 273.05 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "C3 TX->S3 RX0"
-			(at 273.05 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 273.05 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 273.05 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 273.05 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fcfdde34-7952-5b79-b6a9-cb25f818a47d")
-		)
-		(pin "2"
-			(uuid "ac5198e4-9856-54b9-9a8e-83de79645e85")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "JP2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "UART0_TX"
-		(shape passive)
-		(at 308.61 110.49 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9c4e7e22-3d45-5536-8534-e77b12fc6e3f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 308.61 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "C3_RX"
-		(shape passive)
-		(at 318.77 110.49 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9e571452-0349-5411-b265-777972905ee8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 318.77 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 313.69 110.49 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "57926916-c9e1-560e-88c3-5642ed6c42ae")
-		(property "Reference" "JP3"
-			(at 313.69 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "S3 TX0->C3 RX"
-			(at 313.69 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 313.69 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 313.69 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 313.69 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7b858a53-9da1-572a-81e1-4f00271c8ce2")
-		)
-		(pin "2"
-			(uuid "d0a2c11e-47e7-5322-9c83-c6a5f75ddb07")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "JP3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(text "Motor: 2x DRV8833 (PWM+DIR), VM = 5V (JP4 Default) oder MT3608-Boost an U5; nSLEEP ueber JP5 an 3V3"
+	(text "Motor: 2x DRV8833 (PWM+DIR), VM = 5V (JP1 Default) oder MT3608-Boost an U5; nSLEEP fest an 3V3"
 		(exclude_from_sim no)
 		(at 20 177.44 0)
 		(effects
@@ -11170,7 +9418,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e19b3fe5-d79e-5698-a184-66241ecb79b5")
+		(uuid "8328128f-0da7-5eb3-99fd-8de705047371")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -11182,7 +9430,7 @@
 			)
 			(justify right)
 		)
-		(uuid "22af41e4-585e-579b-b8f2-9162c7bd91e6")
+		(uuid "68173644-2f24-5563-90be-5eba2c5563cb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.56 187.96 0)
 			(show_name no)
@@ -11197,7 +9445,7 @@
 	)
 	(no_connect
 		(at 35.56 190.5)
-		(uuid "7f4c5f32-c1cb-5728-9f0a-fc1d0b137a83")
+		(uuid "0ccc07c2-2a4c-57cb-af02-cefd7019a627")
 	)
 	(global_label "FADER2_PWM"
 		(shape passive)
@@ -11209,7 +9457,7 @@
 			)
 			(justify right)
 		)
-		(uuid "e640ac53-c67f-5cb4-be1f-8dac4b162f2b")
+		(uuid "10b6119d-327d-5bd5-be52-0aad4d92f57e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.56 193.04 0)
 			(show_name no)
@@ -11232,7 +9480,7 @@
 			)
 			(justify right)
 		)
-		(uuid "af8355e3-283d-5a37-840a-78d168c4650b")
+		(uuid "9c4e7e22-3d45-5536-8534-e77b12fc6e3f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.56 195.58 0)
 			(show_name no)
@@ -11255,7 +9503,7 @@
 			)
 			(justify right)
 		)
-		(uuid "2f70a9b9-05df-5283-8493-613bfb86da78")
+		(uuid "9e571452-0349-5411-b265-777972905ee8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.56 198.12 0)
 			(show_name no)
@@ -11278,7 +9526,7 @@
 			)
 			(justify right)
 		)
-		(uuid "8289c349-2c29-5747-b4b3-2e10c00e5fa2")
+		(uuid "e19b3fe5-d79e-5698-a184-66241ecb79b5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.56 200.66 0)
 			(show_name no)
@@ -11291,7 +9539,7 @@
 			)
 		)
 	)
-	(global_label "DRV_SLEEP"
+	(global_label "3V3"
 		(shape passive)
 		(at 35.56 203.2 180)
 		(fields_autoplaced yes)
@@ -11301,7 +9549,7 @@
 			)
 			(justify right)
 		)
-		(uuid "9d313a1d-6e0e-5f79-909b-5835b3efc79b")
+		(uuid "22af41e4-585e-579b-b8f2-9162c7bd91e6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.56 203.2 0)
 			(show_name no)
@@ -11316,7 +9564,7 @@
 	)
 	(no_connect
 		(at 35.56 205.74)
-		(uuid "834db50c-041e-5bc0-aa0d-ef0ffd050209")
+		(uuid "7f4c5f32-c1cb-5728-9f0a-fc1d0b137a83")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -11328,7 +9576,7 @@
 			)
 			(justify left)
 		)
-		(uuid "9d755541-3c10-5f0f-b0e6-9376febfc78e")
+		(uuid "e640ac53-c67f-5cb4-be1f-8dac4b162f2b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 60.96 187.96 0)
 			(show_name no)
@@ -11351,7 +9599,7 @@
 			)
 			(justify left)
 		)
-		(uuid "9ec72f3f-e256-57ab-a908-835d17d105bc")
+		(uuid "af8355e3-283d-5a37-840a-78d168c4650b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 60.96 190.5 0)
 			(show_name no)
@@ -11374,7 +9622,7 @@
 			)
 			(justify left)
 		)
-		(uuid "4e028f49-9a9b-5709-9fd6-f01740dd4404")
+		(uuid "2f70a9b9-05df-5283-8493-613bfb86da78")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 60.96 193.04 0)
 			(show_name no)
@@ -11397,7 +9645,7 @@
 			)
 			(justify left)
 		)
-		(uuid "5e69220e-3f80-53b9-bd3c-2d2240b23e18")
+		(uuid "8289c349-2c29-5747-b4b3-2e10c00e5fa2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 60.96 195.58 0)
 			(show_name no)
@@ -11420,7 +9668,7 @@
 			)
 			(justify left)
 		)
-		(uuid "52c845f6-2d8b-58d8-b792-5ea4cd99e8c6")
+		(uuid "9d313a1d-6e0e-5f79-909b-5835b3efc79b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 60.96 198.12 0)
 			(show_name no)
@@ -11443,7 +9691,7 @@
 			)
 			(justify left)
 		)
-		(uuid "467eff2f-70ce-5d81-be50-8a235381d39e")
+		(uuid "834db50c-041e-5bc0-aa0d-ef0ffd050209")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 60.96 200.66 0)
 			(show_name no)
@@ -11458,11 +9706,11 @@
 	)
 	(no_connect
 		(at 60.96 203.2)
-		(uuid "142ec7ca-8ee8-5bf8-9d5e-7d3e754d0def")
+		(uuid "9d755541-3c10-5f0f-b0e6-9376febfc78e")
 	)
 	(no_connect
 		(at 60.96 205.74)
-		(uuid "78a211b5-cd7d-5391-ad89-5e6078593191")
+		(uuid "9ec72f3f-e256-57ab-a908-835d17d105bc")
 	)
 	(symbol
 		(lib_id "deskmate:DRV8833_Breakout")
@@ -11596,7 +9844,7 @@
 			)
 			(justify right)
 		)
-		(uuid "c152400c-0a21-5c27-9b48-4bb949ae4bf6")
+		(uuid "4e028f49-9a9b-5709-9fd6-f01740dd4404")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 90.17 187.96 0)
 			(show_name no)
@@ -11611,7 +9859,7 @@
 	)
 	(no_connect
 		(at 90.17 190.5)
-		(uuid "63bd2fb4-16be-5b13-9abc-040d87399dca")
+		(uuid "5e69220e-3f80-53b9-bd3c-2d2240b23e18")
 	)
 	(global_label "FADER4_PWM"
 		(shape passive)
@@ -11623,7 +9871,7 @@
 			)
 			(justify right)
 		)
-		(uuid "407b019a-b175-5768-955e-95df9bd3ff89")
+		(uuid "52c845f6-2d8b-58d8-b792-5ea4cd99e8c6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 90.17 193.04 0)
 			(show_name no)
@@ -11646,7 +9894,7 @@
 			)
 			(justify right)
 		)
-		(uuid "e318e8da-9f17-5439-b4a0-7bec54bb28ea")
+		(uuid "467eff2f-70ce-5d81-be50-8a235381d39e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 90.17 195.58 0)
 			(show_name no)
@@ -11669,7 +9917,7 @@
 			)
 			(justify right)
 		)
-		(uuid "a21ca44b-bd36-5cba-8096-e5e2a1fb8af1")
+		(uuid "142ec7ca-8ee8-5bf8-9d5e-7d3e754d0def")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 90.17 198.12 0)
 			(show_name no)
@@ -11692,7 +9940,7 @@
 			)
 			(justify right)
 		)
-		(uuid "79115648-e815-59aa-8c89-38cc502a75a3")
+		(uuid "78a211b5-cd7d-5391-ad89-5e6078593191")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 90.17 200.66 0)
 			(show_name no)
@@ -11705,7 +9953,7 @@
 			)
 		)
 	)
-	(global_label "DRV_SLEEP"
+	(global_label "3V3"
 		(shape passive)
 		(at 90.17 203.2 180)
 		(fields_autoplaced yes)
@@ -11715,7 +9963,7 @@
 			)
 			(justify right)
 		)
-		(uuid "ca555d35-fce9-527d-b556-72e317b24634")
+		(uuid "c152400c-0a21-5c27-9b48-4bb949ae4bf6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 90.17 203.2 0)
 			(show_name no)
@@ -11730,7 +9978,7 @@
 	)
 	(no_connect
 		(at 90.17 205.74)
-		(uuid "b3d49744-1966-50b1-8d79-cea83d88d3e7")
+		(uuid "63bd2fb4-16be-5b13-9abc-040d87399dca")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -11742,7 +9990,7 @@
 			)
 			(justify left)
 		)
-		(uuid "a480099d-af9c-5cfd-b3fc-298d2d93f88a")
+		(uuid "407b019a-b175-5768-955e-95df9bd3ff89")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 115.57 187.96 0)
 			(show_name no)
@@ -11765,7 +10013,7 @@
 			)
 			(justify left)
 		)
-		(uuid "ad789973-212d-5d91-b484-768f99ed7ce7")
+		(uuid "e318e8da-9f17-5439-b4a0-7bec54bb28ea")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 115.57 190.5 0)
 			(show_name no)
@@ -11788,7 +10036,7 @@
 			)
 			(justify left)
 		)
-		(uuid "c779b26e-5ecc-591f-be79-9dbb585ba208")
+		(uuid "a21ca44b-bd36-5cba-8096-e5e2a1fb8af1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 115.57 193.04 0)
 			(show_name no)
@@ -11811,7 +10059,7 @@
 			)
 			(justify left)
 		)
-		(uuid "78c4f58c-f4cb-5963-b763-2e790258f0be")
+		(uuid "79115648-e815-59aa-8c89-38cc502a75a3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 115.57 195.58 0)
 			(show_name no)
@@ -11834,7 +10082,7 @@
 			)
 			(justify left)
 		)
-		(uuid "2650d386-f4e0-5311-9406-37afae9537f0")
+		(uuid "ca555d35-fce9-527d-b556-72e317b24634")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 115.57 198.12 0)
 			(show_name no)
@@ -11857,7 +10105,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8eecb1b6-664e-5da0-928a-4674352f6112")
+		(uuid "b3d49744-1966-50b1-8d79-cea83d88d3e7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 115.57 200.66 0)
 			(show_name no)
@@ -11872,11 +10120,11 @@
 	)
 	(no_connect
 		(at 115.57 203.2)
-		(uuid "9ef1dae1-4979-5504-b604-f78b345c1b9b")
+		(uuid "a480099d-af9c-5cfd-b3fc-298d2d93f88a")
 	)
 	(no_connect
 		(at 115.57 205.74)
-		(uuid "382730d1-c7ef-577e-a5ee-ae699560efb3")
+		(uuid "ad789973-212d-5d91-b484-768f99ed7ce7")
 	)
 	(symbol
 		(lib_id "deskmate:DRV8833_Breakout")
@@ -12010,7 +10258,7 @@
 			)
 			(justify left)
 		)
-		(uuid "19462b9e-b871-5ac5-9684-0f324bcace8d")
+		(uuid "c779b26e-5ecc-591f-be79-9dbb585ba208")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 146.05 187.96 0)
 			(show_name no)
@@ -12033,7 +10281,7 @@
 			)
 			(justify right)
 		)
-		(uuid "55016fd9-f4f3-51f6-bdca-85f35656f5ba")
+		(uuid "78c4f58c-f4cb-5963-b763-2e790258f0be")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 146.05 195.58 0)
 			(show_name no)
@@ -12136,7 +10384,7 @@
 			)
 			(justify left)
 		)
-		(uuid "cd3afc73-64ee-5f13-93e4-8f8b89374eff")
+		(uuid "2650d386-f4e0-5311-9406-37afae9537f0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 175.26 187.96 0)
 			(show_name no)
@@ -12159,7 +10407,7 @@
 			)
 			(justify right)
 		)
-		(uuid "fb49109e-9f56-5b88-8169-c640bc1614e7")
+		(uuid "8eecb1b6-664e-5da0-928a-4674352f6112")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 175.26 195.58 0)
 			(show_name no)
@@ -12262,7 +10510,7 @@
 			)
 			(justify right)
 		)
-		(uuid "e9f04a34-0743-5715-be7a-72730812c941")
+		(uuid "9ef1dae1-4979-5504-b604-f78b345c1b9b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 205.74 187.96 0)
 			(show_name no)
@@ -12285,7 +10533,7 @@
 			)
 			(justify right)
 		)
-		(uuid "5245835f-0b32-50e3-9c99-9a83c250b07f")
+		(uuid "382730d1-c7ef-577e-a5ee-ae699560efb3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 210.82 191.77 0)
 			(show_name no)
@@ -12308,7 +10556,7 @@
 			)
 			(justify left)
 		)
-		(uuid "e922e440-74e1-5f94-ab7b-6fc97c5cb62e")
+		(uuid "19462b9e-b871-5ac5-9684-0f324bcace8d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 215.9 187.96 0)
 			(show_name no)
@@ -12332,8 +10580,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "0336a215-fd8a-5b0f-a999-4726fa3e1561")
-		(property "Reference" "JP4"
+		(uuid "b4bee446-d7fb-5407-835c-a7ee39bb1682")
+		(property "Reference" "JP1"
 			(at 210.82 182.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12387,24 +10635,24 @@
 			)
 		)
 		(pin "1"
-			(uuid "546c1ccc-dd61-5504-8d77-e3f6752bdf2e")
+			(uuid "b9d5f3a6-cb77-5ef0-b5db-77f11806c752")
 		)
 		(pin "2"
-			(uuid "bc5a8062-a135-5b22-a323-345d09fdff0d")
+			(uuid "080902b4-32b9-5dc6-b2a2-a9e8d2cfb1da")
 		)
 		(pin "3"
-			(uuid "eccf872b-73b2-5006-9d4a-e6ecfdb189d8")
+			(uuid "a55edc65-152b-5072-a415-2f4049b00756")
 		)
 		(instances
 			(project "mainboard"
 				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "JP4")
+					(reference "JP1")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(global_label "3V3"
+	(global_label "5V"
 		(shape passive)
 		(at 246.38 187.96 180)
 		(fields_autoplaced yes)
@@ -12414,7 +10662,7 @@
 			)
 			(justify right)
 		)
-		(uuid "7d8ea2c2-89c7-54b2-849e-b54caeeb30d8")
+		(uuid "55016fd9-f4f3-51f6-bdca-85f35656f5ba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 246.38 187.96 0)
 			(show_name no)
@@ -12427,135 +10675,9 @@
 			)
 		)
 	)
-	(global_label "DRV_SLEEP"
-		(shape passive)
-		(at 256.54 187.96 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "588dff06-2250-5318-b231-2a85c0959430")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 256.54 187.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Bridged")
-		(at 251.46 187.96 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8c5f33d2-a522-502d-9730-c831b854277b")
-		(property "Reference" "JP5"
-			(at 251.46 184.15 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "nSLEEP an 3V3"
-			(at 251.46 191.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
-			(at 251.46 187.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 251.46 187.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 251.46 187.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9ba33512-de25-5cd1-bb5e-dd977022bf8d")
-		)
-		(pin "2"
-			(uuid "9e05bda5-57ba-58b1-b062-86c16e1dcbb9")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "JP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "5V"
-		(shape passive)
-		(at 285.75 187.96 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "87130215-2fe9-5c9c-9a4c-b6a47828209c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 285.75 187.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "GND"
 		(shape passive)
-		(at 285.75 190.5 180)
+		(at 246.38 190.5 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12563,9 +10685,9 @@
 			)
 			(justify right)
 		)
-		(uuid "a8f38125-053d-58cf-91a5-c10f4da8b672")
+		(uuid "cd3afc73-64ee-5f13-93e4-8f8b89374eff")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 285.75 190.5 0)
+			(at 246.38 190.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -12578,7 +10700,7 @@
 	)
 	(global_label "VBOOST"
 		(shape passive)
-		(at 308.61 187.96 0)
+		(at 269.24 187.96 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12586,9 +10708,9 @@
 			)
 			(justify left)
 		)
-		(uuid "fdaaca06-a118-52b0-b408-9090aeeee5a8")
+		(uuid "fb49109e-9f56-5b88-8169-c640bc1614e7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 308.61 187.96 0)
+			(at 269.24 187.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -12601,7 +10723,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 308.61 190.5 0)
+		(at 269.24 190.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12609,9 +10731,9 @@
 			)
 			(justify left)
 		)
-		(uuid "ccec9cc2-5e18-5091-aa46-d44c5584d51c")
+		(uuid "e9f04a34-0743-5715-be7a-72730812c941")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 308.61 190.5 0)
+			(at 269.24 190.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -12624,7 +10746,7 @@
 	)
 	(symbol
 		(lib_id "deskmate:MT3608_Module")
-		(at 297.18 189.23 0)
+		(at 257.81 189.23 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12635,7 +10757,7 @@
 		(fields_autoplaced yes)
 		(uuid "6e11a730-8dfe-5f2f-970d-10d826c703d2")
 		(property "Reference" "U5"
-			(at 297.18 185.42 0)
+			(at 257.81 185.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12645,7 +10767,7 @@
 			)
 		)
 		(property "Value" "MT3608 Boost ~9V (optional, 4 Draehte)"
-			(at 297.18 193.04 0)
+			(at 257.81 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12655,7 +10777,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 297.18 189.23 0)
+			(at 257.81 189.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -12666,7 +10788,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 297.18 189.23 0)
+			(at 257.81 189.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -12677,7 +10799,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 297.18 189.23 0)
+			(at 257.81 189.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -12717,7 +10839,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "80b35fc7-99a1-5e29-ac7e-49dc7fdd47ce")
+		(uuid "5245835f-0b32-50e3-9c99-9a83c250b07f")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -12729,7 +10851,7 @@
 			)
 			(justify right)
 		)
-		(uuid "83545458-73e4-59bd-a0a3-e4a07b9c7431")
+		(uuid "e922e440-74e1-5f94-ab7b-6fc97c5cb62e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.56 228.6 0)
 			(show_name no)
@@ -12752,7 +10874,7 @@
 			)
 			(justify right)
 		)
-		(uuid "6fc0e04e-b74e-5da8-99c9-0bab2b86dd65")
+		(uuid "7d8ea2c2-89c7-54b2-849e-b54caeeb30d8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.56 231.14 0)
 			(show_name no)
@@ -12775,7 +10897,7 @@
 			)
 			(justify right)
 		)
-		(uuid "046f15ae-910b-5a5c-a4da-52bc72d9d419")
+		(uuid "588dff06-2250-5318-b231-2a85c0959430")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.56 233.68 0)
 			(show_name no)
@@ -12881,7 +11003,7 @@
 			)
 			(justify right)
 		)
-		(uuid "b6566087-6987-585f-84d8-8c1c68998b53")
+		(uuid "87130215-2fe9-5c9c-9a4c-b6a47828209c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 64.77 228.6 0)
 			(show_name no)
@@ -12904,7 +11026,7 @@
 			)
 			(justify right)
 		)
-		(uuid "55d0da61-7796-5ff0-95eb-e00b66272753")
+		(uuid "a8f38125-053d-58cf-91a5-c10f4da8b672")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 64.77 231.14 0)
 			(show_name no)
@@ -12927,7 +11049,7 @@
 			)
 			(justify right)
 		)
-		(uuid "c265c003-52e7-549d-8974-e095eb8f0654")
+		(uuid "fdaaca06-a118-52b0-b408-9090aeeee5a8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 64.77 233.68 0)
 			(show_name no)
@@ -13033,7 +11155,7 @@
 			)
 			(justify left)
 		)
-		(uuid "0b9c3b37-71b6-549c-958c-37bb3ada4fa0")
+		(uuid "ccec9cc2-5e18-5091-aa46-d44c5584d51c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 95.25 228.6 0)
 			(show_name no)
@@ -13056,7 +11178,7 @@
 			)
 			(justify right)
 		)
-		(uuid "d935058b-844d-5078-8e5d-7628945539d3")
+		(uuid "80b35fc7-99a1-5e29-ac7e-49dc7fdd47ce")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 95.25 236.22 0)
 			(show_name no)
@@ -13159,7 +11281,7 @@
 			)
 			(justify right)
 		)
-		(uuid "64aec4c5-b864-59b3-b1af-2fe3089b5f66")
+		(uuid "83545458-73e4-59bd-a0a3-e4a07b9c7431")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.46 228.6 0)
 			(show_name no)
@@ -13182,7 +11304,7 @@
 			)
 			(justify right)
 		)
-		(uuid "32516365-9672-512b-9643-ffb24896dc6e")
+		(uuid "6fc0e04e-b74e-5da8-99c9-0bab2b86dd65")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.46 231.14 0)
 			(show_name no)
@@ -13205,7 +11327,7 @@
 			)
 			(justify right)
 		)
-		(uuid "19f48389-6a03-5a26-a0d5-ff774530eed7")
+		(uuid "046f15ae-910b-5a5c-a4da-52bc72d9d419")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.46 233.68 0)
 			(show_name no)
@@ -13311,7 +11433,7 @@
 			)
 			(justify left)
 		)
-		(uuid "7a269e28-f7d0-5663-a2f5-3f0198103c7f")
+		(uuid "b6566087-6987-585f-84d8-8c1c68998b53")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 154.94 228.6 0)
 			(show_name no)
@@ -13334,7 +11456,7 @@
 			)
 			(justify right)
 		)
-		(uuid "96ff9039-8375-5065-9b02-f064a4c04b6e")
+		(uuid "55d0da61-7796-5ff0-95eb-e00b66272753")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 154.94 236.22 0)
 			(show_name no)
@@ -13437,7 +11559,7 @@
 			)
 			(justify left)
 		)
-		(uuid "27c5397d-2fa8-5899-ba0a-4fc0e585703a")
+		(uuid "c265c003-52e7-549d-8974-e095eb8f0654")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 185.42 228.6 0)
 			(show_name no)
@@ -13460,7 +11582,7 @@
 			)
 			(justify right)
 		)
-		(uuid "0dbe5e49-065c-5631-9bfa-60bc6f729737")
+		(uuid "0b9c3b37-71b6-549c-958c-37bb3ada4fa0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 185.42 236.22 0)
 			(show_name no)
@@ -13563,7 +11685,7 @@
 			)
 			(justify right)
 		)
-		(uuid "b1ce32b1-d047-59df-8892-676750234d22")
+		(uuid "d935058b-844d-5078-8e5d-7628945539d3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 214.63 228.6 0)
 			(show_name no)
@@ -13586,7 +11708,7 @@
 			)
 			(justify right)
 		)
-		(uuid "28c8e16e-29ab-5250-b49c-78ee85b65319")
+		(uuid "64aec4c5-b864-59b3-b1af-2fe3089b5f66")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 214.63 231.14 0)
 			(show_name no)
@@ -13609,7 +11731,7 @@
 			)
 			(justify right)
 		)
-		(uuid "aaf1990b-c58f-5aa4-a65c-19943fbc495d")
+		(uuid "32516365-9672-512b-9643-ffb24896dc6e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 214.63 233.68 0)
 			(show_name no)
@@ -13632,7 +11754,7 @@
 			)
 			(justify right)
 		)
-		(uuid "5122f2cd-bc29-52d6-b933-e811cf0ec87c")
+		(uuid "19f48389-6a03-5a26-a0d5-ff774530eed7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 214.63 236.22 0)
 			(show_name no)
@@ -13647,11 +11769,11 @@
 	)
 	(no_connect
 		(at 214.63 238.76)
-		(uuid "4423dcca-293e-5898-9d79-99a5015c7d3a")
+		(uuid "7a269e28-f7d0-5663-a2f5-3f0198103c7f")
 	)
 	(no_connect
 		(at 214.63 241.3)
-		(uuid "08b4967e-a4db-590b-a91d-0efbf5758dbb")
+		(uuid "96ff9039-8375-5065-9b02-f064a4c04b6e")
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x06")
@@ -13755,7 +11877,7 @@
 			)
 			(justify right)
 		)
-		(uuid "35adb826-0ff6-5e6d-8b1f-9d1db29d8781")
+		(uuid "27c5397d-2fa8-5899-ba0a-4fc0e585703a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 245.11 228.6 0)
 			(show_name no)
@@ -13778,7 +11900,7 @@
 			)
 			(justify right)
 		)
-		(uuid "3d434dab-7ef7-5ac7-bd67-02cf268c11f3")
+		(uuid "0dbe5e49-065c-5631-9bfa-60bc6f729737")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 245.11 231.14 0)
 			(show_name no)
@@ -13801,7 +11923,7 @@
 			)
 			(justify right)
 		)
-		(uuid "98a907cb-ce6e-513c-a6b1-2b2f69da1999")
+		(uuid "b1ce32b1-d047-59df-8892-676750234d22")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 245.11 233.68 0)
 			(show_name no)
@@ -13824,7 +11946,7 @@
 			)
 			(justify right)
 		)
-		(uuid "2ccd9c85-bdc3-5b44-8f22-6c9e07799547")
+		(uuid "28c8e16e-29ab-5250-b49c-78ee85b65319")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 245.11 236.22 0)
 			(show_name no)
@@ -13847,7 +11969,7 @@
 			)
 			(justify right)
 		)
-		(uuid "88e54fb7-8e57-5143-abd3-595b59e3899e")
+		(uuid "aaf1990b-c58f-5aa4-a65c-19943fbc495d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 245.11 238.76 0)
 			(show_name no)
@@ -13870,7 +11992,7 @@
 			)
 			(justify right)
 		)
-		(uuid "3dda69bb-b813-5dd0-9c3b-f6f357a97bed")
+		(uuid "5122f2cd-bc29-52d6-b933-e811cf0ec87c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 245.11 241.3 0)
 			(show_name no)
@@ -13893,7 +12015,7 @@
 			)
 			(justify right)
 		)
-		(uuid "77004036-cece-55ee-ad3a-d94bb9c18073")
+		(uuid "4423dcca-293e-5898-9d79-99a5015c7d3a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 245.11 243.84 0)
 			(show_name no)
@@ -13916,7 +12038,7 @@
 			)
 			(justify right)
 		)
-		(uuid "738d3879-37b9-53aa-9c2b-fccde7205197")
+		(uuid "08b4967e-a4db-590b-a91d-0efbf5758dbb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 245.11 246.38 0)
 			(show_name no)
@@ -13939,7 +12061,7 @@
 			)
 			(justify right)
 		)
-		(uuid "0e7aee44-4825-511d-ad52-59831e75b5f0")
+		(uuid "35adb826-0ff6-5e6d-8b1f-9d1db29d8781")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 245.11 248.92 0)
 			(show_name no)
@@ -13952,7 +12074,7 @@
 			)
 		)
 	)
-	(global_label "GND"
+	(global_label "DISP_RST"
 		(shape passive)
 		(at 245.11 251.46 180)
 		(fields_autoplaced yes)
@@ -13962,7 +12084,7 @@
 			)
 			(justify right)
 		)
-		(uuid "fc380640-58a5-5fca-a870-6e540ddf9408")
+		(uuid "3d434dab-7ef7-5ac7-bd67-02cf268c11f3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 245.11 251.46 0)
 			(show_name no)
@@ -14089,7 +12211,7 @@
 			)
 			(justify right)
 		)
-		(uuid "04039593-6339-5127-9efd-4dfd054f6f8f")
+		(uuid "98a907cb-ce6e-513c-a6b1-2b2f69da1999")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 228.6 0)
 			(show_name no)
@@ -14112,7 +12234,7 @@
 			)
 			(justify left)
 		)
-		(uuid "304b159e-cb80-5553-b93b-b347dcb1b3cd")
+		(uuid "2ccd9c85-bdc3-5b44-8f22-6c9e07799547")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 228.6 0)
 			(show_name no)
@@ -14135,7 +12257,7 @@
 			)
 			(justify right)
 		)
-		(uuid "5b95e353-4f2d-5b86-bb14-da2a73ad743f")
+		(uuid "88e54fb7-8e57-5143-abd3-595b59e3899e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 231.14 0)
 			(show_name no)
@@ -14158,7 +12280,7 @@
 			)
 			(justify left)
 		)
-		(uuid "55f96371-1e6d-5045-be67-d51adbd0ddda")
+		(uuid "3dda69bb-b813-5dd0-9c3b-f6f357a97bed")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 231.14 0)
 			(show_name no)
@@ -14181,7 +12303,7 @@
 			)
 			(justify right)
 		)
-		(uuid "8412c101-281f-5eb4-9741-cdeeb59f2283")
+		(uuid "77004036-cece-55ee-ad3a-d94bb9c18073")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 233.68 0)
 			(show_name no)
@@ -14204,7 +12326,7 @@
 			)
 			(justify left)
 		)
-		(uuid "4e900b11-9a0f-51d9-8cd4-016c4c42463f")
+		(uuid "738d3879-37b9-53aa-9c2b-fccde7205197")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 233.68 0)
 			(show_name no)
@@ -14227,7 +12349,7 @@
 			)
 			(justify right)
 		)
-		(uuid "d2f844ff-9b74-5485-889e-cb160f19987e")
+		(uuid "0e7aee44-4825-511d-ad52-59831e75b5f0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 236.22 0)
 			(show_name no)
@@ -14250,7 +12372,7 @@
 			)
 			(justify left)
 		)
-		(uuid "0d49b225-62de-57c1-a18d-8d4ac30076f3")
+		(uuid "fc380640-58a5-5fca-a870-6e540ddf9408")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 236.22 0)
 			(show_name no)
@@ -14273,7 +12395,7 @@
 			)
 			(justify right)
 		)
-		(uuid "04d2e2f7-bfc8-5f92-8abd-8717831c9094")
+		(uuid "04039593-6339-5127-9efd-4dfd054f6f8f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 238.76 0)
 			(show_name no)
@@ -14296,7 +12418,7 @@
 			)
 			(justify left)
 		)
-		(uuid "a02bc1f1-7a8e-5e65-8433-bf7a5c86ce7c")
+		(uuid "304b159e-cb80-5553-b93b-b347dcb1b3cd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 238.76 0)
 			(show_name no)
@@ -14319,7 +12441,7 @@
 			)
 			(justify right)
 		)
-		(uuid "3eebb78c-2fe5-5df2-97d0-6f5c64899806")
+		(uuid "5b95e353-4f2d-5b86-bb14-da2a73ad743f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 241.3 0)
 			(show_name no)
@@ -14342,7 +12464,7 @@
 			)
 			(justify left)
 		)
-		(uuid "18f798dd-8d46-5a8f-9793-934d01cebf0e")
+		(uuid "55f96371-1e6d-5045-be67-d51adbd0ddda")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 241.3 0)
 			(show_name no)
@@ -14365,7 +12487,7 @@
 			)
 			(justify right)
 		)
-		(uuid "38de3f22-ec65-506e-85ca-a0ce3271f1aa")
+		(uuid "8412c101-281f-5eb4-9741-cdeeb59f2283")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 243.84 0)
 			(show_name no)
@@ -14388,7 +12510,7 @@
 			)
 			(justify left)
 		)
-		(uuid "304a3e98-6bc0-5e23-9e14-476fbad3d5a4")
+		(uuid "4e900b11-9a0f-51d9-8cd4-016c4c42463f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 243.84 0)
 			(show_name no)
@@ -14411,7 +12533,7 @@
 			)
 			(justify right)
 		)
-		(uuid "ff544a92-9672-548d-8090-748fb86de932")
+		(uuid "d2f844ff-9b74-5485-889e-cb160f19987e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 246.38 0)
 			(show_name no)
@@ -14434,7 +12556,7 @@
 			)
 			(justify left)
 		)
-		(uuid "6e0a4695-1b45-5c61-9f00-bcec2980e444")
+		(uuid "0d49b225-62de-57c1-a18d-8d4ac30076f3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 246.38 0)
 			(show_name no)
@@ -14457,7 +12579,7 @@
 			)
 			(justify right)
 		)
-		(uuid "386def8c-974b-5a44-8bee-797747e4ac06")
+		(uuid "04d2e2f7-bfc8-5f92-8abd-8717831c9094")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 248.92 0)
 			(show_name no)
@@ -14480,7 +12602,7 @@
 			)
 			(justify left)
 		)
-		(uuid "4f48db5e-3eef-5e51-9d7e-562b6103e666")
+		(uuid "a02bc1f1-7a8e-5e65-8433-bf7a5c86ce7c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 248.92 0)
 			(show_name no)
@@ -14503,7 +12625,7 @@
 			)
 			(justify right)
 		)
-		(uuid "f4d0b18b-a428-5664-b2bc-f12a843cc81c")
+		(uuid "3eebb78c-2fe5-5df2-97d0-6f5c64899806")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 251.46 0)
 			(show_name no)
@@ -14526,7 +12648,7 @@
 			)
 			(justify left)
 		)
-		(uuid "d26069b9-a755-556e-b020-742d010c3ad6")
+		(uuid "18f798dd-8d46-5a8f-9793-934d01cebf0e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 251.46 0)
 			(show_name no)
@@ -14549,7 +12671,7 @@
 			)
 			(justify right)
 		)
-		(uuid "efb59268-3cd5-5e2a-ad4e-1ee84ca50fd1")
+		(uuid "38de3f22-ec65-506e-85ca-a0ce3271f1aa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 254 0)
 			(show_name no)
@@ -14572,7 +12694,7 @@
 			)
 			(justify left)
 		)
-		(uuid "375fdc54-a6c3-5b45-9320-6694bf9859b7")
+		(uuid "304a3e98-6bc0-5e23-9e14-476fbad3d5a4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 254 0)
 			(show_name no)
@@ -14595,7 +12717,7 @@
 			)
 			(justify right)
 		)
-		(uuid "d2140596-1a23-5420-9bf9-40e45b398e80")
+		(uuid "ff544a92-9672-548d-8090-748fb86de932")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 256.54 0)
 			(show_name no)
@@ -14618,7 +12740,7 @@
 			)
 			(justify left)
 		)
-		(uuid "c3c981e1-41b5-55fa-90e9-d363162f8775")
+		(uuid "6e0a4695-1b45-5c61-9f00-bcec2980e444")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 256.54 0)
 			(show_name no)
@@ -14641,7 +12763,7 @@
 			)
 			(justify right)
 		)
-		(uuid "386e1741-f3a9-5ec8-a134-ffebf4c58eb9")
+		(uuid "386def8c-974b-5a44-8bee-797747e4ac06")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 259.08 0)
 			(show_name no)
@@ -14664,7 +12786,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8c389e19-4b88-512c-9841-a5f49bc9bb19")
+		(uuid "4f48db5e-3eef-5e51-9d7e-562b6103e666")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 259.08 0)
 			(show_name no)
@@ -14687,7 +12809,7 @@
 			)
 			(justify right)
 		)
-		(uuid "4cf4edb5-3ce8-5852-8ec3-79392201e723")
+		(uuid "f4d0b18b-a428-5664-b2bc-f12a843cc81c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 261.62 0)
 			(show_name no)
@@ -14710,7 +12832,7 @@
 			)
 			(justify left)
 		)
-		(uuid "ff79a102-10e0-5bb1-9e4e-8aa7df31cc9d")
+		(uuid "d26069b9-a755-556e-b020-742d010c3ad6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 261.62 0)
 			(show_name no)
@@ -14723,7 +12845,7 @@
 			)
 		)
 	)
-	(global_label "BELLY_BL_PWM"
+	(global_label "DISP_RST"
 		(shape passive)
 		(at 275.59 264.16 180)
 		(fields_autoplaced yes)
@@ -14733,7 +12855,7 @@
 			)
 			(justify right)
 		)
-		(uuid "00eb1cd0-1955-537b-8124-aa6ac5f6ba6b")
+		(uuid "efb59268-3cd5-5e2a-ad4e-1ee84ca50fd1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 264.16 0)
 			(show_name no)
@@ -14756,7 +12878,7 @@
 			)
 			(justify left)
 		)
-		(uuid "3fb57a1f-69d0-5f44-8944-e18be12b1d19")
+		(uuid "375fdc54-a6c3-5b45-9320-6694bf9859b7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 288.29 264.16 0)
 			(show_name no)
@@ -14933,7 +13055,7 @@
 			)
 		)
 	)
-	(text "Reserve (unbestueckt): A4988-Sockel an FADER3/4-Leitungen ueber Loetjumper; C3 SuperMini an UART0 ueber JP2/JP3"
+	(text "Mechanik"
 		(exclude_from_sim no)
 		(at 20 278.78 0)
 		(effects
@@ -14942,1399 +13064,11 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "04657450-2064-5633-af12-a694b30463d7")
-	)
-	(global_label "STEP_EN"
-		(shape passive)
-		(at 35.56 288.29 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "494ac445-387e-505f-8b51-f2b3bf68b3c7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.56 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(no_connect
-		(at 35.56 290.83)
-		(uuid "b3f55fbb-6ba3-54b6-b77d-1c44d572269f")
-	)
-	(no_connect
-		(at 35.56 293.37)
-		(uuid "d7b2a74a-711d-5c79-857b-f5405ba18cf1")
-	)
-	(no_connect
-		(at 35.56 295.91)
-		(uuid "43d7c497-1254-5cbf-b35f-203db434c772")
-	)
-	(global_label "STEP_RST"
-		(shape passive)
-		(at 35.56 298.45 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c19db35b-927d-5c1a-8fa0-0ca1ddf23496")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.56 298.45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_RST"
-		(shape passive)
-		(at 35.56 300.99 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b34c4479-afbd-5df2-95ae-4a64e3ea229e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.56 300.99 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_STEP"
-		(shape passive)
-		(at 35.56 303.53 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0704322f-2954-5234-9683-8f55f752c2bf")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.56 303.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_DIR"
-		(shape passive)
-		(at 35.56 306.07 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a092daad-533c-5c3b-8454-6da64587eb97")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.56 306.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "VM"
-		(shape passive)
-		(at 60.96 288.29 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d67253f1-758c-56d7-a817-b7c9bf8255ee")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.96 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 60.96 290.83 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d7655f5d-7814-567b-a107-350a2a35e934")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.96 290.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_2B"
-		(shape passive)
-		(at 60.96 293.37 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1687035f-f75e-5c00-8f28-5fa397204df1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.96 293.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_2A"
-		(shape passive)
-		(at 60.96 295.91 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b80cee48-172a-5dcf-9863-f8b3feba17f4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.96 295.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_1A"
-		(shape passive)
-		(at 60.96 298.45 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "02a2d538-3ef0-58a7-ab22-7920e6bbacd8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.96 298.45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_1B"
-		(shape passive)
-		(at 60.96 300.99 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8d7f2999-4685-5a70-9457-8a5b714f6e75")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.96 300.99 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "3V3"
-		(shape passive)
-		(at 60.96 303.53 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c956be32-8aa1-58bf-b59a-c102059c646e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.96 303.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 60.96 306.07 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f5c715ed-9460-5524-ba32-48b71824490e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.96 306.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "deskmate:A4988_Socket")
-		(at 48.26 297.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "55fa4ecc-b7ce-557a-86c6-e914a0bbfc83")
-		(property "Reference" "U7"
-			(at 48.26 287.02 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "A4988/TMC2209 Reserve"
-			(at 48.26 307.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "deskmate:A4988_Socket"
-			(at 48.26 297.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 297.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 48.26 297.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "195dd4a3-f9df-5b1a-a6ad-ac8e7c9b113a")
-		)
-		(pin "2"
-			(uuid "d9a38143-a1aa-57d7-a331-ba23aa2309bf")
-		)
-		(pin "3"
-			(uuid "2b50c9b0-2b2a-5694-8450-89061ee092cf")
-		)
-		(pin "4"
-			(uuid "60ba59ba-af74-5438-9ee5-9b6aa4f8c86c")
-		)
-		(pin "5"
-			(uuid "78ea215f-0ec5-5fc7-b578-af1ee29740be")
-		)
-		(pin "6"
-			(uuid "cd8b8319-cbbc-5b71-93c3-4e233f2095cd")
-		)
-		(pin "7"
-			(uuid "dd415f56-c99a-51ab-a729-40e745ea520a")
-		)
-		(pin "8"
-			(uuid "1992ada8-ec00-556b-8ac8-95ffffce8af7")
-		)
-		(pin "9"
-			(uuid "d010f6f6-a96f-586a-b9e5-3ed422afb018")
-		)
-		(pin "10"
-			(uuid "90758e2c-876e-5fd0-ac39-1bff64e45230")
-		)
-		(pin "11"
-			(uuid "27e54b6d-6db2-54f2-9ddb-e06d145bb8c2")
-		)
-		(pin "12"
-			(uuid "caec2d54-f51b-5858-afaa-7a45ef77ce82")
-		)
-		(pin "13"
-			(uuid "4999d6fa-9e04-5751-b873-b699073d9e59")
-		)
-		(pin "14"
-			(uuid "3e32ea00-b878-57db-9235-35ce37503c91")
-		)
-		(pin "15"
-			(uuid "a7c745e7-ff07-5e4c-8d6e-a7a98f46cc9b")
-		)
-		(pin "16"
-			(uuid "44303ff5-f387-501d-b714-2543aff5ff8e")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "U7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "STEP_1A"
-		(shape passive)
-		(at 90.17 288.29 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8ea3df2c-72ad-5ed7-a85f-746634b16529")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.17 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_1B"
-		(shape passive)
-		(at 90.17 290.83 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "52738992-630f-5cf9-bcd5-1a5cb2f74e10")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.17 290.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_2A"
-		(shape passive)
-		(at 90.17 293.37 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ba1153be-2597-5a43-b978-a9a451a58455")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.17 293.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_2B"
-		(shape passive)
-		(at 90.17 295.91 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "72765350-9a55-5d99-af46-423e8e5c89a6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.17 295.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 95.25 290.83 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "1ca42688-9ce7-5e7f-bd14-dc81d206477b")
-		(property "Reference" "J10"
-			(at 95.25 284.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Stepper 1A 1B 2A 2B"
-			(at 95.25 297.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 95.25 290.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 95.25 290.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 95.25 290.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9d12e33c-807e-57ea-82f7-36668694f416")
-		)
-		(pin "2"
-			(uuid "89e692b1-f106-5b7a-bd72-f68eae66f5c7")
-		)
-		(pin "3"
-			(uuid "16e092ca-271a-5641-a014-98367e89d858")
-		)
-		(pin "4"
-			(uuid "be898d65-6b08-5427-a7d1-96de9e305bea")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "J10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "VM"
-		(shape passive)
-		(at 120.65 288.29 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "99506fde-c237-5fd7-83d9-271761f54c5a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.65 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 120.65 295.91 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b864092f-4d95-5783-812f-08c84ef87f99")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.65 295.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 120.65 292.1 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b39fc450-7201-5e23-9d51-40f0319698fb")
-		(property "Reference" "C8"
-			(at 120.65 287.02 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100u"
-			(at 120.65 297.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
-			(at 120.65 292.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 120.65 292.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 120.65 292.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f43712ea-51eb-5ba5-b835-869dedfcd70c")
-		)
-		(pin "2"
-			(uuid "b24e80ec-9a87-5def-ab3a-81e121a40b7b")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "C8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "FADER3_PWM"
-		(shape passive)
-		(at 149.86 288.29 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9be05fd0-2f48-54aa-ba6e-3db9f31b04d2")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 149.86 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_STEP"
-		(shape passive)
-		(at 160.02 288.29 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e71a3b8d-6212-5584-b180-c0181ff95a3d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 160.02 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 154.94 288.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ec8723e8-4f14-55e8-ab36-f501714dda37")
-		(property "Reference" "JP6"
-			(at 154.94 284.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "STEP<-FADER3_PWM"
-			(at 154.94 292.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 154.94 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 154.94 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 154.94 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "27b0d337-0499-5e24-9ec1-a86128fd3fa2")
-		)
-		(pin "2"
-			(uuid "f7c562af-a0af-53fb-80d2-5e3a6ad15de5")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "JP6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "FADER3_DIR"
-		(shape passive)
-		(at 190.5 288.29 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ec0bd194-b0fe-51b7-bb8f-ec3a7eb41385")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 190.5 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_DIR"
-		(shape passive)
-		(at 200.66 288.29 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "551ea371-cad6-5feb-802e-fa408b650c76")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 200.66 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 195.58 288.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f518addc-6fd0-5d62-ab4d-4428dc04e693")
-		(property "Reference" "JP7"
-			(at 195.58 284.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "DIR<-FADER3_DIR"
-			(at 195.58 292.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 195.58 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 195.58 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 195.58 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5fdb116e-1832-5910-9b54-17e4e8d94269")
-		)
-		(pin "2"
-			(uuid "aee83232-2865-550a-ac73-6d081941e393")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "JP7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "FADER4_PWM"
-		(shape passive)
-		(at 231.14 288.29 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "79765660-3fe9-5b80-9d94-901d75a17a30")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 231.14 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STEP_EN"
-		(shape passive)
-		(at 241.3 288.29 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8c092855-0504-5789-aad9-862d72baed3f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 241.3 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 236.22 288.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2549cd33-c20a-5c17-bc9d-327699adcc05")
-		(property "Reference" "JP8"
-			(at 236.22 284.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "EN<-FADER4_PWM"
-			(at 236.22 292.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 236.22 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 236.22 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 236.22 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8b1e1709-adf9-5edf-bcba-9966042bd956")
-		)
-		(pin "2"
-			(uuid "658a43a8-fbda-5e18-8de9-4cc0ae9e4bd7")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "JP8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(no_connect
-		(at 270.51 288.29)
-		(uuid "fd0fda25-0e42-5025-8655-e8d74f71980c")
-	)
-	(no_connect
-		(at 270.51 290.83)
-		(uuid "b7c34a22-72c4-56fe-93ff-1970cd432053")
-	)
-	(no_connect
-		(at 270.51 293.37)
-		(uuid "ced3a7a1-6055-5f2a-a00d-d0ed9b01b12c")
-	)
-	(no_connect
-		(at 270.51 295.91)
-		(uuid "a7d3e4d0-dbc3-51f8-8b3e-97060aa3cff4")
-	)
-	(no_connect
-		(at 270.51 298.45)
-		(uuid "e0f2050e-bd5f-56a8-9676-d7a5b5e53209")
-	)
-	(no_connect
-		(at 270.51 300.99)
-		(uuid "bfa9b521-5bb7-5ba3-9de4-35f8bf8b5e50")
-	)
-	(global_label "C3_RX"
-		(shape passive)
-		(at 270.51 303.53 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8cc1b8ed-6bae-5531-8cef-6a8305f2d8c5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 270.51 303.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "C3_TX"
-		(shape passive)
-		(at 270.51 306.07 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "81fb7f46-20f4-5a28-b02e-94c347305e7d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 270.51 306.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "5V"
-		(shape passive)
-		(at 298.45 288.29 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0834b130-b3ab-5b73-baf2-694d46e6a303")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 298.45 288.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 298.45 290.83 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "beee9c08-c764-51a1-86f0-218cd7a261f7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 298.45 290.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(no_connect
-		(at 298.45 293.37)
-		(uuid "e35fd80a-175e-5966-8a85-531c6cfb5399")
-	)
-	(no_connect
-		(at 298.45 295.91)
-		(uuid "5bcb2be2-4168-5ad4-81be-f3ce8d13ab48")
-	)
-	(no_connect
-		(at 298.45 298.45)
-		(uuid "6008eb20-b365-5f70-971c-d6daab3738aa")
-	)
-	(no_connect
-		(at 298.45 300.99)
-		(uuid "0fa33b3c-6ce0-5e23-9791-e452692c1a1e")
-	)
-	(no_connect
-		(at 298.45 303.53)
-		(uuid "c9fe8d3e-4d49-5ba2-a405-2580b98c17d8")
-	)
-	(no_connect
-		(at 298.45 306.07)
-		(uuid "a1aea70d-0726-5536-ae6c-fa7807cb99c8")
-	)
-	(symbol
-		(lib_id "deskmate:ESP32-C3_SuperMini")
-		(at 284.48 297.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "b0f3cc46-24d9-5e6a-a3d8-cdd4f1755236")
-		(property "Reference" "U6"
-			(at 284.48 287.02 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "ESP32-C3 SuperMini Reserve"
-			(at 284.48 307.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "deskmate:ESP32-C3_SuperMini"
-			(at 284.48 297.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 284.48 297.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 284.48 297.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5b273469-c55a-5966-943f-52f362b35030")
-		)
-		(pin "2"
-			(uuid "cd6d95bd-b2c0-5ad7-b3c0-181e476fd298")
-		)
-		(pin "3"
-			(uuid "acbc0924-6f35-5146-95a1-f013d93fbfa3")
-		)
-		(pin "4"
-			(uuid "671825a7-0403-5bbd-b718-08c771283f60")
-		)
-		(pin "5"
-			(uuid "e807d50a-8295-513c-98da-7dfa062e766d")
-		)
-		(pin "6"
-			(uuid "0bc1dba2-60fe-59e1-9029-dd2e3f0a2dc1")
-		)
-		(pin "7"
-			(uuid "b59b65ab-db76-5dc9-bb6b-712bda64e5b0")
-		)
-		(pin "8"
-			(uuid "69076210-2089-5a78-83a4-ae34111e5c85")
-		)
-		(pin "9"
-			(uuid "0126bd0a-07b9-568f-9b9b-58fff920ea07")
-		)
-		(pin "10"
-			(uuid "a481d937-9b6d-566b-b0ef-3a52d6670eb6")
-		)
-		(pin "11"
-			(uuid "abaf6db5-22fe-56dc-8f6d-6865fa6e6a50")
-		)
-		(pin "12"
-			(uuid "f8560773-f75a-55ac-8279-65e015641f91")
-		)
-		(pin "13"
-			(uuid "d7ee2817-0b2f-5384-9ca2-a566e02abf13")
-		)
-		(pin "14"
-			(uuid "1cc53bef-7029-5a57-b262-a1d736cae4df")
-		)
-		(pin "15"
-			(uuid "efce9423-f95e-5184-80cf-a4130c4fa7b0")
-		)
-		(pin "16"
-			(uuid "e2e33fc0-b54e-5437-807e-09d03993fd2e")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "U6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(text "Mechanik"
-		(exclude_from_sim no)
-		(at 20 320.56 0)
-		(effects
-			(font
-				(size 2.5 2.5)
-			)
-			(justify left bottom)
-		)
-		(uuid "b6417f09-2543-5c6a-afd0-16368ea04b95")
+		(uuid "d2140596-1a23-5420-9bf9-40e45b398e80")
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 35.56 330.2 0)
+		(at 35.56 288.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16345,7 +13079,7 @@
 		(fields_autoplaced yes)
 		(uuid "0373bc91-5ec5-582f-ba66-82e1bb165311")
 		(property "Reference" "H1"
-			(at 35.56 326.39 0)
+			(at 35.56 284.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16355,7 +13089,7 @@
 			)
 		)
 		(property "Value" "M3"
-			(at 35.56 334.01 0)
+			(at 35.56 292.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16365,7 +13099,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 35.56 330.2 0)
+			(at 35.56 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16376,7 +13110,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 330.2 0)
+			(at 35.56 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16387,7 +13121,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 35.56 330.2 0)
+			(at 35.56 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16408,7 +13142,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 64.77 330.2 0)
+		(at 64.77 288.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16419,7 +13153,7 @@
 		(fields_autoplaced yes)
 		(uuid "daafcef2-4bc7-5419-a258-456c5428dc01")
 		(property "Reference" "H2"
-			(at 64.77 326.39 0)
+			(at 64.77 284.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16429,7 +13163,7 @@
 			)
 		)
 		(property "Value" "M3"
-			(at 64.77 334.01 0)
+			(at 64.77 292.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16439,7 +13173,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 64.77 330.2 0)
+			(at 64.77 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16450,7 +13184,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 64.77 330.2 0)
+			(at 64.77 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16461,7 +13195,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 64.77 330.2 0)
+			(at 64.77 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16482,7 +13216,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 95.25 330.2 0)
+		(at 95.25 288.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16493,7 +13227,7 @@
 		(fields_autoplaced yes)
 		(uuid "4348ee25-3c07-5dd1-b4e4-b33f96793cc9")
 		(property "Reference" "H3"
-			(at 95.25 326.39 0)
+			(at 95.25 284.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16503,7 +13237,7 @@
 			)
 		)
 		(property "Value" "M3"
-			(at 95.25 334.01 0)
+			(at 95.25 292.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16513,7 +13247,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 95.25 330.2 0)
+			(at 95.25 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16524,7 +13258,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 330.2 0)
+			(at 95.25 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16535,7 +13269,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 95.25 330.2 0)
+			(at 95.25 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16556,7 +13290,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 124.46 330.2 0)
+		(at 124.46 288.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16567,7 +13301,7 @@
 		(fields_autoplaced yes)
 		(uuid "e494e8e8-bf0b-544f-b04c-6a199d48c803")
 		(property "Reference" "H4"
-			(at 124.46 326.39 0)
+			(at 124.46 284.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16577,7 +13311,7 @@
 			)
 		)
 		(property "Value" "M3"
-			(at 124.46 334.01 0)
+			(at 124.46 292.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16587,7 +13321,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 124.46 330.2 0)
+			(at 124.46 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16598,7 +13332,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 124.46 330.2 0)
+			(at 124.46 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16609,7 +13343,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 124.46 330.2 0)
+			(at 124.46 288.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16630,18 +13364,18 @@
 	)
 	(text "PWR_FLAGs"
 		(exclude_from_sim no)
-		(at 20 348.56 0)
+		(at 20 306.78 0)
 		(effects
 			(font
 				(size 2.5 2.5)
 			)
 			(justify left bottom)
 		)
-		(uuid "f9392ca0-3575-57fe-b890-dd3ab4da94f0")
+		(uuid "c3c981e1-41b5-55fa-90e9-d363162f8775")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 25.4 358.14 0)
+		(at 25.4 316.23 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16652,7 +13386,7 @@
 		(fields_autoplaced yes)
 		(uuid "ef545ac3-d751-52e6-8da5-983d5d30a4d4")
 		(property "Reference" "#FLG01"
-			(at 25.4 354.33 0)
+			(at 25.4 312.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16663,7 +13397,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 25.4 354.33 0)
+			(at 25.4 312.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16673,7 +13407,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 25.4 358.14 0)
+			(at 25.4 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16684,7 +13418,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 25.4 358.14 0)
+			(at 25.4 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16695,7 +13429,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 25.4 358.14 0)
+			(at 25.4 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16706,7 +13440,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "364a0589-84f0-55c3-98ef-96597f6298da")
+			(uuid "386e1741-f3a9-5ec8-a134-ffebf4c58eb9")
 		)
 		(instances
 			(project "mainboard"
@@ -16719,7 +13453,7 @@
 	)
 	(global_label "VBUS"
 		(shape passive)
-		(at 25.4 358.14 270)
+		(at 25.4 316.23 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -16727,9 +13461,9 @@
 			)
 			(justify right)
 		)
-		(uuid "5c6dc852-c2ad-5cd3-9aa8-0c861c07751b")
+		(uuid "8c389e19-4b88-512c-9841-a5f49bc9bb19")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 25.4 358.14 0)
+			(at 25.4 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16742,7 +13476,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 49.53 358.14 0)
+		(at 49.53 316.23 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16753,7 +13487,7 @@
 		(fields_autoplaced yes)
 		(uuid "0c412bda-70b3-5c9e-873d-6f4bd5b2db54")
 		(property "Reference" "#FLG02"
-			(at 49.53 354.33 0)
+			(at 49.53 312.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16764,7 +13498,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 49.53 354.33 0)
+			(at 49.53 312.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16774,7 +13508,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 358.14 0)
+			(at 49.53 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16785,7 +13519,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 358.14 0)
+			(at 49.53 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16796,7 +13530,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 49.53 358.14 0)
+			(at 49.53 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16807,7 +13541,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "a197cd5a-bb2a-5f45-ab05-b9eb9b70f221")
+			(uuid "4cf4edb5-3ce8-5852-8ec3-79392201e723")
 		)
 		(instances
 			(project "mainboard"
@@ -16820,7 +13554,7 @@
 	)
 	(global_label "5V"
 		(shape passive)
-		(at 49.53 358.14 270)
+		(at 49.53 316.23 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -16828,9 +13562,9 @@
 			)
 			(justify right)
 		)
-		(uuid "5760f2c9-9211-5300-bc5a-3ee704c0d66b")
+		(uuid "ff79a102-10e0-5bb1-9e4e-8aa7df31cc9d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 49.53 358.14 0)
+			(at 49.53 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16843,7 +13577,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 74.93 358.14 0)
+		(at 74.93 316.23 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16854,7 +13588,7 @@
 		(fields_autoplaced yes)
 		(uuid "71d7fab9-6ec1-5463-9eab-1ebea736abf2")
 		(property "Reference" "#FLG03"
-			(at 74.93 354.33 0)
+			(at 74.93 312.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16865,7 +13599,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 74.93 354.33 0)
+			(at 74.93 312.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16875,7 +13609,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.93 358.14 0)
+			(at 74.93 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16886,7 +13620,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 358.14 0)
+			(at 74.93 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16897,7 +13631,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 74.93 358.14 0)
+			(at 74.93 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16908,7 +13642,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "4e0eccf2-1887-550f-8c80-8fc9e5188ce2")
+			(uuid "00eb1cd0-1955-537b-8124-aa6ac5f6ba6b")
 		)
 		(instances
 			(project "mainboard"
@@ -16921,7 +13655,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 74.93 358.14 270)
+		(at 74.93 316.23 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -16929,9 +13663,9 @@
 			)
 			(justify right)
 		)
-		(uuid "9bb7f06e-d759-53ef-be85-fe1c6cd6a9d5")
+		(uuid "3fb57a1f-69d0-5f44-8944-e18be12b1d19")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 74.93 358.14 0)
+			(at 74.93 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16944,7 +13678,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 100.33 358.14 0)
+		(at 100.33 316.23 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16955,7 +13689,7 @@
 		(fields_autoplaced yes)
 		(uuid "7b0b0752-ffbe-5cfb-8e24-535fddf44374")
 		(property "Reference" "#FLG04"
-			(at 100.33 354.33 0)
+			(at 100.33 312.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16966,7 +13700,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 100.33 354.33 0)
+			(at 100.33 312.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16976,7 +13710,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 100.33 358.14 0)
+			(at 100.33 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16987,7 +13721,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 100.33 358.14 0)
+			(at 100.33 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -16998,7 +13732,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 100.33 358.14 0)
+			(at 100.33 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -17009,7 +13743,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "cf8ec3bb-5eca-54fd-adeb-8106ba1ff641")
+			(uuid "04657450-2064-5633-af12-a694b30463d7")
 		)
 		(instances
 			(project "mainboard"
@@ -17022,7 +13756,7 @@
 	)
 	(global_label "VM"
 		(shape passive)
-		(at 100.33 358.14 270)
+		(at 100.33 316.23 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -17030,9 +13764,9 @@
 			)
 			(justify right)
 		)
-		(uuid "5f74f054-c148-5004-aef2-e6dff91c0779")
+		(uuid "494ac445-387e-505f-8b51-f2b3bf68b3c7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 100.33 358.14 0)
+			(at 100.33 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -17045,7 +13779,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 124.46 358.14 0)
+		(at 124.46 316.23 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17056,7 +13790,7 @@
 		(fields_autoplaced yes)
 		(uuid "690bc676-5de8-5e3f-b982-681835b66ff4")
 		(property "Reference" "#FLG05"
-			(at 124.46 354.33 0)
+			(at 124.46 312.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -17067,7 +13801,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 124.46 354.33 0)
+			(at 124.46 312.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17077,7 +13811,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 124.46 358.14 0)
+			(at 124.46 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -17088,7 +13822,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 124.46 358.14 0)
+			(at 124.46 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -17099,7 +13833,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 124.46 358.14 0)
+			(at 124.46 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -17110,7 +13844,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "044b48b9-b7c4-5c82-ba23-d7ddd2fa957b")
+			(uuid "b3f55fbb-6ba3-54b6-b77d-1c44d572269f")
 		)
 		(instances
 			(project "mainboard"
@@ -17123,7 +13857,7 @@
 	)
 	(global_label "VBOOST"
 		(shape passive)
-		(at 124.46 358.14 270)
+		(at 124.46 316.23 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -17131,110 +13865,9 @@
 			)
 			(justify right)
 		)
-		(uuid "e785e850-d915-5618-bdcd-055f8bbc5af1")
+		(uuid "d7b2a74a-711d-5c79-857b-f5405ba18cf1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.46 358.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 149.86 358.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2267c9b4-7733-59a5-8a3d-793e9d56391d")
-		(property "Reference" "#FLG06"
-			(at 149.86 354.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 149.86 354.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 149.86 358.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 149.86 358.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 149.86 358.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3463a2d1-8e96-565a-8332-f474e8c63409")
-		)
-		(instances
-			(project "mainboard"
-				(path "/6a9f9a3d-4154-5744-b824-92ffbfc6cb39"
-					(reference "#FLG06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "DRV_SLEEP"
-		(shape passive)
-		(at 149.86 358.14 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d5234924-7b62-59a9-a5b0-d117f128738b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 149.86 358.14 0)
+			(at 124.46 316.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)

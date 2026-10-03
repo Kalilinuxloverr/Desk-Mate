@@ -11,7 +11,7 @@ Code-Wahrheit: `firmware/arduino/deskmate/pins.h` (Test: `sh tools/test-pins.sh`
 - **Alle geplanten GPIOs liegen am Header** (J1 + J3), inkl. 19/20 (USB D−/D+) und 43/44 (UART0 → CP2102N-A02-GQFN28).
 - **Onboard-RGB-LED:** v1.0 = GPIO 48, v1.1 = GPIO 38 (0-Ω-Widerstand R17). Keine offizielle äußere Erkennung — beim ersten Boot ausprobieren. v1.1: LED spiegelt unser Pixel 0 (gewollt). v1.0: LED hängt am PSU_SENSE-Knoten (GPIO 48) — Digital-Read bleibt gültig, Teiler 10k/10k ist niederohmig genug.
 - **Octal-PSRAM (N16R8):** GPIO 35/36/37 intern belegt → am Sockel **unverbunden lassen** (liegen am Header!).
-- **Strapping:** 0 (Pull-up, Boot), 3 (JTAG-Sel, per eFuse-Default ignoriert), 45 (VDD_SPI: **nie high beim Boot**, danach frei — deshalb Backlight nur per Lötjumper), 46 (Pull-down, danach frei). **48 ist kein Strapping-Pin.** Latch-Zeit ≥ 3 ms nach Reset.
+- **Strapping:** 0 (Pull-up, Boot), 3 (JTAG-Sel, per eFuse-Default ignoriert), 45 (VDD_SPI: **nie high beim Boot** — seit 2026-10-04 komplett unbelegt, `tools/test-pins.sh` blockt ihn), 46 (Pull-down, danach frei). **48 ist kein Strapping-Pin.** Latch-Zeit ≥ 3 ms nach Reset.
 - **ADC:** ADC1_CH0–9 = GPIO 1–10, ADC2 = 11–20 (mit WiFi unbrauchbar). Schleifer auf 1/2/4/5 ✓.
 - **LEDC:** 8 Kanäle, 4 Timer, nur Low-Speed. Belegt: 4 Motor + 2 Servo + 1 BL = 7.
 - **JTAG 39–42:** frei, solange USB-Serial-JTAG (eFuse-Default) genutzt wird.

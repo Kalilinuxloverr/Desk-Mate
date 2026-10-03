@@ -1,6 +1,6 @@
 # Desk-Mate — Design-Spec
 
-**Datum:** 2026-08-22 · **Status:** von Leon im Chat abgenommen (Abschnitte 1–5), 18 Grill-Fragen beantwortet · **Relikt:** [`docs/relic/2026-08-22-original-prompt.md`](../../relic/2026-08-22-original-prompt.md)
+**Datum:** 2026-08-22 · **Status:** von Leon im Chat abgenommen (Abschnitte 1–5), 18 Grill-Fragen beantwortet; Reserve gestrichen 2026-10-04 (§2.2, [`vault/Entscheidungen/2026-10-04-reserve-raus.md`](../../../vault/Entscheidungen/2026-10-04-reserve-raus.md)) · **Relikt:** [`docs/relic/2026-08-22-original-prompt.md`](../../relic/2026-08-22-original-prompt.md)
 
 Desk-Mate ist ein kleiner Wall-E-artiger Schreibtisch-Begleiter: eine Ampel für alles, was dich braucht (Claude Code, Downloads, Steam), ein Deck mit Motorfadern und Soft-Keys, ein Kopf mit zwei Augen-Displays — verbunden per USB, BLE und WiFi, steuerbar von Mac, Handy und Haus-MQTT.
 
@@ -13,8 +13,8 @@ Leitplanken aus dem Grilling: **eine PCB-Bestellung** (drei Designs, kein Re-Spi
 | # | Frage | Entscheidung |
 |---|---|---|
 | 1 | v1-Umfang | Alles (A–E); Reihenfolge Plan → KiCad → Teile → JLCPCB → Rest |
-| 2 | Mechanik | Base statisch, **kein Körper-Stepper**; Treiber-Sockel nur als Reserve |
-| 3 | Hirn | **Ein ESP32-S3 DevKitC-1 N16R8**, gesteckt; C3 nur als unbestückter Footprint |
+| 2 | Mechanik | Base statisch, **kein Körper-Stepper**; Treiber-Sockel gestrichen (2026-10-04) |
+| 3 | Hirn | **Ein ESP32-S3 DevKitC-1 N16R8**, gesteckt; kein C3 (Footprint gestrichen 2026-10-04) |
 | 5 | Zentrale | Hybrid: USB → Desktop-Agent primär, BLE → Handy, Gerät auch standalone |
 | 6 | Standalone | BLE-HID + Gesicht + **WiFi in v1** (MQTT, NTP, OTA, Wetter, Haus-Nodes) |
 | 7 | Fader-Regelung | Eigene, einfache Regelung auf dem S3; DRV8833-Breakouts gesteckt. Fader: **Behringer X32-Ersatz, 100 mm, panel-mounted mit Kabel** (entschieden 2026-08-23) |
@@ -46,12 +46,12 @@ Frage 4 (UART vs. ESP-NOW) entfiel mit dem C3. Jede Entscheidung hat eine Notiz 
  │ BAUCH / DECK        │  FRONTPANEL-PCB
  │  [ 2,8" ILI9341 ]   │   6 Soft-Keys unter dem Display
  │  [k][k][k][k][k][k] │   4 Makro-Keys · EC11
- │  |F| [k][k] (o) |F| │   2(4)× MF60T · MCP23017 · MPR121
+ │  |F| [k][k] (o) |F| │   2(4)× X32-Fader · MCP23017 · MPR121
  │  |F|  [k][k]    |F| │
  ├─────────────────────┤
  │ BASE (statisch)     │  MAINBOARD-PCB
- │  USB-C(D) USB-C(P)  │   S3 DevKitC-1 · P-FET-ODER · LD1117V33
- │  BME680 hinter      │   2(4)× DRV8833 · Reserve: Stepper, C3
+ │  USB-C(D) USB-C(P)  │   S3 DevKitC-1 · Polyfuse + SB540 · LD1117V33
+ │  BME680 hinter      │   2(4)× DRV8833 · VM-Boost optional
  │  Lüftungsschlitzen  │
  └─────────────────────┘
 ```
@@ -64,15 +64,14 @@ Frage 4 (UART vs. ESP-NOW) entfiel mit dem C3. Jede Entscheidung hat eine Notiz 
 - Sockel für ESP32-S3-DevKitC-1 (2× 1×22 Buchsenleiste, 2,54 mm; Antennenseite über Platinenrand hinaus, nichts darüber)
 - **Daten-Port** = Panel-Mount-USB-C-Verlängerung von der DevKit-USB-Buchse zur Gehäuserückwand (entschieden 2026-08-23: kein USB-Routing/ESD auf dem Mainboard, DevKit direkt flashbar). Auf dem Mainboard nur **J_PWR**: USB-C-Buchse 16-Pin THT, nur 5 V, CC1/CC2 mit 5,1 kΩ nach GND → 3 A vom Netzteil. Außen am Gehäuse bleiben zwei USB-C-Ports (Entscheidung 11)
 - Versorgung (entschieden 2026-08-23, ersetzt P-FET-ODER): J_PWR → Polyfuse 3 A → **Schottky SB540** → 5-V-Rail; USB-Pfad speist die Rail über die **DevKit-eigene Diode** am 5V-Pin (Standard-Praxis, sperrt Rückspeisung zum Host). PSU_SENSE-Teiler **10 k/15 k** (→ 3,0 V bei 5 V; 10 k/10 k lägen mit 2,5 V zu nah an VIH) greift **vor** der SB540 ab → eindeutig „Netzteil da“. Rail liegt real bei ~4,6–4,7 V (Diodenabfall) — für Logik/Displays egal, für Fader-Motoren siehe VM-Boost-Sockel. Bulk 1000 µF/10 V an der Rail, LD1117V33 (TO-220) für 3,3-V-Peripherie (Displays, MCP23017, MPR121, BME680); DevKit-LDO versorgt nur den S3
-- 2× Sockel für DRV8833-Breakout (Pololu #2130, 16-polig, Raster 10,16 mm) = 4 Motorkanäle; je 100 µF am VM-Pin; **VM-Rail per Lötjumper JP4: 5 V (Default) oder MT3608-Boost auf ~9 V** — das MT3608-Modul hat kein 2,54-Raster, deshalb 4-Pin-Stiftleiste U5 (VIN+ VIN− VOUT+ VOUT−) und Drähte statt Sockel (2026-08-27); nSLEEP beider Treiber über JP5 (gebrückt) an 3V3 — MF60T-Motor ist lt. Soundwell für 6–10 V spezifiziert, läuft bei 5 V nur langsamer (FaderBuddy-Praxis)
+- 2× Sockel für DRV8833-Breakout (Pololu #2130, 16-polig, Raster 10,16 mm) = 4 Motorkanäle; je 100 µF am VM-Pin; **VM-Rail per Lötjumper JP1 (der einzige auf dem Board): 5 V (Default) oder MT3608-Boost auf ~9 V** — das MT3608-Modul hat kein 2,54-Raster, deshalb 4-Pin-Stiftleiste U5 (VIN+ VIN− VOUT+ VOUT−) und Drähte statt Sockel (2026-08-27); nSLEEP beider Treiber fest an 3V3 (Jumper gestrichen 2026-10-04) — MF60T-Motor ist lt. Soundwell für 6–10 V spezifiziert, läuft bei 5 V nur langsamer (FaderBuddy-Praxis)
 - 2× Servo-Stecker JST-XH 3-Pin (GND/5V/Signal), 470 µF direkt an den Steckern; der 10-Ω-Serienwiderstand ist gestrichen (2026-08-27: bei 0,7 A Stall fielen 7 V ab — Drosselung macht die Firmware über PSU_SENSE)
 - WS2812/ARGB-Stecker 3-Pin (5 V, GND, Data über 330 Ω), 1000 µF lokal — generisch: beliebiger 5-V-ARGB-Streifen/Ring (Leons Drohnen-Streifen), LED-Anzahl per NVS, Strom-Cap in Firmware
 - BME680-Breakout-Sockel 1×6 (VCC GND SCL SDA SDO CS, CJMCU-680-Reihenfolge — am Modul prüfen)
 - I²C-Pull-ups 4,7 kΩ und IO_INT-Pull-up 10 kΩ sitzen auf dem Mainboard (2026-08-27: damit der Interrupt-Eingang auch ohne gestecktes Frontpanel definiert ist)
-- Reserve C3-SuperMini: TX/RX über offene Lötjumper JP2/JP3 an UART0 (GPIO 43/44, geteilt mit dem CP2102); A4988-Sockel: STEP/DIR/EN über JP6–JP8 an FADER3_PWM/FADER3_DIR/FADER4_PWM (nur sinnvoll, wenn Fader 3/4 unbestückt bleiben)
-- IDC 2×15 zum Frontpanel (Pinbelegung 2.4)
+- IDC 2×15 zum Frontpanel (Pinbelegung 2.4); DISP_RST vom Frontpanel läuft über Pin 29 durch zum Augen-Kabel (J7 Pin 10)
 - Augen-/Servo-/WS2812-Kabel gehen vom Mainboard nach oben (Kopf ist am Bauch, Kabel durch Bauch-Rückwand)
-- **Reserve, unbestückt:** Stepper-Treiber-Sockel (A4988/TMC2209-Standard-Footprint, 2× 1×8) mit STEP/DIR/EN auf Lötjumper; C3-SuperMini-Footprint (2× 1×8) mit 5 V, GND, UART-TX/RX auf Lötjumper
+- **Keine Reserve-Footprints** (2026-10-04): Stepper-Sockel und C3-Footprint sind gestrichen, GPIO 43/44 bleiben als Debug-UART frei, der einzige Lötjumper ist JP1 (VM). Begründung: `vault/Entscheidungen/2026-10-04-reserve-raus.md`
 - Taster RESET und BOOT per Kabel/Pins nach außen führbar (DevKit-Taster liegen unter dem Gehäuse)
 
 **Frontpanel (Deck)** — 2 Lagen, **120 × 136 mm** (KiCad 2026-08-27): ILI9341-Modul quer oben (x 17–103, y 6–56, Header links, 4× M3×11-Abstandshalter im MSP2807-Raster 76,08 × 44), darunter 6 Soft-Keys im 19,05-Raster, 4 Makro-Keys 2×2 mittig, Encoder rechts, MCP23017 links, MPR121-Sockel rechts, Fader-Header an den Seitenkanten, IDC an der Unterkante; die Fader sitzen links/rechts **neben** dem PCB im Panel. Anordnung ist ein Vorschlag — Leons Skizze entscheidet
@@ -81,22 +80,22 @@ Frage 4 (UART vs. ESP-NOW) entfiel mit dem C3. Jede Entscheidung hat eine Notiz 
 - EC11-Encoder mit Taster
 - MCP23017 (DIP-28) — Tasten 0–9, Encoder A/B/SW, Display-RST, Display-BL (on/off); INT_A/B → IDC
 - MPR121-Breakout-Sockel (I²C) — Fader-Touch 0–3 (Kanal 4–11 frei, z. B. Touch am Kopf)
-- Steckleiste für das 2,8"-ILI9341-Modul (14-Pin-Variante; SPI, ohne Touch-Pins), Display sitzt über den Soft-Keys. **Backlight-Schalter zweistufig:** Steuerleitung → 1 kΩ → BC337 (low-side) → 1 kΩ → BC327 (high-side an 3V3) → LED-Pin; 100 kΩ Pull-down an der Steuerleitung, 10 kΩ B-E am BC327. Grund: GPIO45 (Option über JP11/JP1) verträgt keinen Pull-up (Falle 13)
-- MCP23017 RESET fest an 3V3, A0–A2 an GND (0x20), INTA über JP9 (gebrückt) und INTB über JP10 (offen) an IO_INT; Firmware setzt MIRROR=1, INT open-drain
+- Steckleiste für das 2,8"-ILI9341-Modul (14-Pin-Variante; SPI, ohne Touch-Pins), Display sitzt über den Soft-Keys. **Backlight-Schalter einstufig** (2026-10-04): MCP23017 GPB6 → 1 kΩ → Basis BC327 (high-side an 3V3) → LED-Pin; 10 kΩ Basis–Emitter hält das Licht aus, bis die Firmware den MCP konfiguriert; GPB6 low = an. Kein GPIO45, kein Jumper
+- MCP23017 RESET fest an 3V3, A0–A2 an GND (0x20), INTA direkt an IO_INT, INTB unbeschaltet; Firmware setzt MIRROR=1, INT open-drain. DISP_RST (GPB5) hat 10 kΩ Pull-up und geht an das Bauch-Display und über IDC-Pin 29 zu den Augen
 - 4× Fader-Anschluss-Header (Motor + Schleifer + Touch), RC-Filter (1 kΩ / 100 nF) je Schleifer vor dem IDC
 - IDC 2×15 zum Mainboard
 
-**Augen-Adapter (Kopf)** — 2 Lagen, ca. 30 × 20 mm, nur Stecker
-- 1× 10-Pin-Eingang (3V3, 3V3, GND, GND, MOSI, SCK, DC, CS_L, CS_R, GND — identisch zu J7 auf dem Mainboard)
+**Augen-Adapter (Kopf)** — 2 Lagen, 42 × 30 mm, nur Stecker
+- 1× 10-Pin-Eingang (3V3, 3V3, GND, GND, MOSI, SCK, DC, CS_L, CS_R, DISP_RST — identisch zu J7 auf dem Mainboard)
 - 2× 7-Pin-Buchse für GC9A01 (VCC GND SCL SDA RES DC CS), 100 nF je Modul
-- **Reset per RC** (10 kΩ/1 µF an 3V3): es gibt keinen freien GPIO für DISP_RST zu den Augen; im Betrieb reicht der Software-Reset (LovyanGFX `pin_rst = -1`). Das Bauch-Display bekommt DISP_RST vom MCP23017
-- 42 × 30 mm, nur Stecker + RC → kann keine Revision kosten
+- **Reset gemeinsam mit dem Bauch-Display** (2026-10-04, ersetzt das RC-Glied): DISP_RST kommt vom MCP23017 (GPB5, Pull-up auf dem Frontpanel) über IDC-Pin 29 und Pin 10 des Augen-Kabels. Ein Reset-Pfad für alle drei Panels, kein `pin_rst = -1`-Sonderfall
+- nur Stecker + 2× 100 nF → kann keine Revision kosten
 
 ### 2.3 Pin-Map ESP32-S3 DevKitC-1 (N16R8)
 
 Regeln: Schleifer nur auf **ADC1 (GPIO 1–10)** (ADC2 ist mit WiFi tot) · keine Strapping-Pins (0, 3, 45, 46) für Funktionen · 19/20 = USB · 26–37 = Flash/Octal-PSRAM (nicht nutzen) · 43/44 = UART0 zum CP2102 (Debug, frei lassen) · 38/48 = je nach DevKit-Revision die Onboard-RGB-LED.
 
-Motoren laufen im **PWM + DIR**-Schema am DRV8833 (IN1 = PWM, IN2 = DIR; rückwärts mit invertiertem Duty = Drive/Brake). So braucht jeder Motor **einen** LEDC-Kanal; der S3 hat 8 LEDC-Kanäle → 4 Motoren + 2 Servos + 1 Backlight-Reserve = 7.
+Motoren laufen im **PWM + DIR**-Schema am DRV8833 (IN1 = PWM, IN2 = DIR; rückwärts mit invertiertem Duty = Drive/Brake). So braucht jeder Motor **einen** LEDC-Kanal; der S3 hat 8 LEDC-Kanäle → 4 Motoren + 2 Servos = 6.
 
 | GPIO | Funktion | Bus | Ziel | Hinweis |
 |---|---|---|---|---|
@@ -124,9 +123,8 @@ Motoren laufen im **PWM + DIR**-Schema am DRV8833 (IN1 = PWM, IN2 = DIR; rückw�
 | 41 | CS_BELLY | GPIO | ILI9341 | |
 | 42 | CS_EYE_L | GPIO | GC9A01 links | |
 | 47 | CS_EYE_R | GPIO | GC9A01 rechts | |
-| 45 | BELLY_BL_PWM | LEDC | ILI9341 LED-Pin | **Strapping (VDD_SPI):** nur über Lötjumper; Default = BL on/off am MCP23017. Kein externer Pull-up erlaubt |
 | 48 | PSU_SENSE | GPIO in | Spannungsteiler an J_PWR-5V | „Netzteil da?“ (Onboard-LED auf DevKit v1.0 hängt hier — unkritisch) |
-| 0, 3, 46 | — | | | Strapping, nicht belegen |
+| 0, 3, 45, 46 | — | | | Strapping, nicht belegen. 45 (VDD_SPI) war bis 2026-10-04 als Backlight-PWM-Option über Lötjumper vorgesehen, jetzt unbelegt |
 | 19, 20 | USB D−/D+ | USB | J_DATA | über DevKit-USB-Buchse oder direkt; Entscheidung bei Bauteilwahl |
 | 43, 44 | UART0 | | CP2102 | Debug/Flash-Fallback |
 
@@ -152,7 +150,7 @@ Motoren laufen im **PWM + DIR**-Schema am DRV8833 (IN1 = PWM, IN2 = DIR; rückw�
 | 23 | I2C_SCL | 24 | IO_INT |
 | 25 | SPI_MOSI | 26 | SPI_SCK |
 | 27 | SPI_DC | 28 | CS_BELLY |
-| 29 | BELLY_BL_PWM | 30 | GND |
+| 29 | DISP_RST | 30 | GND |
 
 Motorleitungen liegen zwischen GND-Paaren (Störungen), Schleifer ebenfalls. DRV8833 bleiben auf dem Mainboard (kurzer Strompfad zum Bulk-Elko); 0,2–0,6 A pro Motor über 28-AWG-Flachband ist im Rahmen (≤ 1 A/Ader).
 
@@ -289,7 +287,7 @@ Desk-Mate/
 
 ## 7 · Roadmap (nicht v1)
 
-SmartKnob als externes Gerät über MQTT/USB · watchOS-App (Ampel am Handgelenk) · Android-App · iPadOS · Home-Assistant-Discovery-Payloads · Körper-Stepper (Sockel ist da) · 4 Fader bestücken · Lern-Funktion (Arbeitsrhythmus → Pausen-Erinnerung; erst wenn Log-Daten da sind) · Backlight-Dimmen über GPIO 45 · Windows-Tray.
+SmartKnob als externes Gerät über MQTT/USB · watchOS-App (Ampel am Handgelenk) · Android-App · iPadOS · Home-Assistant-Discovery-Payloads · Körper-Stepper (bräuchte eine Mainboard-Revision, Sockel gestrichen 2026-10-04) · 4 Fader bestücken · Lern-Funktion (Arbeitsrhythmus → Pausen-Erinnerung; erst wenn Log-Daten da sind) · Backlight-Dimmen (kein freier PWM-GPIO in Rev. 1) · Windows-Tray.
 
 ---
 
@@ -302,4 +300,4 @@ SmartKnob als externes Gerät über MQTT/USB · watchOS-App (Ampel am Handgelenk
 5. `PreToolUse`/`AskUserQuestion`: trägt `tool_input` die Frage? Maximaler Hook-Timeout? → testen.
 6. Lizenz (MIT vs. CERN-OHL für Hardware) — Leon.
 7. Leons Skizze nachreichen → Frontpanel-Anordnung (KiCad-Vorschlag vom 2026-08-27 steht, siehe §2.2; Änderung = Positionen in `hardware/kicad/gen/boards.py`).
-8. Vor der JLCPCB-Bestellung am echten Teil nachmessen (2026-08-27): C3-SuperMini-Reihenabstand 15,24, MPR121-Clone 17,78, DRV8833-Module aus der Box = Pololu-Raster 10,16?, BME680-Pinreihenfolge. DevKit-Sockel 22,86 ist per Espressif-DXF belegt. Details `vault/Hardware/Module-Masse.md`.
+8. Vor der JLCPCB-Bestellung am echten Teil nachmessen (2026-08-27): MPR121-Clone 17,78, DRV8833-Module aus der Box = Pololu-Raster 10,16?, BME680-Pinreihenfolge. DevKit-Sockel 22,86 ist per Espressif-DXF belegt. Details `vault/Hardware/Module-Masse.md`.

@@ -20,7 +20,7 @@
     "7": "SPI_DC",
     "8": "CS_EYE_L",
     "9": "CS_EYE_R",
-    "10": "GND"
+    "10": "DISP_RST"
    },
    "pcb": {
     "x": 21,
@@ -39,7 +39,7 @@
     "2": "GND",
     "3": "SPI_SCK",
     "4": "SPI_MOSI",
-    "5": "EYE_RST",
+    "5": "DISP_RST",
     "6": "SPI_DC",
     "7": "CS_EYE_L"
    },
@@ -60,7 +60,7 @@
     "2": "GND",
     "3": "SPI_SCK",
     "4": "SPI_MOSI",
-    "5": "EYE_RST",
+    "5": "DISP_RST",
     "6": "SPI_DC",
     "7": "CS_EYE_R"
    },
@@ -68,38 +68,6 @@
     "x": 31,
     "y": 24,
     "rot": 90
-   }
-  },
-  {
-   "ref": "R17",
-   "value": "10k",
-   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
-   "uuid": "4aa3c58b-25d0-573f-a990-f7f96f6a3f7e",
-   "dnp": false,
-   "pads": {
-    "1": "3V3",
-    "2": "EYE_RST"
-   },
-   "pcb": {
-    "x": 7,
-    "y": 13,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "C19",
-   "value": "1u",
-   "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
-   "uuid": "06e7a41b-d05a-5f78-b38f-32ec122e5956",
-   "dnp": false,
-   "pads": {
-    "1": "EYE_RST",
-    "2": "GND"
-   },
-   "pcb": {
-    "x": 16.5,
-    "y": 13,
-    "rot": 0
    }
   },
   {
@@ -180,10 +148,6 @@
     "1"
    ],
    [
-    "R17",
-    "1"
-   ],
-   [
     "C20",
     "1"
    ],
@@ -202,19 +166,11 @@
     "4"
    ],
    [
-    "J11",
-    "10"
-   ],
-   [
     "J12",
     "2"
    ],
    [
     "J13",
-    "2"
-   ],
-   [
-    "C19",
     "2"
    ],
    [
@@ -288,7 +244,11 @@
     "7"
    ]
   ],
-  "EYE_RST": [
+  "DISP_RST": [
+   [
+    "J11",
+    "10"
+   ],
    [
     "J12",
     "5"
@@ -296,14 +256,6 @@
    [
     "J13",
     "5"
-   ],
-   [
-    "R17",
-    "2"
-   ],
-   [
-    "C19",
-    "1"
    ]
   ]
  },

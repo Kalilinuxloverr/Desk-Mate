@@ -1,4 +1,4 @@
-// Desk-Mate — verifizierte Pin-Map (2026-08-23). Quellen: vault/Hardware/Pin-Map.md, Spec §2.3.
+// Desk-Mate — verifizierte Pin-Map (2026-08-23; GPIO45 gestrichen 2026-10-04). Quellen: vault/Hardware/Pin-Map.md, Spec §2.3.
 // Board: ESP32-S3-DevKitC-1 (WROOM-1-N16R8). Aenderungen nur mit Spec-Update.
 #pragma once
 
@@ -28,7 +28,7 @@ constexpr int PIN_SPI_DC = 40;
 constexpr int PIN_CS_BELLY = 41;
 constexpr int PIN_CS_EYE_L = 42;
 constexpr int PIN_CS_EYE_R = 47;
-constexpr int PIN_BELLY_BL_PWM = 45;  // Loetjumper! Strapping VDD_SPI: darf beim Boot nie high sein. Default: BL ueber MCP23017 GPB6 + Transistor.
+// Backlight on/off und DISP_RST aller drei Displays laufen ueber den MCP23017 (GPB6 / GPB5), kein S3-Pin.
 
 // I2C (MCP23017 0x20, MPR121 0x5A, BME680 0x76/0x77)
 constexpr int PIN_I2C_SDA = 17;
@@ -38,4 +38,4 @@ constexpr int PIN_IO_INT = 21;        // MCP23017-INT + MPR121-IRQ, wired-OR (Op
 // Versorgung
 constexpr int PIN_PSU_SENSE = 48;     // Teiler an J_PWR-5V; DevKit v1.0: Onboard-LED haengt hier (unkritisch)
 
-// Tabu: 0, 3, 46 (Strapping), 19/20 (USB), 26-34 (Flash), 35-37 (Octal-PSRAM, unverbunden lassen), 43/44 (UART0/CP2102N)
+// Tabu: 0, 3, 45, 46 (Strapping; 45 = VDD_SPI), 19/20 (USB), 26-34 (Flash), 35-37 (Octal-PSRAM, unverbunden lassen), 43/44 (UART0/CP2102N)

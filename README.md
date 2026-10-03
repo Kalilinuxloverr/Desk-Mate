@@ -25,12 +25,12 @@ Arbeitszeit und Tagesprotokolle: [`vault/Log/`](vault/Log/) · Projektseite: Por
  │ BAUCH / DECK        │  FRONTPANEL-PCB
  │  [ 2,8" ILI9341 ]   │   6 Soft-Keys unter dem Display
  │  [k][k][k][k][k][k] │   4 Makro-Keys · EC11-Encoder
- │  |F| [k][k] (o) |F| │   2(4)× Motorfader MF60T · MCP23017 · MPR121
+ │  |F| [k][k] (o) |F| │   2(4)× X32-Motorfader · MCP23017 · MPR121
  │  |F|  [k][k]    |F| │
  ├─────────────────────┤
  │ BASE (statisch)     │  MAINBOARD-PCB
  │  USB-C(D) USB-C(P)  │   ESP32-S3 DevKitC-1 · 2× USB-C · LD1117V33
- │  BME680             │   2(4)× DRV8833 · Reserve: Stepper-Treiber, C3
+ │  BME680             │   2(4)× DRV8833 · VM-Boost optional
  └─────────────────────┘
           │ USB / BLE / WiFi-MQTT
    ┌──────┴──────┐      ┌──────────┐      ┌────────────┐

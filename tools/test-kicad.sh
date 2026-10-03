@@ -6,8 +6,12 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 K=/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli
 T="$(mktemp -d "${TMPDIR:-/tmp}/deskmate-kicad-test.XXXXXX")"
 fail=0
+# Auf Kopien pruefen: kicad-cli schreibt die .kicad_pro zurueck und nullt dabei netclass_assignments (Falle 18).
+cp -R "$ROOT/hardware/kicad/lib" "$T/lib"
 for b in mainboard frontpanel eye-adapter; do
-  d="$ROOT/hardware/kicad/$b"
+  mkdir "$T/$b"
+  cp "$ROOT/hardware/kicad/$b/$b".kicad_* "$ROOT/hardware/kicad/$b"/*-lib-table "$ROOT/hardware/kicad/$b/netlist.json" "$T/$b/"
+  d="$T/$b"
   bf=0
   if ! "$K" sch erc --severity-error --exit-code-violations -o "$T/erc_$b.rpt" "$d/$b.kicad_sch" >/dev/null 2>&1; then
     echo "FAIL ERC $b"; grep -c "error" "$T/erc_$b.rpt"; bf=1

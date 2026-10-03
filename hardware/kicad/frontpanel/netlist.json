@@ -39,7 +39,7 @@
     "26": "SPI_SCK",
     "27": "SPI_DC",
     "28": "CS_BELLY",
-    "29": "BELLY_BL_PWM",
+    "29": "DISP_RST",
     "30": "GND"
    },
    "pcb": {
@@ -70,8 +70,7 @@
     "16": "GND",
     "17": "GND",
     "18": "3V3",
-    "19": "INTB",
-    "20": "INTA",
+    "20": "IO_INT",
     "21": "KEY1",
     "22": "KEY2",
     "23": "KEY3",
@@ -104,34 +103,18 @@
    }
   },
   {
-   "ref": "JP9",
-   "value": "INTA->IO_INT",
-   "footprint": "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm",
-   "uuid": "b81fc8b9-af94-5f26-9288-8aa7fa994f35",
+   "ref": "R17",
+   "value": "10k",
+   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "uuid": "624648cd-7a8d-5082-b343-d65031bdac04",
    "dnp": false,
    "pads": {
-    "1": "INTA",
-    "2": "IO_INT"
+    "1": "DISP_RST",
+    "2": "3V3"
    },
    "pcb": {
     "x": 30,
-    "y": 84,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "JP10",
-   "value": "INTB->IO_INT",
-   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
-   "uuid": "2e3d814d-baac-5675-a79e-55ba78a2108b",
-   "dnp": false,
-   "pads": {
-    "1": "INTB",
-    "2": "IO_INT"
-   },
-   "pcb": {
-    "x": 30,
-    "y": 88,
+    "y": 86,
     "rot": 0
    }
   },
@@ -386,62 +369,13 @@
    }
   },
   {
-   "ref": "Q2",
-   "value": "BC337",
-   "footprint": "Package_TO_SOT_THT:TO-92_Inline",
-   "uuid": "d033816c-cfe1-52b6-94dd-2b3dd067844a",
-   "dnp": false,
-   "pads": {
-    "1": "BL_Q2C",
-    "2": "BL_Q2B",
-    "3": "GND"
-   },
-   "pcb": {
-    "x": 50,
-    "y": 30,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "R9",
-   "value": "1k",
-   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-   "uuid": "8dbcd1d2-1fc6-59db-a75f-fbe598cb4bc8",
-   "dnp": false,
-   "pads": {
-    "1": "BL_DRV",
-    "2": "BL_Q2B"
-   },
-   "pcb": {
-    "x": 40,
-    "y": 20,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "R12",
-   "value": "100k",
-   "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-   "uuid": "071d77db-cb8b-590a-93bc-fe2e417de4e7",
-   "dnp": false,
-   "pads": {
-    "1": "BL_DRV",
-    "2": "GND"
-   },
-   "pcb": {
-    "x": 54,
-    "y": 20,
-    "rot": 0
-   }
-  },
-  {
    "ref": "R11",
    "value": "1k",
    "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
    "uuid": "cf4e48fa-b765-500d-afd8-dfc8c5c1df0a",
    "dnp": false,
    "pads": {
-    "1": "BL_Q2C",
+    "1": "BL_EN_MCP",
     "2": "BL_BASE"
    },
    "pcb": {
@@ -462,23 +396,6 @@
    },
    "pcb": {
     "x": 82,
-    "y": 20,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "JP11",
-   "value": "BL: 1=MCP 3=GPIO45",
-   "footprint": "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels",
-   "uuid": "d861ceef-132e-5259-be7d-1fdc7df3cdac",
-   "dnp": false,
-   "pads": {
-    "1": "BL_EN_MCP",
-    "2": "BL_DRV",
-    "3": "BELLY_BL_PWM"
-   },
-   "pcb": {
-    "x": 30,
     "y": 20,
     "rot": 0
    }
@@ -945,14 +862,6 @@
     "2"
    ],
    [
-    "Q2",
-    "3"
-   ],
-   [
-    "R12",
-    "2"
-   ],
-   [
     "J14",
     "3"
    ],
@@ -1045,6 +954,10 @@
    [
     "C12",
     "1"
+   ],
+   [
+    "R17",
+    "2"
    ],
    [
     "DSP1",
@@ -1249,12 +1162,8 @@
     "24"
    ],
    [
-    "JP9",
-    "2"
-   ],
-   [
-    "JP10",
-    "2"
+    "U8",
+    "20"
    ],
    [
     "U9",
@@ -1301,14 +1210,22 @@
     "3"
    ]
   ],
-  "BELLY_BL_PWM": [
+  "DISP_RST": [
    [
     "J9",
     "29"
    ],
    [
-    "JP11",
-    "3"
+    "U8",
+    "6"
+   ],
+   [
+    "R17",
+    "1"
+   ],
+   [
+    "DSP1",
+    "4"
    ]
   ],
   "KEY9": [
@@ -1369,43 +1286,13 @@
     "S1"
    ]
   ],
-  "DISP_RST": [
-   [
-    "U8",
-    "6"
-   ],
-   [
-    "DSP1",
-    "4"
-   ]
-  ],
   "BL_EN_MCP": [
    [
     "U8",
     "7"
    ],
    [
-    "JP11",
-    "1"
-   ]
-  ],
-  "INTB": [
-   [
-    "U8",
-    "19"
-   ],
-   [
-    "JP10",
-    "1"
-   ]
-  ],
-  "INTA": [
-   [
-    "U8",
-    "20"
-   ],
-   [
-    "JP9",
+    "R11",
     "1"
    ]
   ],
@@ -1511,40 +1398,6 @@
    [
     "R10",
     "1"
-   ]
-  ],
-  "BL_Q2C": [
-   [
-    "Q2",
-    "1"
-   ],
-   [
-    "R11",
-    "1"
-   ]
-  ],
-  "BL_Q2B": [
-   [
-    "Q2",
-    "2"
-   ],
-   [
-    "R9",
-    "2"
-   ]
-  ],
-  "BL_DRV": [
-   [
-    "R9",
-    "1"
-   ],
-   [
-    "R12",
-    "1"
-   ],
-   [
-    "JP11",
-    "2"
    ]
   ],
   "WIPER1_RAW": [

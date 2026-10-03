@@ -36,16 +36,17 @@ Startbestand aus ESP32-Kühler und VVVF; Desk-Mate-eigene Fallen werden hier num
 5. **Protokoll geändert = Versionsnummer hoch** und beide Seiten (Firmware + Agent + App) im selben Commit; Parser-Test mitziehen.
 6. **Secrets im Initial-Commit** (Kühler `8958b76`): `secrets.h`/`.env` sind gitignored, `tools/check-secrets.sh` blockt. Trotzdem vor dem ersten Push nochmal `git log -p | grep -i passw`.
 7. **UART zwischen zwei ESPs** (VVVF): Baud-Mismatch + Pufferüberlauf = „verbinden sich nie“. Desk-Mate hat deshalb nur einen ESP; der C3-Footprint ist Reserve mit Lötjumpern.
-8. **Strapping-Pins S3:** 0, 3, 45, 46 nie als Funktion. 45 nur über Lötjumper (Backlight-PWM), Default ist Backlight über MCP23017 + Transistor.
+8. **Strapping-Pins S3:** 0, 3, 45, 46 nie als Funktion. 45 ist seit 2026-10-04 komplett unbelegt (Backlight on/off über MCP23017 + BC327); `tools/test-pins.sh` blockt ihn.
 9. **Onboard-RGB-LED des DevKitC-1** liegt je nach Revision auf GPIO 38 (v1.1) oder 48 (v1.0). WS2812-Daten auf 38 ist gewollt (spiegelt Pixel 0); 48 ist PSU_SENSE-Eingang — bei v1.0 leuchtet die LED dann mit, unkritisch.
 10. **Motoren/Servos am Rechner-USB** = Brownout und „Gerät nicht erkannt“. Deshalb zwei USB-C-Buchsen; ohne Netzteil (`PSU_SENSE` low) nur gedrosselt fahren.
 11. **ILI9341-Backlight** zieht bis 150 mA — nie direkt aus einem MCP23017-Pin, immer Transistor.
 12. **Kapazitives Touch über Flachband** ist unzuverlässig — deshalb MPR121 auf dem Frontpanel, nicht die S3-Touch-Pins.
-13. **GPIO45 darf keinen externen Pull-up sehen** (VDD_SPI-Strapping → 1,8 V → Flash tot). Deshalb Backlight-Steuerung zweistufig (BC337 low-side → BC327 high-side): die Steuerleitung sieht nur Basiswiderstand + Pull-down, nie einen Pull-up. Gilt für alles, was je über JP1 an GPIO45 hängt.
+13. **GPIO45 darf keinen externen Pull-up sehen** (VDD_SPI-Strapping → 1,8 V → Flash tot). Hat 2026-08-27 einen zweistufigen Backlight-Schalter erzwungen; seit 2026-10-04 hängt nichts mehr an GPIO45 und der Schalter ist einstufig. Die Regel gilt weiter für jede künftige Belegung.
 14. **DevKitC-1: Pin 1 beider Header liegt am Antennen-Ende**, nicht am USB-Ende (Espressif zeichnet mit Antenne oben). Footprint `ESP32-S3-DevKitC-1_Socket` ist so gebaut; beim Nachmessen nicht erschrecken.
 15. **Modul-Lochraster vor dem Footprint prüfen** — MT3608-Module (6,45–6,8 mm Paarabstand) und viele Breakouts sind nicht 2,54-kompatibel. Regel: nur Module mit belegter Maßzeichnung bekommen einen Sockel, der Rest bekommt eine Stiftleiste + Drähte.
 16. **Freerouting headless nur mit `-Djava.awt.headless=true`** — sonst hängt der Java-Prozess nach „Optimization was completed“ ewig in einem unsichtbaren Dialog (0 % CPU, keine .ses). `build_pcb.py` setzt das Flag.
 17. **`pcbnew` (KiCad-Python) `board.Save()` schreibt die `.kicad_pro` mit Default-Netzklassen zurück** (0,2/0,2) — Projektregeln danach restaurieren (macht `build_pcb.py`) und eine Platine nur unter ihrem Projektnamen laden, sonst fehlen die Netzklassen beim DSN-Export. Außerdem: Anführungszeichen in Bauteilwerten (`2.8"`) zerstören die DSN-Datei.
+18. **`kicad-cli sch erc` schreibt die `.kicad_pro` zurück und setzt `netclass_assignments` auf `null`** — alle Netze fallen still in die Default-Klasse, und der SessionEnd-Hook (`git add -A`) committet das. Deshalb prüft `tools/test-kicad.sh` auf Kopien in `$TMPDIR`. Nie `kicad-cli` direkt auf `hardware/kicad/<board>/` loslassen; zeigt `git status` eine geänderte `.kicad_pro`, erst `git diff` lesen.
 
 ## Konventionen
 

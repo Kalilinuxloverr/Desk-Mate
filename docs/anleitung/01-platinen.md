@@ -19,7 +19,7 @@ Alle drei Zips einzeln als eigenes Produkt hochladen (drei Designs = drei Positi
 
 ## Was auf die Platinen kommt
 
-Die Stückliste mit Bezugsquellen und Preisen steht in `hardware/bom.md`; welche Maße der gesteckten Module der Entwurf annimmt (und wie sicher das ist), in `vault/Hardware/Module-Masse.md`. **Vor dem Löten der Sockel** die Kandidaten mit „mittel“-Konfidenz am echten Modul nachmessen: ESP32-C3 SuperMini, MPR121-Breakout, DRV8833-Module aus der Box (Pololu-Raster 10,16 mm?), BME680-Pinreihenfolge.
+Die Stückliste mit Bezugsquellen und Preisen steht in `hardware/bom.md`; welche Maße der gesteckten Module der Entwurf annimmt (und wie sicher das ist), in `vault/Hardware/Module-Masse.md`. **Vor dem Löten der Sockel** die Kandidaten mit „mittel“-Konfidenz am echten Modul nachmessen: MPR121-Breakout, DRV8833-Module aus der Box (Pololu-Raster 10,16 mm?), BME680-Pinreihenfolge.
 
 ## Schaltpläne und 3D
 

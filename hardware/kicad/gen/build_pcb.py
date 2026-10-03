@@ -224,10 +224,12 @@ def build(name, force=False, route=True, attempts=6):
         open_count = board.GetConnectivity().GetUnconnectedCount(True)
         print(f'{name}: Versuch {attempt + 1} (mt={mt if route else "-"}, {us if route else "-"}): {open_count} offen')
         if best is None or open_count < best[0]:
-            best = (open_count, attempt)
             board.Save(pcb_path)
+            best = (open_count, attempt, open(pcb_path).read())   # naechster Versuch ueberschreibt die Datei mit pristine
         if open_count == 0:
             break
+    with open(pcb_path, 'w') as f:
+        f.write(best[2])
     with open(pro_path, 'w') as f:
         f.write(pro_text)
     print(f'{name}: gespeichert -> {pcb_path} ({best[0]} offene Verbindungen, Versuch {best[1] + 1})')

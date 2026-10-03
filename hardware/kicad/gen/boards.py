@@ -11,10 +11,6 @@ DEVKIT_ROW_SPACING = 22.86   # ESP32-S3-DevKitC-1: Abstand der beiden Buchsenrei
 DEVKIT_W, DEVKIT_L = 25.5, 63.5
 DRV8833_ROW_SPACING = 10.16  # Pololu #2130: 0,5" breit, Reihen 0,4" auseinander
 DRV8833_W, DRV8833_L = 12.7, 20.3
-A4988_ROW_SPACING = 12.7     # Pololu A4988: 0,6" × 0,8", Reihen 0,5"
-A4988_W, A4988_L = 15.24, 20.32
-C3_ROW_SPACING = 15.24       # ESP32-C3 SuperMini 18 × 22,5 mm
-C3_W, C3_L = 18.0, 22.5
 DEVKIT_OUTLINE_DY = 3.30     # Pinfeld sitzt 3,3 mm zum Antennenende hin (Pin 1 = Antennenende, 1,40 mm vom Rand)
 MPR121_ROW_SPACING = 17.78   # SparkFun-Layout (Clone 1:1): Steuerreihe/Elektrodenreihe 0,7"
 # MT3608-Modul: Lochraster nicht 2,54-kompatibel (6,45–6,8 / 30,5–31 mm) -> Modul per 4 Drähten an Stiftleiste (ponytail)
@@ -50,19 +46,6 @@ DRV8833_ROW2 = ['GND2', 'VIN', 'BOUT1', 'BOUT2', 'AOUT2', 'AOUT1', 'AISEN', 'BIS
 DRV8833_PINS = [(str(i + 1), n, 'L', i, 'passive') for i, n in enumerate(DRV8833_ROW1)] + \
                [(str(i + 9), n, 'R', i, 'passive') for i, n in enumerate(DRV8833_ROW2)]
 
-A4988_ROW1 = ['ENABLE', 'MS1', 'MS2', 'MS3', 'RESET', 'SLEEP', 'STEP', 'DIR']
-A4988_ROW2 = ['VMOT', 'GND', '2B', '2A', '1A', '1B', 'VDD', 'GND2']
-A4988_PINS = [(str(i + 1), n, 'L', i, 'passive') for i, n in enumerate(A4988_ROW1)] + \
-             [(str(i + 9), n, 'R', i, 'passive') for i, n in enumerate(A4988_ROW2)]
-
-C3_ROW1 = ['IO0', 'IO1', 'IO2', 'IO3', 'IO4', 'IO5', 'IO6', 'IO7']
-C3_ROW2 = ['5V', 'GND', '3V3', 'IO4b', 'IO3b', 'IO2b', 'IO1b', 'IO0b']
-# ponytail: SuperMini-Belegung variiert je Hersteller; nur 5V/GND/TX(21)/RX(20) werden genutzt, Rest bleibt NC.
-C3_ROW1 = ['IO5', 'IO6', 'IO7', 'IO8', 'IO9', 'IO10', 'IO20/RX', 'IO21/TX']
-C3_ROW2 = ['5V', 'GND', '3V3', 'IO4', 'IO3', 'IO2', 'IO1', 'IO0']
-C3_PINS = [(str(i + 1), n, 'L', i, 'passive') for i, n in enumerate(C3_ROW1)] + \
-          [(str(i + 9), n, 'R', i, 'passive') for i, n in enumerate(C3_ROW2)]
-
 MT3608_PINS = [('1', 'VIN+', 'L', 0, 'passive'), ('2', 'VIN-', 'L', 1, 'passive'),
                ('3', 'VOUT+', 'R', 0, 'passive'), ('4', 'VOUT-', 'R', 1, 'passive')]
 
@@ -75,10 +58,6 @@ CUSTOM_SYMBOLS = {
                                              desc='Espressif ESP32-S3-DevKitC-1 N16R8, gesteckt (2x 1x22 Buchsenleiste)'),
     'DRV8833_Breakout': make_custom_symbol('DRV8833_Breakout', DRV8833_PINS, width=20.32, ref_prefix='U',
                                            desc='Pololu DRV8833 Dual Motor Driver Carrier #2130 (Sockel 2x 1x8)'),
-    'A4988_Socket': make_custom_symbol('A4988_Socket', A4988_PINS, width=20.32, ref_prefix='U',
-                                       desc='Stepper-Treiber-Sockel A4988/TMC2209-Raster, Reserve (unbestueckt)'),
-    'ESP32-C3_SuperMini': make_custom_symbol('ESP32-C3_SuperMini', C3_PINS, width=22.86, ref_prefix='U',
-                                             desc='ESP32-C3 SuperMini, Reserve-Satellit (unbestueckt)'),
     'MT3608_Module': make_custom_symbol('MT3608_Module', MT3608_PINS, width=17.78, ref_prefix='U',
                                         desc='MT3608 Step-up-Modul, VM-Boost (optional)'),
     'MPR121_Breakout': make_custom_symbol('MPR121_Breakout', MPR121_PINS, width=20.32, ref_prefix='U',
@@ -88,10 +67,10 @@ CUSTOM_SYMBOLS = {
 IDC_NETS = {1: '5V', 2: '5V', 3: 'GND', 4: 'GND', 5: '3V3', 6: '3V3', 7: 'MOT1A', 8: 'MOT1B', 9: 'MOT2A', 10: 'MOT2B',
             11: 'MOT3A', 12: 'MOT3B', 13: 'MOT4A', 14: 'MOT4B', 15: 'GND', 16: 'GND', 17: 'FADER1_WIPER',
             18: 'FADER2_WIPER', 19: 'FADER3_WIPER', 20: 'FADER4_WIPER', 21: 'GND', 22: 'I2C_SDA', 23: 'I2C_SCL',
-            24: 'IO_INT', 25: 'SPI_MOSI', 26: 'SPI_SCK', 27: 'SPI_DC', 28: 'CS_BELLY', 29: 'BELLY_BL_PWM', 30: 'GND'}
+            24: 'IO_INT', 25: 'SPI_MOSI', 26: 'SPI_SCK', 27: 'SPI_DC', 28: 'CS_BELLY', 29: 'DISP_RST', 30: 'GND'}
 IDC_NETS = {str(k): v for k, v in IDC_NETS.items()}
 EYE_CABLE = {'1': '3V3', '2': '3V3', '3': 'GND', '4': 'GND', '5': 'SPI_MOSI', '6': 'SPI_SCK', '7': 'SPI_DC',
-             '8': 'CS_EYE_L', '9': 'CS_EYE_R', '10': 'GND'}
+             '8': 'CS_EYE_L', '9': 'CS_EYE_R', '10': 'DISP_RST'}
 
 
 def r(ref, val, n1, n2, x, y, rot=0):
@@ -131,31 +110,18 @@ def devkit_nets():
          'IO7': 'FADER1_DIR', 'IO15': 'SERVO_TILT', 'IO16': 'SPI_MOSI', 'IO17': 'I2C_SDA', 'IO18': 'I2C_SCL',
          'IO8': 'FADER2_PWM', 'IO3': None, 'IO46': None, 'IO9': 'FADER2_DIR', 'IO10': 'FADER3_PWM',
          'IO11': 'FADER3_DIR', 'IO12': 'FADER4_PWM', 'IO13': 'FADER4_DIR', 'IO14': 'SERVO_PAN', '5V': '5V',
-         'GND': 'GND', 'TXD0/IO43': 'UART0_TX', 'RXD0/IO44': 'UART0_RX', 'IO1': 'FADER1_WIPER',
+         'GND': 'GND', 'TXD0/IO43': None, 'RXD0/IO44': None, 'IO1': 'FADER1_WIPER',
          'IO2': 'FADER2_WIPER', 'IO42': 'CS_EYE_L', 'IO41': 'CS_BELLY', 'IO40': 'SPI_DC', 'IO39': 'SPI_SCK',
-         'IO38': 'WS2812_DATA', 'IO37': None, 'IO36': None, 'IO35': None, 'IO0': 'BOOT_N', 'IO45': 'BL_PWM_45',
+         'IO38': 'WS2812_DATA', 'IO37': None, 'IO36': None, 'IO35': None, 'IO0': 'BOOT_N', 'IO45': None,
          'IO48': 'PSU_SENSE', 'IO47': 'CS_EYE_R', 'IO21': 'IO_INT', 'IO20': None, 'IO19': None}
     return {num: m[name] for num, name, *_ in DEVKIT_PINS}
 
 
 def drv_nets(a_pwm, a_dir, b_pwm, b_dir, aout, bout):
     m = {'VIN': 'VM', 'GND': 'GND', 'AOUT1': aout[0], 'AOUT2': aout[1], 'BOUT2': bout[1], 'BOUT1': bout[0],
-         'VMM': None, 'GND2': 'GND', 'nSLEEP': 'DRV_SLEEP', 'nFAULT': None, 'AIN1': a_pwm, 'AIN2': a_dir,
+         'VMM': None, 'GND2': 'GND', 'nSLEEP': '3V3', 'nFAULT': None, 'AIN1': a_pwm, 'AIN2': a_dir,
          'BIN2': b_dir, 'BIN1': b_pwm, 'AISEN': None, 'BISEN': None}
     return {num: m[name] for num, name, *_ in DRV8833_PINS}
-
-
-def a4988_nets():
-    m = {'ENABLE': 'STEP_EN', 'MS1': None, 'MS2': None, 'MS3': None, 'RESET': 'STEP_RST', 'SLEEP': 'STEP_RST',
-         'STEP': 'STEP_STEP', 'DIR': 'STEP_DIR', 'VMOT': 'VM', 'GND': 'GND', '2B': 'STEP_2B', '2A': 'STEP_2A',
-         '1A': 'STEP_1A', '1B': 'STEP_1B', 'VDD': '3V3', 'GND2': 'GND'}
-    return {num: m[name] for num, name, *_ in A4988_PINS}
-
-
-def c3_nets():
-    m = {n: None for _, n, *_ in C3_PINS}
-    m.update({'5V': '5V', 'GND': 'GND', 'IO20/RX': 'C3_RX', 'IO21/TX': 'C3_TX'})
-    return {num: m[name] for num, name, *_ in C3_PINS}
 
 
 def mpr_nets():
@@ -189,7 +155,7 @@ MAINBOARD = {
             c('C7', '100n', '3V3', 'GND', 83, 18),
             tp('TP1', '5V', 64, 4), tp('TP2', '3V3', 67, 4), tp('TP3', 'GND', 70, 4),
         ]),
-        ('MCU: ESP32-S3-DevKitC-1 gesteckt, USB-Ende zur Rueckwand, Antenne nach vorn ueber Kupfer-Sperrzone; DevKit-3V3 bleibt frei; 35-37 PSRAM, 19/20 USB, 0/3/46 Strapping', [
+        ('MCU: ESP32-S3-DevKitC-1 gesteckt, USB-Ende zur Rueckwand, Antenne nach vorn ueber Kupfer-Sperrzone; DevKit-3V3 bleibt frei; 35-37 PSRAM, 19/20 USB, 43/44 UART0 frei, 0/3/45/46 Strapping', [
             ('U1', 'deskmate', 'ESP32-S3-DevKitC-1', 'ESP32-S3-DevKitC-1-N16R8', 'deskmate:ESP32-S3-DevKitC-1_Socket',
              devkit_nets(), dict(x=18, y=42, rot=180)),
             ('J8', 'Connector_Generic', 'Conn_02x02_Odd_Even', 'RST/BOOT extern',
@@ -197,11 +163,8 @@ MAINBOARD = {
              {'1': 'RST_N', '2': 'GND', '3': 'BOOT_N', '4': 'GND'}, dict(x=40, y=63, rot=0)),
             r('R6', '4k7', 'I2C_SDA', '3V3', 40, 34), r('R7', '4k7', 'I2C_SCL', '3V3', 40, 38),
             r('R8', '10k', 'IO_INT', '3V3', 40, 42),
-            jp2('JP1', JP2O, 'BL45 (Strapping! offen lassen ausser Backlight-PWM)', 'BL_PWM_45', 'BELLY_BL_PWM', 40, 48),
-            jp2('JP2', JP2O, 'C3 TX->S3 RX0', 'C3_TX', 'UART0_RX', 69, 66),
-            jp2('JP3', JP2O, 'S3 TX0->C3 RX', 'UART0_TX', 'C3_RX', 69, 70),
         ]),
-        ('Motor: 2x DRV8833 (PWM+DIR), VM = 5V (JP4 Default) oder MT3608-Boost an U5; nSLEEP ueber JP5 an 3V3', [
+        ('Motor: 2x DRV8833 (PWM+DIR), VM = 5V (JP1 Default) oder MT3608-Boost an U5; nSLEEP fest an 3V3', [
             ('U3', 'deskmate', 'DRV8833_Breakout', 'DRV8833 Pololu #2130', 'deskmate:DRV8833_Socket',
              drv_nets('FADER1_PWM', 'FADER1_DIR', 'FADER2_PWM', 'FADER2_DIR', ('MOT1A', 'MOT1B'), ('MOT2A', 'MOT2B')),
              dict(x=53, y=45, rot=0)),
@@ -209,8 +172,7 @@ MAINBOARD = {
              drv_nets('FADER3_PWM', 'FADER3_DIR', 'FADER4_PWM', 'FADER4_DIR', ('MOT3A', 'MOT3B'), ('MOT4A', 'MOT4B')),
              dict(x=69, y=45, rot=0)),
             cp('C2', '100u', 'VM', 'GND', 53, 60), cp('C3', '100u', 'VM', 'GND', 69, 60),
-            jp3('JP4', 'VM: 1=5V 3=Boost', '5V', 'VM', 'VBOOST', 58, 31),
-            jp2('JP5', JP2B, 'nSLEEP an 3V3', '3V3', 'DRV_SLEEP', 66, 31),
+            jp3('JP1', 'VM: 1=5V 3=Boost', '5V', 'VM', 'VBOOST', 58, 31),
             ('U5', 'deskmate', 'MT3608_Module', 'MT3608 Boost ~9V (optional, 4 Draehte)', HDR % 4,
              {'1': '5V', '2': 'GND', '3': 'VBOOST', '4': 'GND'}, dict(x=78, y=34, rot=0), True),
         ]),
@@ -227,20 +189,9 @@ MAINBOARD = {
             ('J2', 'Connector_Generic', 'Conn_02x15_Odd_Even', 'IDC 2x15 -> Frontpanel', IDC, IDC_NETS,
              dict(x=52, y=95, rot=90)),
         ]),
-        ('Reserve (unbestueckt): A4988-Sockel an FADER3/4-Leitungen ueber Loetjumper; C3 SuperMini an UART0 ueber JP2/JP3', [
-            ('U7', 'deskmate', 'A4988_Socket', 'A4988/TMC2209 Reserve', 'deskmate:A4988_Socket', a4988_nets(),
-             dict(x=50, y=78, rot=0), True),
-            conn('J10', 4, 'Stepper 1A 1B 2A 2B', HDR % 4, ['STEP_1A', 'STEP_1B', 'STEP_2A', 'STEP_2B'], 50, 65.5, 90, dnp=True),
-            cp('C8', '100u', 'VM', 'GND', 62, 72, fp=CP100),
-            jp2('JP6', JP2O, 'STEP<-FADER3_PWM', 'FADER3_PWM', 'STEP_STEP', 69, 76),
-            jp2('JP7', JP2O, 'DIR<-FADER3_DIR', 'FADER3_DIR', 'STEP_DIR', 69, 80),
-            jp2('JP8', JP2O, 'EN<-FADER4_PWM', 'FADER4_PWM', 'STEP_EN', 69, 84),
-            ('U6', 'deskmate', 'ESP32-C3_SuperMini', 'ESP32-C3 SuperMini Reserve', 'deskmate:ESP32-C3_SuperMini',
-             c3_nets(), dict(x=84, y=80, rot=90), True),
-        ]),
         ('Mechanik', [hole('H1', 4, 4), hole('H2', 96, 4), hole('H3', 4, 96), hole('H4', 96, 96)]),
     ],
-    'pwr_flags': ['VBUS', '5V', 'GND', 'VM', 'VBOOST', 'DRV_SLEEP'],
+    'pwr_flags': ['VBUS', '5V', 'GND', 'VM', 'VBOOST'],
     'netclasses': {'Power': (['5V', 'VBUS', 'VBUS_F', 'VM', 'VBOOST', 'GND'], 1.0),
                    'Motor': (['MOT1A', 'MOT1B', 'MOT2A', 'MOT2B', 'MOT3A', 'MOT3B', 'MOT4A', 'MOT4B'], 0.6),
                    'Power3V3': (['3V3'], 0.6)},
@@ -276,16 +227,15 @@ FRONTPANEL = {
             ('J9', 'Connector_Generic', 'Conn_02x15_Odd_Even', 'IDC 2x15 <- Mainboard', IDC, IDC_NETS,
              dict(x=60, y=130, rot=90)),
         ]),
-        ('MCP23017 (0x20): Tasten 1-10 gegen GND (interne Pull-ups), Encoder, DISP_RST, Backlight-Enable; INTA -> IO_INT', [
+        ('MCP23017 (0x20): Tasten 1-10 gegen GND (interne Pull-ups), Encoder, DISP_RST (10k Pull-up, geht ueber IDC 29 auch zu den Augen), Backlight-Enable; INTA direkt an IO_INT', [
             ('U8', 'Interface_Expansion', 'MCP23017x-x-SP', 'MCP23017-E/SP', 'Package_DIP:DIP-28_W7.62mm_Socket',
              {'1': 'KEY9', '2': 'KEY10', '3': 'ENC_A', '4': 'ENC_B', '5': 'ENC_SW', '6': 'DISP_RST', '7': 'BL_EN_MCP',
               '8': None, '9': '3V3', '10': 'GND', '11': None, '12': 'I2C_SCL', '13': 'I2C_SDA', '14': None,
-              '15': 'GND', '16': 'GND', '17': 'GND', '18': '3V3', '19': 'INTB', '20': 'INTA',
+              '15': 'GND', '16': 'GND', '17': 'GND', '18': '3V3', '19': None, '20': 'IO_INT',
               '21': 'KEY1', '22': 'KEY2', '23': 'KEY3', '24': 'KEY4', '25': 'KEY5', '26': 'KEY6', '27': 'KEY7',
               '28': 'KEY8'}, dict(x=18, y=100, rot=0)),
             c('C12', '100n', '3V3', 'GND', 18, 79),
-            jp2('JP9', JP2B, 'INTA->IO_INT', 'INTA', 'IO_INT', 30, 84),
-            jp2('JP10', JP2O, 'INTB->IO_INT', 'INTB', 'IO_INT', 30, 88),
+            r('R17', '10k', 'DISP_RST', '3V3', 30, 86),
         ] + [('SW%d' % (i + 1), 'Switch', 'SW_Push', 'Soft-Key %d' % (i + 1),
               'Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB', {'1': 'KEY%d' % (i + 1), '2': 'GND'},
               dict(x=SOFT_X[i], y=SOFT_Y, rot=0)) for i in range(6)]
@@ -301,17 +251,13 @@ FRONTPANEL = {
               'Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm',
               {'A': 'ENC_A', 'B': 'ENC_B', 'C': 'GND', 'S1': 'ENC_SW', 'S2': 'GND'}, dict(x=100, y=108, rot=0)),
              c('C13', '10n', 'ENC_A', 'GND', 95, 128), c('C14', '10n', 'ENC_B', 'GND', 105, 128)]),
-        ('Bauch-Display ILI9341 2.8in SPI (MSP2807, 14-Pin, Header links); Backlight 150 mA: High-Side BC327 via BC337, Quelle JP11 (1=MCP GPB6, 3=GPIO45-PWM)', [
+        ('Bauch-Display ILI9341 2.8in SPI (MSP2807, 14-Pin, Header links); Backlight 150 mA: High-Side BC327 direkt vom MCP GPB6 (low = an); 10k B-E haelt aus, bis der MCP konfiguriert ist', [
             conn('DSP1', 14, 'ILI9341 2.8in SPI', SOCK % 14,
                  ['3V3', 'GND', 'CS_BELLY', 'DISP_RST', 'SPI_DC', 'SPI_MOSI', 'SPI_SCK', 'BELLY_BL', None, None, None,
                   None, None, None], DSP_X0 + 2.0, DSP_Y0 + 8.49 + 16.51, 0),
             ('Q1', 'Transistor_BJT', 'BC327', 'BC327', 'Package_TO_SOT_THT:TO-92_Inline',
              {'1': 'BELLY_BL', '2': 'BL_BASE', '3': '3V3'}, dict(x=40, y=30, rot=0)),
-            ('Q2', 'Transistor_BJT', 'BC337', 'BC337', 'Package_TO_SOT_THT:TO-92_Inline',
-             {'1': 'BL_Q2C', '2': 'BL_Q2B', '3': 'GND'}, dict(x=50, y=30, rot=0)),
-            r('R9', '1k', 'BL_DRV', 'BL_Q2B', 40, 20), r('R12', '100k', 'BL_DRV', 'GND', 54, 20),
-            r('R11', '1k', 'BL_Q2C', 'BL_BASE', 68, 20), r('R10', '10k', 'BL_BASE', '3V3', 82, 20),
-            jp3('JP11', 'BL: 1=MCP 3=GPIO45', 'BL_EN_MCP', 'BL_DRV', 'BELLY_BL_PWM', 30, 20),
+            r('R11', '1k', 'BL_EN_MCP', 'BL_BASE', 68, 20), r('R10', '10k', 'BL_BASE', '3V3', 82, 20),
         ]),
         ('Fader X32 (panel-mount, Draehte an Stiftleisten): Motor auf IDC, Schleifer ueber RC 1k/100n, Touch auf MPR121 ELE0-3', [
             fader_header(1, 6, 90), fader_header(2, 114, 88), fader_header(3, 6, 112), fader_header(4, 114, 110),
@@ -338,15 +284,13 @@ EYE_W, EYE_H = 42.0, 30.0
 EYEADAPTER = {
     'name': 'eye-adapter', 'title': 'Desk-Mate Augen-Adapter (Kopf)', 'w': EYE_W, 'h': EYE_H,
     'sections': [
-        ('Nur Stecker: 10-Pin vom Mainboard -> 2x GC9A01 (VCC GND SCL SDA RES DC CS); Reset per RC (Software-Reset im Betrieb)', [
+        ('Nur Stecker: 10-Pin vom Mainboard -> 2x GC9A01 (VCC GND SCL SDA RES DC CS); DISP_RST kommt vom MCP23017 ueber das Kabel', [
             conn('J11', 10, 'vom Mainboard J7', HDR % 10, [EYE_CABLE[str(i + 1)] for i in range(10)], 21, 4, 90),
-            conn('J12', 7, 'GC9A01 links', SOCK % 7, ['3V3', 'GND', 'SPI_SCK', 'SPI_MOSI', 'EYE_RST', 'SPI_DC', 'CS_EYE_L'],
+            conn('J12', 7, 'GC9A01 links', SOCK % 7, ['3V3', 'GND', 'SPI_SCK', 'SPI_MOSI', 'DISP_RST', 'SPI_DC', 'CS_EYE_L'],
                  11, 24, 90),
-            conn('J13', 7, 'GC9A01 rechts', SOCK % 7, ['3V3', 'GND', 'SPI_SCK', 'SPI_MOSI', 'EYE_RST', 'SPI_DC', 'CS_EYE_R'],
+            conn('J13', 7, 'GC9A01 rechts', SOCK % 7, ['3V3', 'GND', 'SPI_SCK', 'SPI_MOSI', 'DISP_RST', 'SPI_DC', 'CS_EYE_R'],
                  31, 24, 90),
-            ('R17', 'Device', 'R', '10k', 'Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal',
-             {'1': '3V3', '2': 'EYE_RST'}, dict(x=7, y=13, rot=0)),
-            c('C19', '1u', 'EYE_RST', 'GND', 16.5, 13), c('C20', '100n', '3V3', 'GND', 24.5, 13),
+            c('C20', '100n', '3V3', 'GND', 24.5, 13),
             c('C21', '100n', '3V3', 'GND', 32.5, 13),
         ]),
         ('Mechanik', [hole('H13', 4, 4), hole('H14', 38, 4)]),

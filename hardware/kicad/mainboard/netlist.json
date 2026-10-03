@@ -277,8 +277,6 @@
     "21": "5V",
     "22": "GND",
     "23": "GND",
-    "24": "UART0_TX",
-    "25": "UART0_RX",
     "26": "FADER1_WIPER",
     "27": "FADER2_WIPER",
     "28": "CS_EYE_L",
@@ -287,7 +285,6 @@
     "31": "SPI_SCK",
     "32": "WS2812_DATA",
     "36": "BOOT_N",
-    "37": "BL_PWM_45",
     "38": "PSU_SENSE",
     "39": "CS_EYE_R",
     "40": "IO_INT",
@@ -367,54 +364,6 @@
    }
   },
   {
-   "ref": "JP1",
-   "value": "BL45 (Strapping! offen lassen ausser Backlight-PWM)",
-   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
-   "uuid": "b4bee446-d7fb-5407-835c-a7ee39bb1682",
-   "dnp": false,
-   "pads": {
-    "1": "BL_PWM_45",
-    "2": "BELLY_BL_PWM"
-   },
-   "pcb": {
-    "x": 40,
-    "y": 48,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "JP2",
-   "value": "C3 TX->S3 RX0",
-   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
-   "uuid": "4cff45b3-f494-5f50-a3e1-d90d2b82e2bd",
-   "dnp": false,
-   "pads": {
-    "1": "C3_TX",
-    "2": "UART0_RX"
-   },
-   "pcb": {
-    "x": 69,
-    "y": 66,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "JP3",
-   "value": "S3 TX0->C3 RX",
-   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
-   "uuid": "57926916-c9e1-560e-88c3-5642ed6c42ae",
-   "dnp": false,
-   "pads": {
-    "1": "UART0_TX",
-    "2": "C3_RX"
-   },
-   "pcb": {
-    "x": 69,
-    "y": 70,
-    "rot": 0
-   }
-  },
-  {
    "ref": "U3",
    "value": "DRV8833 Pololu #2130",
    "footprint": "deskmate:DRV8833_Socket",
@@ -426,7 +375,7 @@
     "4": "FADER2_DIR",
     "5": "FADER1_DIR",
     "6": "FADER1_PWM",
-    "7": "DRV_SLEEP",
+    "7": "3V3",
     "9": "GND",
     "10": "VM",
     "11": "MOT2A",
@@ -452,7 +401,7 @@
     "4": "FADER4_DIR",
     "5": "FADER3_DIR",
     "6": "FADER3_PWM",
-    "7": "DRV_SLEEP",
+    "7": "3V3",
     "9": "GND",
     "10": "VM",
     "11": "MOT4A",
@@ -499,10 +448,10 @@
    }
   },
   {
-   "ref": "JP4",
+   "ref": "JP1",
    "value": "VM: 1=5V 3=Boost",
    "footprint": "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels",
-   "uuid": "0336a215-fd8a-5b0f-a999-4726fa3e1561",
+   "uuid": "b4bee446-d7fb-5407-835c-a7ee39bb1682",
    "dnp": false,
    "pads": {
     "1": "5V",
@@ -511,22 +460,6 @@
    },
    "pcb": {
     "x": 58,
-    "y": 31,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "JP5",
-   "value": "nSLEEP an 3V3",
-   "footprint": "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm",
-   "uuid": "8c5f33d2-a522-502d-9730-c831b854277b",
-   "dnp": false,
-   "pads": {
-    "1": "3V3",
-    "2": "DRV_SLEEP"
-   },
-   "pcb": {
-    "x": 66,
     "y": 31,
     "rot": 0
    }
@@ -682,7 +615,7 @@
     "7": "SPI_DC",
     "8": "CS_EYE_L",
     "9": "CS_EYE_R",
-    "10": "GND"
+    "10": "DISP_RST"
    },
    "pcb": {
     "x": 95,
@@ -725,139 +658,12 @@
     "26": "SPI_SCK",
     "27": "SPI_DC",
     "28": "CS_BELLY",
-    "29": "BELLY_BL_PWM",
+    "29": "DISP_RST",
     "30": "GND"
    },
    "pcb": {
     "x": 52,
     "y": 95,
-    "rot": 90
-   }
-  },
-  {
-   "ref": "U7",
-   "value": "A4988/TMC2209 Reserve",
-   "footprint": "deskmate:A4988_Socket",
-   "uuid": "55fa4ecc-b7ce-557a-86c6-e914a0bbfc83",
-   "dnp": true,
-   "pads": {
-    "1": "STEP_EN",
-    "5": "STEP_RST",
-    "6": "STEP_RST",
-    "7": "STEP_STEP",
-    "8": "STEP_DIR",
-    "9": "VM",
-    "10": "GND",
-    "11": "STEP_2B",
-    "12": "STEP_2A",
-    "13": "STEP_1A",
-    "14": "STEP_1B",
-    "15": "3V3",
-    "16": "GND"
-   },
-   "pcb": {
-    "x": 50,
-    "y": 78,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "J10",
-   "value": "Stepper 1A 1B 2A 2B",
-   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
-   "uuid": "1ca42688-9ce7-5e7f-bd14-dc81d206477b",
-   "dnp": true,
-   "pads": {
-    "1": "STEP_1A",
-    "2": "STEP_1B",
-    "3": "STEP_2A",
-    "4": "STEP_2B"
-   },
-   "pcb": {
-    "x": 50,
-    "y": 65.5,
-    "rot": 90
-   }
-  },
-  {
-   "ref": "C8",
-   "value": "100u",
-   "footprint": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
-   "uuid": "b39fc450-7201-5e23-9d51-40f0319698fb",
-   "dnp": false,
-   "pads": {
-    "1": "VM",
-    "2": "GND"
-   },
-   "pcb": {
-    "x": 62,
-    "y": 72,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "JP6",
-   "value": "STEP<-FADER3_PWM",
-   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
-   "uuid": "ec8723e8-4f14-55e8-ab36-f501714dda37",
-   "dnp": false,
-   "pads": {
-    "1": "FADER3_PWM",
-    "2": "STEP_STEP"
-   },
-   "pcb": {
-    "x": 69,
-    "y": 76,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "JP7",
-   "value": "DIR<-FADER3_DIR",
-   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
-   "uuid": "f518addc-6fd0-5d62-ab4d-4428dc04e693",
-   "dnp": false,
-   "pads": {
-    "1": "FADER3_DIR",
-    "2": "STEP_DIR"
-   },
-   "pcb": {
-    "x": 69,
-    "y": 80,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "JP8",
-   "value": "EN<-FADER4_PWM",
-   "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
-   "uuid": "2549cd33-c20a-5c17-bc9d-327699adcc05",
-   "dnp": false,
-   "pads": {
-    "1": "FADER4_PWM",
-    "2": "STEP_EN"
-   },
-   "pcb": {
-    "x": 69,
-    "y": 84,
-    "rot": 0
-   }
-  },
-  {
-   "ref": "U6",
-   "value": "ESP32-C3 SuperMini Reserve",
-   "footprint": "deskmate:ESP32-C3_SuperMini",
-   "uuid": "b0f3cc46-24d9-5e6a-a3d8-cdd4f1755236",
-   "dnp": true,
-   "pads": {
-    "7": "C3_RX",
-    "8": "C3_TX",
-    "9": "5V",
-    "10": "GND"
-   },
-   "pcb": {
-    "x": 84,
-    "y": 80,
     "rot": 90
    }
   },
@@ -1061,10 +867,6 @@
     "4"
    ],
    [
-    "J7",
-    "10"
-   ],
-   [
     "J2",
     "3"
    ],
@@ -1087,22 +889,6 @@
    [
     "J2",
     "30"
-   ],
-   [
-    "U7",
-    "10"
-   ],
-   [
-    "U7",
-    "16"
-   ],
-   [
-    "C8",
-    "2"
-   ],
-   [
-    "U6",
-    "10"
    ]
   ],
   "VBUS": [
@@ -1187,7 +973,7 @@
     "21"
    ],
    [
-    "JP4",
+    "JP1",
     "1"
    ],
    [
@@ -1221,10 +1007,6 @@
    [
     "J2",
     "2"
-   ],
-   [
-    "U6",
-    "9"
    ]
   ],
   "PSU_SENSE": [
@@ -1271,8 +1053,12 @@
     "2"
    ],
    [
-    "JP5",
-    "1"
+    "U3",
+    "7"
+   ],
+   [
+    "U4",
+    "7"
    ],
    [
     "J6",
@@ -1293,10 +1079,6 @@
    [
     "J2",
     "6"
-   ],
-   [
-    "U7",
-    "15"
    ]
   ],
   "RST_N": [
@@ -1437,10 +1219,6 @@
    [
     "U4",
     "6"
-   ],
-   [
-    "JP6",
-    "1"
    ]
   ],
   "FADER3_DIR": [
@@ -1451,10 +1229,6 @@
    [
     "U4",
     "5"
-   ],
-   [
-    "JP7",
-    "1"
    ]
   ],
   "FADER4_PWM": [
@@ -1465,10 +1239,6 @@
    [
     "U4",
     "3"
-   ],
-   [
-    "JP8",
-    "1"
    ]
   ],
   "FADER4_DIR": [
@@ -1489,26 +1259,6 @@
    [
     "J3",
     "3"
-   ]
-  ],
-  "UART0_TX": [
-   [
-    "U1",
-    "24"
-   ],
-   [
-    "JP3",
-    "1"
-   ]
-  ],
-  "UART0_RX": [
-   [
-    "U1",
-    "25"
-   ],
-   [
-    "JP2",
-    "2"
    ]
   ],
   "FADER1_WIPER": [
@@ -1599,16 +1349,6 @@
     "3"
    ]
   ],
-  "BL_PWM_45": [
-   [
-    "U1",
-    "37"
-   ],
-   [
-    "JP1",
-    "1"
-   ]
-  ],
   "CS_EYE_R": [
    [
     "U1",
@@ -1633,50 +1373,6 @@
     "24"
    ]
   ],
-  "BELLY_BL_PWM": [
-   [
-    "JP1",
-    "2"
-   ],
-   [
-    "J2",
-    "29"
-   ]
-  ],
-  "C3_TX": [
-   [
-    "JP2",
-    "1"
-   ],
-   [
-    "U6",
-    "8"
-   ]
-  ],
-  "C3_RX": [
-   [
-    "JP3",
-    "2"
-   ],
-   [
-    "U6",
-    "7"
-   ]
-  ],
-  "DRV_SLEEP": [
-   [
-    "U3",
-    "7"
-   ],
-   [
-    "U4",
-    "7"
-   ],
-   [
-    "JP5",
-    "2"
-   ]
-  ],
   "VM": [
    [
     "U3",
@@ -1695,16 +1391,8 @@
     "1"
    ],
    [
-    "JP4",
+    "JP1",
     "2"
-   ],
-   [
-    "U7",
-    "9"
-   ],
-   [
-    "C8",
-    "1"
    ]
   ],
   "MOT2A": [
@@ -1789,7 +1477,7 @@
   ],
   "VBOOST": [
    [
-    "JP4",
+    "JP1",
     "3"
    ],
    [
@@ -1807,84 +1495,14 @@
     "2"
    ]
   ],
-  "STEP_EN": [
+  "DISP_RST": [
    [
-    "U7",
-    "1"
+    "J7",
+    "10"
    ],
    [
-    "JP8",
-    "2"
-   ]
-  ],
-  "STEP_RST": [
-   [
-    "U7",
-    "5"
-   ],
-   [
-    "U7",
-    "6"
-   ]
-  ],
-  "STEP_STEP": [
-   [
-    "U7",
-    "7"
-   ],
-   [
-    "JP6",
-    "2"
-   ]
-  ],
-  "STEP_DIR": [
-   [
-    "U7",
-    "8"
-   ],
-   [
-    "JP7",
-    "2"
-   ]
-  ],
-  "STEP_2B": [
-   [
-    "U7",
-    "11"
-   ],
-   [
-    "J10",
-    "4"
-   ]
-  ],
-  "STEP_2A": [
-   [
-    "U7",
-    "12"
-   ],
-   [
-    "J10",
-    "3"
-   ]
-  ],
-  "STEP_1A": [
-   [
-    "U7",
-    "13"
-   ],
-   [
-    "J10",
-    "1"
-   ]
-  ],
-  "STEP_1B": [
-   [
-    "U7",
-    "14"
-   ],
-   [
-    "J10",
-    "2"
+    "J2",
+    "29"
    ]
   ]
  },
