@@ -2,9 +2,9 @@
 
 | Ordner | Platine | Maß | Inhalt |
 |---|---|---|---|
-| `mainboard/` | Base | 100 × 100 mm | S3-DevKit-Sockel, USB-C-Netzteilbuchse, Polyfuse + SB540, LD1117V33, 2× DRV8833-Sockel, Servo/ARGB/BME680/Augen-Stecker, IDC 2×15, MT3608-Header (VM-Boost, optional) |
-| `frontpanel/` | Deck | 120 × 136 mm | 10× MX, EC11, MCP23017, MPR121-Sockel, ILI9341-Sockel + 4 Abstandshalter, 4× Fader-Header, Backlight-Schalter, IDC 2×15 |
-| `eye-adapter/` | Kopf | 42 × 30 mm | 10-Pin ein (Pin 10 = DISP_RST), 2× 7-Pin GC9A01 |
+| `mainboard/` | Base | 100 × 100 mm | S3-DevKit-Sockel, Schraubklemme für das USB-C-Breakout (5 V/3 A), Polyfuse + SB540, LD1117V33, 2× DRV8833-Sockel, Servo/ARGB/I²C-Stiftleisten, Augen-Kabel IDC 2×5, IDC 2×15, MT3608-Header (VM-Boost, optional) |
+| `frontpanel/` | Deck | 120 × 136 mm | 10× MX, EC11, MCP23017, MPR121-Stiftleiste (Modul per Kabel), ILI9341-Sockel + 4 Abstandshalter, 4× Fader-Header, Backlight-Schalter, IDC 2×15 |
+| `eye-adapter/` | Kopf | 42 × 30 mm | IDC 2×5 ein, 2× 1×7-Stiftleiste für die GC9A01 (per Dupont-Kabel) |
 | `lib/` | — | — | Projektbibliothek `deskmate.kicad_sym` + `deskmate.pretty` (Modul-Sockel, Polyfuse) |
 | `gen/` | — | — | Generator (siehe unten) |
 | `<board>/fab/` | — | — | Gerber/Drill-Zip, STEP, Render — das geht zu JLCPCB |

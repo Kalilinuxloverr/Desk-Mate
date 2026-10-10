@@ -1,6 +1,6 @@
 # Desk-Mate — Design-Spec
 
-**Datum:** 2026-08-22 · **Status:** von Leon im Chat abgenommen (Abschnitte 1–5), 18 Grill-Fragen beantwortet; Reserve gestrichen 2026-10-04 (§2.2, [`vault/Entscheidungen/2026-10-04-reserve-raus.md`](../../../vault/Entscheidungen/2026-10-04-reserve-raus.md)) · **Relikt:** [`docs/relic/2026-08-22-original-prompt.md`](../../relic/2026-08-22-original-prompt.md)
+**Datum:** 2026-08-22 · **Status:** von Leon im Chat abgenommen (Abschnitte 1–5), 18 Grill-Fragen beantwortet; Reserve gestrichen 2026-10-04 (§2.2, [`vault/Entscheidungen/2026-10-04-reserve-raus.md`](../../../vault/Entscheidungen/2026-10-04-reserve-raus.md)); **finalisiert 2026-10-09** — Platinenteile von Reichelt, Silkscreen ([`vault/Entscheidungen/2026-10-09-finalisierung.md`](../../../vault/Entscheidungen/2026-10-09-finalisierung.md)) · **Relikt:** [`docs/relic/2026-08-22-original-prompt.md`](../../relic/2026-08-22-original-prompt.md)
 
 Desk-Mate ist ein kleiner Wall-E-artiger Schreibtisch-Begleiter: eine Ampel für alles, was dich braucht (Claude Code, Downloads, Steam), ein Deck mit Motorfadern und Soft-Keys, ein Kopf mit zwei Augen-Displays — verbunden per USB, BLE und WiFi, steuerbar von Mac, Handy und Haus-MQTT.
 
@@ -14,14 +14,14 @@ Leitplanken aus dem Grilling: **eine PCB-Bestellung** (drei Designs, kein Re-Spi
 |---|---|---|
 | 1 | v1-Umfang | Alles (A–E); Reihenfolge Plan → KiCad → Teile → JLCPCB → Rest |
 | 2 | Mechanik | Base statisch, **kein Körper-Stepper**; Treiber-Sockel gestrichen (2026-10-04) |
-| 3 | Hirn | **Ein ESP32-S3 DevKitC-1 N16R8**, gesteckt; kein C3 (Footprint gestrichen 2026-10-04) |
+| 3 | Hirn | **Ein ESP32-S3 DevKitC-1 N16R8** (N8R8 gleichwertig), gesteckt; kein C3 (Footprint gestrichen 2026-10-04) |
 | 5 | Zentrale | Hybrid: USB → Desktop-Agent primär, BLE → Handy, Gerät auch standalone |
 | 6 | Standalone | BLE-HID + Gesicht + **WiFi in v1** (MQTT, NTP, OTA, Wetter, Haus-Nodes) |
 | 7 | Fader-Regelung | Eigene, einfache Regelung auf dem S3; DRV8833-Breakouts gesteckt. Fader: **Behringer X32-Ersatz, 100 mm, panel-mounted mit Kabel** (entschieden 2026-08-23) |
 | 8 | Fader-Anzahl | 2 verbaut, 4 vorgesehen (5er-Set: +1 Ersatz) |
 | 9 | Displays | 2× rund 1,28" GC9A01 (Augen) + 2,8" ILI9341 (Bauch), ein SPI-Bus |
 | 10 | Tasten | 6 Soft-Keys + 4 Makro-Keys (MX, Hot-Swap) + EC11-Encoder; SmartKnob: Roadmap |
-| 11 | Strom | 2× USB-C außen (Daten-Verlängerung / 5 V 3 A); Mainboard: Polyfuse + Schottky, DevKit-Diode als zweiter Zweig |
+| 11 | Strom | 2× USB-C außen (Daten-Verlängerung / 5 V 3 A über USB-C-Breakout an Schraubklemme, 2026-10-09); Mainboard: Polyfuse + Schottky, DevKit-Diode als zweiter Zweig |
 | 12 | Kopf | 2× MG90S Pan/Tilt, Easing, PWM-Aus im Ruhezustand |
 | 13 | Claude | Claude-Code-**Hooks** (Status + Freigabe), Tastendruck nur als Fallback; generische Ereignisquellen |
 | 14 | Agent | Swift-Menüleisten-App im Xcode-Projekt der iOS-App; Windows-Tray in Python (Phase 2); S3 = Composite-HID |
@@ -62,34 +62,37 @@ Frage 4 (UART vs. ESP-NOW) entfiel mit dem C3. Jede Entscheidung hat eine Notiz 
 
 **Mainboard (Base)** — 2 Lagen, **100 × 100 mm** (KiCad 2026-08-27; Rückwand = obere Kante: USB-C-Netzteilbuchse, BME680-Sockel, Testpunkte; DevKit links mit USB-Ende zur Rückwand, Antenne nach vorn über einer Kupfer-Sperrzone; IDC an der Vorderkante)
 - Sockel für ESP32-S3-DevKitC-1 (2× 1×22 Buchsenleiste, 2,54 mm; Antennenseite über Platinenrand hinaus, nichts darüber)
-- **Daten-Port** = Panel-Mount-USB-C-Verlängerung von der DevKit-USB-Buchse zur Gehäuserückwand (entschieden 2026-08-23: kein USB-Routing/ESD auf dem Mainboard, DevKit direkt flashbar). Auf dem Mainboard nur **J_PWR**: USB-C-Buchse 16-Pin THT, nur 5 V, CC1/CC2 mit 5,1 kΩ nach GND → 3 A vom Netzteil. Außen am Gehäuse bleiben zwei USB-C-Ports (Entscheidung 11)
-- Versorgung (entschieden 2026-08-23, ersetzt P-FET-ODER): J_PWR → Polyfuse 3 A → **Schottky SB540** → 5-V-Rail; USB-Pfad speist die Rail über die **DevKit-eigene Diode** am 5V-Pin (Standard-Praxis, sperrt Rückspeisung zum Host). PSU_SENSE-Teiler **10 k/15 k** (→ 3,0 V bei 5 V; 10 k/10 k lägen mit 2,5 V zu nah an VIH) greift **vor** der SB540 ab → eindeutig „Netzteil da“. Rail liegt real bei ~4,6–4,7 V (Diodenabfall) — für Logik/Displays egal, für Fader-Motoren siehe VM-Boost-Sockel. Bulk 1000 µF/10 V an der Rail, LD1117V33 (TO-220) für 3,3-V-Peripherie (Displays, MCP23017, MPR121, BME680); DevKit-LDO versorgt nur den S3
+- **Daten-Port** = Panel-Mount-USB-C-Verlängerung von der DevKit-USB-Buchse zur Gehäuserückwand (entschieden 2026-08-23: kein USB-Routing/ESD auf dem Mainboard, DevKit direkt flashbar). Strom kommt über **J1 = 4-polige Schraubklemme RM 5,08** (VBUS, GND, CC1, CC2) von einem USB-C-Breakout in der Rückwand; CC1/CC2 bekommen auf dem Mainboard je 5,1 kΩ nach GND → 3 A vom Netzteil (2026-10-09: Reichelt hat keine THT-USB-C-Buchse, die 0,85-mm-Buchse samt Handrouting entfällt). Außen am Gehäuse bleiben zwei USB-C-Ports (Entscheidung 11)
+- Versorgung (entschieden 2026-08-23, ersetzt P-FET-ODER): J1 (VBUS) → Polyfuse 3 A → **Schottky SB540** → 5-V-Rail; USB-Pfad speist die Rail über die **DevKit-eigene Diode** am 5V-Pin (Standard-Praxis, sperrt Rückspeisung zum Host). PSU_SENSE-Teiler **10 k/15 k** (→ 3,0 V bei 5 V; 10 k/10 k lägen mit 2,5 V zu nah an VIH) greift **vor** der SB540 ab → eindeutig „Netzteil da“. Rail liegt real bei ~4,6–4,7 V (Diodenabfall) — für Logik/Displays egal, für Fader-Motoren siehe VM-Boost-Sockel. Bulk 1000 µF/10 V an der Rail, LD1117V33 (TO-220) für 3,3-V-Peripherie (Displays, MCP23017, MPR121, BME680); DevKit-LDO versorgt nur den S3
 - 2× Sockel für DRV8833-Breakout (Pololu #2130, 16-polig, Raster 10,16 mm) = 4 Motorkanäle; je 100 µF am VM-Pin; **VM-Rail per Lötjumper JP1 (der einzige auf dem Board): 5 V (Default) oder MT3608-Boost auf ~9 V** — das MT3608-Modul hat kein 2,54-Raster, deshalb 4-Pin-Stiftleiste U5 (VIN+ VIN− VOUT+ VOUT−) und Drähte statt Sockel (2026-08-27); nSLEEP beider Treiber fest an 3V3 (Jumper gestrichen 2026-10-04) — MF60T-Motor ist lt. Soundwell für 6–10 V spezifiziert, läuft bei 5 V nur langsamer (FaderBuddy-Praxis)
-- 2× Servo-Stecker JST-XH 3-Pin (GND/5V/Signal), 470 µF direkt an den Steckern; der 10-Ω-Serienwiderstand ist gestrichen (2026-08-27: bei 0,7 A Stall fielen 7 V ab — Drosselung macht die Firmware über PSU_SENSE)
-- WS2812/ARGB-Stecker 3-Pin (5 V, GND, Data über 330 Ω), 1000 µF lokal — generisch: beliebiger 5-V-ARGB-Streifen/Ring (Leons Drohnen-Streifen), LED-Anzahl per NVS, Strom-Cap in Firmware
-- BME680-Breakout-Sockel 1×6 (VCC GND SCL SDA SDO CS, CJMCU-680-Reihenfolge — am Modul prüfen)
+- 2× Servo-Anschluss als 1×3-Stiftleiste (GND/5V/Signal, der Servostecker passt direkt), 470 µF direkt daneben; der 10-Ω-Serienwiderstand ist gestrichen (2026-08-27: bei 0,7 A Stall fielen 7 V ab — Drosselung macht die Firmware über PSU_SENSE)
+- WS2812/ARGB-Anschluss als 1×3-Stiftleiste (5 V, GND, Data über 330 Ω), 1000 µF lokal — generisch: beliebiger 5-V-ARGB-Streifen/Ring (Leons Drohnen-Streifen), LED-Anzahl per NVS, Strom-Cap in Firmware
+- BME680 per Kabel an eine 1×4-I²C-Stiftleiste J6 (3V3 GND SCL SDA, 2026-10-09) — Sensor sitzt hinter den Lüftungsschlitzen, weg von der ESP-Wärme; kein Sockel mit ungeprüfter Pinfolge
 - I²C-Pull-ups 4,7 kΩ und IO_INT-Pull-up 10 kΩ sitzen auf dem Mainboard (2026-08-27: damit der Interrupt-Eingang auch ohne gestecktes Frontpanel definiert ist)
-- IDC 2×15 zum Frontpanel (Pinbelegung 2.4); DISP_RST vom Frontpanel läuft über Pin 29 durch zum Augen-Kabel (J7 Pin 10)
+- IDC 2×15 zum Frontpanel (Pinbelegung 2.4); DISP_RST vom Frontpanel läuft über Pin 29 durch zum Augen-Kabel
+- **Augen-Kabel J7 = IDC 2×5** (verpolsicher, 10 Adern vom selben Flachband; 2026-10-09): 1 3V3 · 2 GND · 3 SCK · 4 GND · 5 MOSI · 6 GND · 7 DC · 8 CS_L · 9 CS_R · 10 DISP_RST — GND liegt zwischen SCK und MOSI
 - Augen-/Servo-/WS2812-Kabel gehen vom Mainboard nach oben (Kopf ist am Bauch, Kabel durch Bauch-Rückwand)
 - **Keine Reserve-Footprints** (2026-10-04): Stepper-Sockel und C3-Footprint sind gestrichen, GPIO 43/44 bleiben als Debug-UART frei, der einzige Lötjumper ist JP1 (VM). Begründung: `vault/Entscheidungen/2026-10-04-reserve-raus.md`
 - Taster RESET und BOOT per Kabel/Pins nach außen führbar (DevKit-Taster liegen unter dem Gehäuse)
 
-**Frontpanel (Deck)** — 2 Lagen, **120 × 136 mm** (KiCad 2026-08-27): ILI9341-Modul quer oben (x 17–103, y 6–56, Header links, 4× M3×11-Abstandshalter im MSP2807-Raster 76,08 × 44), darunter 6 Soft-Keys im 19,05-Raster, 4 Makro-Keys 2×2 mittig, Encoder rechts, MCP23017 links, MPR121-Sockel rechts, Fader-Header an den Seitenkanten, IDC an der Unterkante; die Fader sitzen links/rechts **neben** dem PCB im Panel. Anordnung ist ein Vorschlag — Leons Skizze entscheidet
+**Frontpanel (Deck)** — 2 Lagen, **120 × 136 mm** (KiCad 2026-08-27): ILI9341-Modul quer oben (x 17–103, y 6–56, Header links, 4× M3×11-Abstandshalter im MSP2807-Raster 76,08 × 44), darunter 6 Soft-Keys im 19,05-Raster, 4 Makro-Keys 2×2 mittig, Encoder rechts, MCP23017 links, MPR121-Stiftleiste rechts, Fader-Header an den Seitenkanten, IDC an der Unterkante; die Fader sitzen links/rechts **neben** dem PCB im Panel. Anordnung von Leon freigegeben 2026-10-09
 - Fader: **Behringer X32-Ersatzfader, 100 mm, 5er-Set** (entschieden 2026-08-23, ersetzt MF60T 60 mm) — Metallrahmen wird ans Gehäuse-Panel geschraubt, Anschluss über die mitgelieferten Kabel auf 4× Header am PCB (Motor 2-polig, Poti/Touch mehradrig — Pinout bei Charakterisierung). Kein Fader-Footprint mehr → größtes Footprint-Risiko eliminiert. Deck wird durch den 100-mm-Fahrweg ~4–5 cm höher als mit 60ern
 - 10× MX-kompatibler Schalter-Footprint (**THT, direkt gelötet** — Hot-Swap-Sockel gestrichen 2026-08-24: sind SMD), keine Dioden (kein Matrix-Scan, direkt am Expander)
 - EC11-Encoder mit Taster
 - MCP23017 (DIP-28) — Tasten 0–9, Encoder A/B/SW, Display-RST, Display-BL (on/off); INT_A/B → IDC
-- MPR121-Breakout-Sockel (I²C) — Fader-Touch 0–3 (Kanal 4–11 frei, z. B. Touch am Kopf)
+- MPR121-Breakout **per Kabel** an die 1×9-Stiftleiste J18 (3V3 GND SCL SDA IRQ T1–T4; 2026-10-09: kein Sockel, weil die Clone-Raster nicht belegt sind — Falle 15) — Fader-Touch 0–3 (Kanal 4–11 frei, z. B. Touch am Kopf)
 - Steckleiste für das 2,8"-ILI9341-Modul (14-Pin-Variante; SPI, ohne Touch-Pins), Display sitzt über den Soft-Keys. **Backlight-Schalter einstufig** (2026-10-04): MCP23017 GPB6 → 1 kΩ → Basis BC327 (high-side an 3V3) → LED-Pin; 10 kΩ Basis–Emitter hält das Licht aus, bis die Firmware den MCP konfiguriert; GPB6 low = an. Kein GPIO45, kein Jumper
 - MCP23017 RESET fest an 3V3, A0–A2 an GND (0x20), INTA direkt an IO_INT, INTB unbeschaltet; Firmware setzt MIRROR=1, INT open-drain. DISP_RST (GPB5) hat 10 kΩ Pull-up und geht an das Bauch-Display und über IDC-Pin 29 zu den Augen
 - 4× Fader-Anschluss-Header (Motor + Schleifer + Touch), RC-Filter (1 kΩ / 100 nF) je Schleifer vor dem IDC
 - IDC 2×15 zum Mainboard
 
 **Augen-Adapter (Kopf)** — 2 Lagen, 42 × 30 mm, nur Stecker
-- 1× 10-Pin-Eingang (3V3, 3V3, GND, GND, MOSI, SCK, DC, CS_L, CS_R, DISP_RST — identisch zu J7 auf dem Mainboard)
-- 2× 7-Pin-Buchse für GC9A01 (VCC GND SCL SDA RES DC CS), 100 nF je Modul
+- IDC 2×5 als Eingang (Belegung wie J7 auf dem Mainboard)
+- 2× 1×7-Stiftleiste in GC9A01-Reihenfolge (VCC GND SCL SDA RES DC CS), 100 nF je Modul; die Displays hängen an 7-poligen Dupont-Kabeln, ihren Abstand bestimmt das Visier (2026-10-09: vorher Buchsen 20 mm auseinander, die 38-mm-Module hätten sich überlappt)
 - **Reset gemeinsam mit dem Bauch-Display** (2026-10-04, ersetzt das RC-Glied): DISP_RST kommt vom MCP23017 (GPB5, Pull-up auf dem Frontpanel) über IDC-Pin 29 und Pin 10 des Augen-Kabels. Ein Reset-Pfad für alle drei Panels, kein `pin_rst = -1`-Sonderfall
 - nur Stecker + 2× 100 nF → kann keine Revision kosten
+
+**Alle drei Platinen (2026-10-09):** Jedes gelötete Teil gibt es bei Reichelt (Art.-Nr. in `hardware/bom.md`), Module kommen von Amazon oder aus dem Bestand. Kein SMD. Silkscreen vorne: Desk-Mate-Kopf (Augen und Lächeln als Aussparung im Visier), Platinenname, Rev 1 und an jedem Stecker die Pin-Namen; hinten großer Kopf, GitHub-Link und das Feld `JLCJLCJLCJLC` für die JLCPCB-Bestellnummer. Erzeugt aus `hardware/kicad/gen/boards.py` (`'silk'`).
 
 ### 2.3 Pin-Map ESP32-S3 DevKitC-1 (N16R8)
 
@@ -123,7 +126,7 @@ Motoren laufen im **PWM + DIR**-Schema am DRV8833 (IN1 = PWM, IN2 = DIR; rückw�
 | 41 | CS_BELLY | GPIO | ILI9341 | |
 | 42 | CS_EYE_L | GPIO | GC9A01 links | |
 | 47 | CS_EYE_R | GPIO | GC9A01 rechts | |
-| 48 | PSU_SENSE | GPIO in | Spannungsteiler an J_PWR-5V | „Netzteil da?“ (Onboard-LED auf DevKit v1.0 hängt hier — unkritisch) |
+| 48 | PSU_SENSE | GPIO in | Spannungsteiler an J1-VBUS (vor der SB540) | „Netzteil da?“ (Onboard-LED auf DevKit v1.0 hängt hier — unkritisch) |
 | 0, 3, 45, 46 | — | | | Strapping, nicht belegen. 45 (VDD_SPI) war bis 2026-10-04 als Backlight-PWM-Option über Lötjumper vorgesehen, jetzt unbelegt |
 | 19, 20 | USB D−/D+ | USB | J_DATA | über DevKit-USB-Buchse oder direkt; Entscheidung bei Bauteilwahl |
 | 43, 44 | UART0 | | CP2102 | Debug/Flash-Fallback |
@@ -259,7 +262,7 @@ Sicherheits-Regel: Der Freigabe-Hook gibt **nur** frei, was Claude Code ohnehin 
 Desk-Mate/
   README.md                 Template (Was · Architektur-ASCII · Pfadtabelle · Bauen)
   CLAUDE.md                 Architektur · Build & Test · Bekannte Fallen · Konventionen · Session-Pflichten
-  LICENSE                   MIT (Hardware-Teile CERN-OHL-P wäre Alternative — Entscheidung Leon)
+  LICENSE                   MIT (gilt auch für die Hardware, entschieden 2026-10-09)
   .gitignore                secrets.h, .env, *.local.xcconfig, .obsidian/workspace*, Build-Ordner, KiCad-Backups
   .claude/settings.json     SessionStart/SessionEnd-Hooks (Zeiterfassung, commit+push)
   tools/                    session-start.sh, session-end.sh, check-secrets.sh (pre-commit), deskmate-hook.sh
@@ -298,6 +301,6 @@ SmartKnob als externes Gerät über MQTT/USB · watchOS-App (Ampel am Handgelenk
 3. ~~ODER-Stufe~~ erledigt 2026-08-23: Polyfuse + SB540 + DevKit-Diode, kein P-FET (§2.2).
 4. ~~HiveMQ-Free-Tier~~ erledigt 2026-08-23: max. Nachrichtengröße 5 MB (Quelle: community.hivemq.com/t/maximum-message-size/3087) → 800-px-Screenshots unkritisch.
 5. `PreToolUse`/`AskUserQuestion`: trägt `tool_input` die Frage? Maximaler Hook-Timeout? → testen.
-6. Lizenz (MIT vs. CERN-OHL für Hardware) — Leon.
-7. Leons Skizze nachreichen → Frontpanel-Anordnung (KiCad-Vorschlag vom 2026-08-27 steht, siehe §2.2; Änderung = Positionen in `hardware/kicad/gen/boards.py`).
-8. Vor der JLCPCB-Bestellung am echten Teil nachmessen (2026-08-27): MPR121-Clone 17,78, DRV8833-Module aus der Box = Pololu-Raster 10,16?, BME680-Pinreihenfolge. DevKit-Sockel 22,86 ist per Espressif-DXF belegt. Details `vault/Hardware/Module-Masse.md`.
+6. ~~Lizenz~~ erledigt 2026-10-09: MIT für alles (wie im Repo).
+7. ~~Frontpanel-Anordnung~~ erledigt 2026-10-09: KiCad-Vorschlag freigegeben.
+8. Vor dem Löten nachmessen: DRV8833-Module aus der Box = Pololu #2130 (Reihen 10,16)? Sonst Pololu kaufen. MPR121 und BME680 hängen seit 2026-10-09 am Kabel, deren Raster spielt keine Rolle mehr. DevKit-Sockel 22,86 ist per Espressif-DXF belegt. Details `vault/Hardware/Module-Masse.md`.

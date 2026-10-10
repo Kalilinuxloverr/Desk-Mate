@@ -6,6 +6,7 @@
 Überschreibt <board>.kicad_pcb nur mit --force (GUI-Änderungen von Leon sind sonst die Wahrheit).
 """
 import json
+import math
 import os
 import shutil
 import subprocess
@@ -54,17 +55,103 @@ def add_line(board, x1, y1, x2, y2, layer=pcbnew.Edge_Cuts, width=0.1):
     board.Add(s)
 
 
-def add_text(board, text, x, y, layer=pcbnew.F_SilkS, size=1.5, rot=0):
+JUST = {'L': pcbnew.GR_TEXT_H_ALIGN_LEFT, 'C': pcbnew.GR_TEXT_H_ALIGN_CENTER, 'R': pcbnew.GR_TEXT_H_ALIGN_RIGHT}
+
+
+def add_text(board, text, x, y, layer=pcbnew.F_SilkS, size=1.5, rot=0, just='C', bold=False):
     t = pcbnew.PCB_TEXT(board)
     t.SetText(text)
     t.SetPosition(V(x, y))
     t.SetLayer(layer)
     t.SetTextSize(pcbnew.VECTOR2I(mm(size), mm(size)))
-    t.SetTextThickness(mm(size * 0.15))
+    t.SetTextThickness(mm(max(size * (0.2 if bold else 0.15), 0.15)))   # JLCPCB: Strich >= 0,15 mm
     t.SetTextAngleDegrees(rot)
+    t.SetHorizJustify(JUST[just])
     if layer == pcbnew.B_SilkS:
         t.SetMirrored(True)
     board.Add(t)
+
+
+def rrect(cx, cy, w, h, r, n=10):
+    pts = []
+    for ox, oy, a0 in ((cx + w / 2 - r, cy - h / 2 + r, -90), (cx + w / 2 - r, cy + h / 2 - r, 0),
+                       (cx - w / 2 + r, cy + h / 2 - r, 90), (cx - w / 2 + r, cy - h / 2 + r, 180)):
+        for i in range(n + 1):
+            a = math.radians(a0 + 90 * i / n)
+            pts.append((ox + r * math.cos(a), oy + r * math.sin(a)))
+    return pts
+
+
+def arc_band(cx, cy, r, t, a0, a1, n=16):
+    """Bogen als Flaeche (y zeigt nach unten: 0..180 Grad ist der untere Halbkreis)."""
+    ang = [math.radians(a0 + (a1 - a0) * i / n) for i in range(n + 1)]
+    return ([(cx + (r + t / 2) * math.cos(a), cy + (r + t / 2) * math.sin(a)) for a in ang] +
+            [(cx + (r - t / 2) * math.cos(a), cy + (r - t / 2) * math.sin(a)) for a in reversed(ang)])
+
+
+def add_poly(board, outline, holes=(), layer=pcbnew.F_SilkS):
+    ps = pcbnew.SHAPE_POLY_SET()
+    o = ps.NewOutline()
+    for x, y in outline:
+        ps.Append(mm(x), mm(y), o)
+    for h in holes:
+        hi = ps.NewHole(o)
+        for x, y in h:
+            ps.Append(mm(x), mm(y), o, hi)
+    ps.Fracture()   # gr_poly kennt keine Loecher -> Schlitz-Kontur
+    s = pcbnew.PCB_SHAPE(board, pcbnew.SHAPE_T_POLY)
+    s.SetPolyShape(ps)
+    s.SetFilled(True)
+    s.SetWidth(0)
+    s.SetLayer(layer)
+    board.Add(s)
+
+
+def add_logo(board, cx, cy, s, layer):
+    """Desk-Mate-Kopf im Visier-Look, s = Kopfbreite in mm. Augen und Laecheln sind Aussparungen (Lötstopp scheint durch)."""
+    def f(pts):
+        return [(cx + x * s, cy + y * s) for x, y in pts]
+    t = max(0.05 * s, 0.25) / s
+    add_poly(board, f(rrect(0, 0, 1.0, 0.8, 0.34)), [f(rrect(0, 0, 1.0 - 2 * t, 0.8 - 2 * t, 0.34 - t))], layer)
+    for sx in (-1, 1):
+        add_poly(board, f(rrect(sx * 0.57, 0.02, 0.09, 0.32, 0.045)), (), layer)
+    holes = [f(rrect(sx * 0.17, -0.06, 0.15, 0.19, 0.075)) for sx in (-1, 1)]
+    if s >= 9:   # darunter wird der Spalt fuer JLCPCB zu fein
+        holes.append(f(arc_band(0, -0.02, 0.15, 0.04, 35, 145)))
+    add_poly(board, f(rrect(0, -0.02, 0.74, 0.40, 0.2)), holes, layer)
+    add_poly(board, f(rrect(0, -0.46, 0.05, 0.10, 0.02)), (), layer)
+    add_poly(board, f(rrect(0, -0.55, 0.10, 0.10, 0.05)), (), layer)
+
+
+def add_silk(board, items):
+    """Silkscreen aus boards.py: Logo, Texte, Pin-Namen (Position relativ zum Pad, also unabhaengig von Drehung)."""
+    side = {'F': pcbnew.F_SilkS, 'B': pcbnew.B_SilkS}
+    fps = {fp.GetReference(): fp for fp in board.GetFootprints()}
+    for ref, fp in fps.items():
+        if ref[0] == 'H' and ref[1:].isdigit():   # Bohrungen brauchen keine Referenz auf dem Druck
+            fp.Reference().SetVisible(False)
+    for it in items:
+        if it[0] == 'hideref':
+            for ref in it[1]:
+                fps[ref].Reference().SetVisible(False)
+        elif it[0] == 'moveref':
+            fps[it[1]].Reference().SetPosition(V(it[2], it[3]))
+        elif it[0] == 'logo':
+            _, x, y, s, sd = it
+            add_logo(board, x, y, s, side[sd])
+        elif it[0] == 'text':
+            _, txt, x, y, size, rot, sd, just, bold = it
+            add_text(board, txt, x, y, side[sd], size, rot, just, bold)
+        elif it[0] == 'pins':
+            _, ref, labels, dx, dy, rot, just, size = it
+            pads = sorted(fps[ref].Pads(), key=lambda p: int(p.GetNumber()))
+            for pad, lab in zip(pads, labels):
+                if lab is None:
+                    continue
+                ldx, ldy, lj = (dx, dy, just) if isinstance(lab, str) else lab[1:]
+                lab = lab if isinstance(lab, str) else lab[0]
+                p = pad.GetPosition()
+                add_text(board, lab, pcbnew.ToMM(p.x) + ldx, pcbnew.ToMM(p.y) + ldy, pcbnew.F_SilkS, size, rot, lj)
 
 
 def add_zone(board, net, layer, x1, y1, x2, y2, rule_area=False):
@@ -157,8 +244,7 @@ def build(name, force=False, route=True, attempts=6):
     add_line(board, W, 0, W, H)
     add_line(board, W, H, 0, H)
     add_line(board, 0, H, 0, 0)
-    add_text(board, f'Desk-Mate {name} v1 2026-08', W / 2, H - 1.2, size=0.8)
-    add_text(board, 'github.com/Kalilinuxloverr/Desk-Mate', W / 2, H - 1.2, layer=pcbnew.B_SilkS, size=0.8)
+    add_silk(board, nl.get('silk', []))
 
     def pad_xy(ref, num):
         for fp in board.GetFootprints():

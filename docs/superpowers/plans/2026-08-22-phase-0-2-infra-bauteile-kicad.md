@@ -362,6 +362,7 @@ exit 0
 Werkzeug: KiCad 10 GUI für Schaltplan/Layout, `KICAD=/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli` für Prüfungen und Export. Skill `kicad` laden, bevor Task 11 beginnt; jede Review-Runde mit dem Skill gegen Spec §2 fahren.
 
 **Stand 2026-08-27:** Tasks 11–16 als Erstversion per Generator (`hardware/kicad/gen/`) erledigt — Bibliothek, drei Schaltpläne (ERC sauber), drei Layouts (Freerouting, DRC), `tools/test-kicad.sh`. Offen vor Task 17: Leons Freigabe der Frontpanel-Anordnung, Nachmessen der Module (Spec §8.8), Fader-Charakterisierung.
+**Stand 2026-10-09:** Task 17 bis auf die Bestellung erledigt — Reserve gestrichen (04.10.), Platinenteile auf Reichelt umgestellt, Silkscreen, Frontpanel freigegeben, Fab-Export neu. Bestellliste: `vault/Bestellungen/2026-10-09-reichelt.md`. Fader-Charakterisierung bleibt nach Lieferung (PCB-unabhängig, Drähte).
 
 ### Task 11: KiCad-Projekte und Bibliothek anlegen
 

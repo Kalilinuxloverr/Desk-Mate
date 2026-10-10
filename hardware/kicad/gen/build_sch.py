@@ -42,12 +42,6 @@ def footprints():
                          y_offset=dy, extra=ant),
         FP.module_socket('DRV8833_Socket', (-B.DRV8833_ROW_SPACING / 2, B.DRV8833_ROW_SPACING / 2), 8,
                          B.DRV8833_W, B.DRV8833_L, 'Sockel 2x 1x8 fuer Pololu DRV8833 #2130 (Pad 1 = GND, VMM-Seite links)'),
-        FP.module_socket('MPR121_Breakout', (-B.MPR121_ROW_SPACING / 2, B.MPR121_ROW_SPACING / 2), 12,
-                         20.3, 30.5, 'Sockel fuer MPR121-Breakout (SparkFun-Layout): rechts 1x12 Elektroden ELE0-11 (Pads 7-18), links 1x6 Steuerpins (1-6: 3V3 IRQ SCL SDA ADD GND, gegenueber ELE8..ELE3)',
-                         pads=[(1, -B.MPR121_ROW_SPACING / 2, 8), (2, -B.MPR121_ROW_SPACING / 2, 7),
-                               (3, -B.MPR121_ROW_SPACING / 2, 6), (4, -B.MPR121_ROW_SPACING / 2, 5),
-                               (5, -B.MPR121_ROW_SPACING / 2, 4), (6, -B.MPR121_ROW_SPACING / 2, 3)] +
-                              [(7 + i, B.MPR121_ROW_SPACING / 2, i) for i in range(12)]),
         FP.two_pad_radial('Polyfuse_Radial_P5.08mm', 5.08, 12.0, 4.0, 'Polyfuse radial, RM 5,08 (RXEF300)'),
     ]
     return fps
@@ -112,7 +106,7 @@ def main():
         json.dump(pro, open(f'{d}/{board["name"]}.kicad_pro', 'w'), indent=2, ensure_ascii=False)
         nl = {'board': board['name'], 'w': board['w'], 'h': board['h'], 'sheet_uuid': sch.uuid,
               'parts': sch.parts, 'nets': sch.nets(), 'netclasses': board['netclasses'], 'keepout': board['keepout'],
-              'pre_tracks': board.get('pre_tracks', [])}
+              'pre_tracks': board.get('pre_tracks', []), 'silk': board.get('silk', [])}
         json.dump(nl, open(f'{d}/netlist.json', 'w'), indent=1, ensure_ascii=False)
         print(f'{board["name"]}: {len(sch.parts)} Teile, {len(nl["nets"])} Netze')
 

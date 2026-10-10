@@ -9,7 +9,7 @@ Desk-Mate ist ein Wall-E-artiger Schreibtisch-Begleiter: Ampel für Claude Code 
 
 ## Architektur (Kurzform)
 
-- **Gerät:** ESP32-S3 (Hirn) · Mainboard (Base: USB-C ×2, Versorgung, DRV8833-Sockel, BME680) · Frontpanel (2(4)× MF60T, 10× MX, EC11, MCP23017, MPR121, 2,8" ILI9341) · Augen-Adapter (2× GC9A01). IDC 2×15 dazwischen. Pin-Map: Spec §2.3.
+- **Gerät:** ESP32-S3 (Hirn) · Mainboard (Base: 5 V über USB-C-Breakout an Schraubklemme, DevKit-USB per Einbaukabel, Versorgung, DRV8833-Sockel, I²C-Leiste für BME680) · Frontpanel (2(4)× X32-Motorfader per Draht, 10× MX, EC11, MCP23017, MPR121 per Kabel, 2,8" ILI9341) · Augen-Adapter (2× GC9A01). IDC 2×15 dazwischen. Pin-Map: Spec §2.3.
 - **Verbindungen:** USB (Composite-HID + CDC-JSON zum Agent), BLE-HID + BLE-Config, WiFi (MQTT HiveMQ `deskmate/#`, NTP, OTA).
 - **Agent:** Swift-Menüleisten-App (macOS), lokaler HTTP-Endpunkt `127.0.0.1:4821` für Claude-Hooks und Skripte, Watcher für `~/Downloads` und Steam-ACF, Screenshot → MQTT. iOS-App im selben Xcode-Projekt (`DeskMateCore` geteilt). Windows-Tray in Python (Phase 2).
 - **Claude-Integration:** Hooks in `~/.claude/settings.json`: `UserPromptSubmit`→gelb, `PermissionRequest`→rot + Taste→`allow`/`deny`/`escalate`, `Notification`→rot blinkend, `Stop`→grün. Fakten: `vault/Apps/Claude-Hooks.md`.
@@ -35,7 +35,7 @@ Startbestand aus ESP32-Kühler und VVVF; Desk-Mate-eigene Fallen werden hier num
 4. **`.ino`-Prototyp-Fallen:** keine eigenen Structs oder Default-Argumente in Funktionssignaturen im `.ino`; die Wörter `extern "C"` brechen ctags. Alle Logik in `.cpp/.h`.
 5. **Protokoll geändert = Versionsnummer hoch** und beide Seiten (Firmware + Agent + App) im selben Commit; Parser-Test mitziehen.
 6. **Secrets im Initial-Commit** (Kühler `8958b76`): `secrets.h`/`.env` sind gitignored, `tools/check-secrets.sh` blockt. Trotzdem vor dem ersten Push nochmal `git log -p | grep -i passw`.
-7. **UART zwischen zwei ESPs** (VVVF): Baud-Mismatch + Pufferüberlauf = „verbinden sich nie“. Desk-Mate hat deshalb nur einen ESP; der C3-Footprint ist Reserve mit Lötjumpern.
+7. **UART zwischen zwei ESPs** (VVVF): Baud-Mismatch + Pufferüberlauf = „verbinden sich nie“. Desk-Mate hat deshalb nur einen ESP; der C3-Footprint ist seit 2026-10-04 gestrichen.
 8. **Strapping-Pins S3:** 0, 3, 45, 46 nie als Funktion. 45 ist seit 2026-10-04 komplett unbelegt (Backlight on/off über MCP23017 + BC327); `tools/test-pins.sh` blockt ihn.
 9. **Onboard-RGB-LED des DevKitC-1** liegt je nach Revision auf GPIO 38 (v1.1) oder 48 (v1.0). WS2812-Daten auf 38 ist gewollt (spiegelt Pixel 0); 48 ist PSU_SENSE-Eingang — bei v1.0 leuchtet die LED dann mit, unkritisch.
 10. **Motoren/Servos am Rechner-USB** = Brownout und „Gerät nicht erkannt“. Deshalb zwei USB-C-Buchsen; ohne Netzteil (`PSU_SENSE` low) nur gedrosselt fahren.
@@ -55,7 +55,7 @@ Startbestand aus ESP32-Kühler und VVVF; Desk-Mate-eigene Fallen werden hier num
 - Dateien: Specs/Pläne `YYYY-MM-DD-<thema>.md`; CAD-Teile deutsch (`Kopf_Schale_vorne.stl`), je Teil STEP + STL; Sketch-Ordner snake_case.
 - KiCad: Erstversion aus `hardware/kicad/gen/` generiert (Bauteil→Pin→Netz→Position in `boards.py`). Sobald in der GUI editiert wurde, sind `.kicad_sch`/`.kicad_pcb` die Wahrheit — Generator nicht mehr blind laufen lassen (`build_pcb.py` braucht `--force`). Sockel-Maße mit Quellen: `vault/Hardware/Module-Masse.md`.
 - Pin-Map: `firmware/arduino/deskmate/pins.h` ist die Wahrheit (verifiziert, Test `tools/test-pins.sh`); Spec §2.3 und `vault/Hardware/Pin-Map.md` werden bei Änderungen nachgezogen.
-- Through-Hole oder gesteckte Breakouts. Kein SMD auf unseren Platinen.
+- Through-Hole oder gesteckte Breakouts. Kein SMD auf unseren Platinen. Alles, was gelötet wird, gibt es bei Reichelt (Art.-Nr. in `hardware/bom.md`); Module dürfen von Amazon kommen.
 - `// ponytail:`-Kommentare markieren bewusste Vereinfachungen und nennen den Ausbaupfad.
 - Jede nicht-triviale Logik hinterlässt genau einen lauffähigen Check (`tools/test-*.sh`, `assert`-Test), kein Test-Framework.
 

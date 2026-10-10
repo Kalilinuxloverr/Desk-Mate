@@ -36,6 +36,6 @@ constexpr int PIN_I2C_SCL = 18;
 constexpr int PIN_IO_INT = 21;        // MCP23017-INT + MPR121-IRQ, wired-OR (Open-Drain, Pull-up)
 
 // Versorgung
-constexpr int PIN_PSU_SENSE = 48;     // Teiler an J_PWR-5V; DevKit v1.0: Onboard-LED haengt hier (unkritisch)
+constexpr int PIN_PSU_SENSE = 48;     // Teiler an J1-VBUS (vor der SB540); DevKit v1.0: Onboard-LED haengt hier (unkritisch)
 
 // Tabu: 0, 3, 45, 46 (Strapping; 45 = VDD_SPI), 19/20 (USB), 26-34 (Flash), 35-37 (Octal-PSRAM, unverbunden lassen), 43/44 (UART0/CP2102N)

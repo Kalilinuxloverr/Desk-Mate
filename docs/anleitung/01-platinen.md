@@ -14,12 +14,14 @@ Desk-Mate besteht aus drei Platinen, die in **einer** JLCPCB-Bestellung kommen. 
 - Oberfläche: HASL (bleifrei) reicht — alles Through-Hole; ENIG nur, wenn's schöner sein soll
 - Farbe: frei (Referenz-Build: weiß, passend zum Gehäuse)
 - Kein SMD-Assembly nötig (alles THT, Module gesteckt)
+- **Mark on PCB: „Order Number (Specify Position)“** — jede Platine hat auf der Rückseite das Feld `JLCJLCJLCJLC`; dort druckt JLCPCB die Bestellnummer hin statt irgendwo zwischen die Beschriftung
+- Bei weißer Lötstoppmaske druckt JLCPCB den Silkscreen schwarz — das Logo funktioniert in beiden Farben (Augen und Lächeln sind Aussparungen)
 
 Alle drei Zips einzeln als eigenes Produkt hochladen (drei Designs = drei Positionen im Warenkorb). Im JLCPCB-Viewer kurz prüfen: Umriss geschlossen, Bohrungen da, Silkscreen lesbar.
 
 ## Was auf die Platinen kommt
 
-Die Stückliste mit Bezugsquellen und Preisen steht in `hardware/bom.md`; welche Maße der gesteckten Module der Entwurf annimmt (und wie sicher das ist), in `vault/Hardware/Module-Masse.md`. **Vor dem Löten der Sockel** die Kandidaten mit „mittel“-Konfidenz am echten Modul nachmessen: MPR121-Breakout, DRV8833-Module aus der Box (Pololu-Raster 10,16 mm?), BME680-Pinreihenfolge.
+Die Stückliste mit Bezugsquellen und Preisen steht in `hardware/bom.md`; welche Maße der gesteckten Module der Entwurf annimmt (und wie sicher das ist), in `vault/Hardware/Module-Masse.md`. **Vor dem Löten der Sockel** die Kandidaten mit „mittel“-Konfidenz am echten Modul nachmessen: DRV8833-Module aus der Box (Pololu #2130, Raster 10,16 mm?). MPR121, BME680, Augen-Displays und Fader hängen an Kabeln — dort zählt nur die Pin-Beschriftung auf dem Silkscreen.
 
 ## Schaltpläne und 3D
 

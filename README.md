@@ -4,15 +4,15 @@
 
 Ein kleiner Wall-E-artiger Schreibtisch-Begleiter: eine Ampel für alles, was dich braucht (Claude Code, Browser-Downloads, Steam), ein Deck mit Motorfadern und Soft-Keys, ein Kopf mit zwei Augen-Displays. Verbunden per USB, BLE und WiFi; steuerbar vom Mac, vom Handy und über das Haus-MQTT. Alles Through-Hole, alles 3D-gedruckt, alles dokumentiert — inklusive Arbeitszeit.
 
-**Zwischenstand (2026-08-27):**
+**Zwischenstand (2026-10-09):**
 
 | Schritt | Stand |
 |---|---|
 | Design-Spec (18 Grill-Fragen) | ✅ [`docs/superpowers/specs/`](docs/superpowers/specs/2026-08-22-desk-mate-design.md) |
 | Pin-Map gegen Datenblatt + DevKit-Schaltplan verifiziert | ✅ [`firmware/arduino/deskmate/pins.h`](firmware/arduino/deskmate/pins.h) |
 | Stückliste mit Quellen und Preisen, Teile bestellt (Amazon ~142 €) | ✅ [`hardware/bom.md`](hardware/bom.md) |
-| KiCad: Mainboard 100×100 · Frontpanel 120×136 · Augen-Adapter 42×30 — ERC/DRC sauber, Gerber exportiert | ✅ [`hardware/kicad/`](hardware/kicad/README.md) |
-| Platinen-Bestellung (JLCPCB) | 🔜 nach Nachmessen der Module + Fader-Charakterisierung |
+| KiCad final: Mainboard 100×100 · Frontpanel 120×136 · Augen-Adapter 42×30 — nur THT, Teile von Reichelt, Silkscreen mit Logo und Pin-Namen, ERC/DRC sauber, Gerber exportiert | ✅ [`hardware/kicad/`](hardware/kicad/README.md) |
+| Bestellung Reichelt + JLCPCB | 🔜 bereit — Gerber in `hardware/kicad/<board>/fab/`, Liste in [`vault/Bestellungen/2026-10-09-reichelt.md`](vault/Bestellungen/2026-10-09-reichelt.md) |
 | Firmware · Agent/App · Gehäuse | ⬜ danach |
 
 Arbeitszeit und Tagesprotokolle: [`vault/Log/`](vault/Log/) · Projektseite: Portfolio-Eintrag P12.

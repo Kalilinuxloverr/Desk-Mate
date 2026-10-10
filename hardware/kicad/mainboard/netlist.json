@@ -6,26 +6,19 @@
  "parts": [
   {
    "ref": "J1",
-   "value": "USB-C 5V/3A (GCT USB4085)",
-   "footprint": "Connector_USB:USB_C_Receptacle_GCT_USB4085",
+   "value": "USB-C-Breakout 5V/3A (VBUS GND CC1 CC2)",
+   "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal",
    "uuid": "50cde29e-a42b-5f6f-8773-0ff042d8df05",
    "dnp": false,
    "pads": {
-    "A1": "GND",
-    "A4": "VBUS",
-    "A5": "CC1",
-    "A9": "VBUS",
-    "A12": "GND",
-    "B1": "GND",
-    "B4": "VBUS",
-    "B5": "CC2",
-    "B9": "VBUS",
-    "B12": "GND",
-    "SH": "GND"
+    "1": "VBUS",
+    "2": "GND",
+    "3": "CC1",
+    "4": "CC2"
    },
    "pcb": {
-    "x": 55,
-    "y": 5.6,
+    "x": 52,
+    "y": 6,
     "rot": 0
    }
   },
@@ -40,9 +33,9 @@
     "2": "GND"
    },
    "pcb": {
-    "x": 47,
-    "y": 9,
-    "rot": 90
+    "x": 40,
+    "y": 14.5,
+    "rot": 0
    }
   },
   {
@@ -57,7 +50,7 @@
    },
    "pcb": {
     "x": 40,
-    "y": 17.5,
+    "y": 18.5,
     "rot": 0
    }
   },
@@ -73,7 +66,7 @@
    },
    "pcb": {
     "x": 55,
-    "y": 13.5,
+    "y": 15.5,
     "rot": 0
    }
   },
@@ -89,7 +82,7 @@
    },
    "pcb": {
     "x": 57,
-    "y": 19,
+    "y": 21,
     "rot": 0
    }
   },
@@ -105,7 +98,7 @@
    },
    "pcb": {
     "x": 40,
-    "y": 21.5,
+    "y": 22.5,
     "rot": 0
    }
   },
@@ -121,13 +114,13 @@
    },
    "pcb": {
     "x": 40,
-    "y": 25.5,
+    "y": 26.5,
     "rot": 0
    }
   },
   {
    "ref": "C1",
-   "value": "1000u/10V",
+   "value": "1000u/16V",
    "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
    "uuid": "05775d0f-2dc7-5ba5-bf50-47432f37d472",
    "dnp": false,
@@ -170,14 +163,14 @@
    },
    "pcb": {
     "x": 55,
-    "y": 25,
+    "y": 26.5,
     "rot": 0
    }
   },
   {
    "ref": "C11",
    "value": "10u",
-   "footprint": "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm",
+   "footprint": "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm",
    "uuid": "ca91cfb5-4759-52d6-a266-37a84b3de166",
    "dnp": false,
    "pads": {
@@ -216,7 +209,7 @@
     "1": "5V"
    },
    "pcb": {
-    "x": 64,
+    "x": 65,
     "y": 4,
     "rot": 0
    }
@@ -231,7 +224,7 @@
     "1": "3V3"
    },
    "pcb": {
-    "x": 67,
+    "x": 68,
     "y": 4,
     "rot": 0
    }
@@ -246,14 +239,14 @@
     "1": "GND"
    },
    "pcb": {
-    "x": 70,
+    "x": 71,
     "y": 4,
     "rot": 0
    }
   },
   {
    "ref": "U1",
-   "value": "ESP32-S3-DevKitC-1-N16R8",
+   "value": "ESP32-S3-DevKitC-1 (N16R8/N8R8)",
    "footprint": "deskmate:ESP32-S3-DevKitC-1_Socket",
    "uuid": "e99e1cd8-3e7a-59c5-be99-604f3a5173b6",
    "dnp": false,
@@ -477,15 +470,15 @@
     "4": "GND"
    },
    "pcb": {
-    "x": 78,
-    "y": 34,
-    "rot": 0
+    "x": 79,
+    "y": 29,
+    "rot": 90
    }
   },
   {
    "ref": "J3",
    "value": "Servo Pan (GND/5V/Sig)",
-   "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
    "uuid": "ad3f2460-139d-5982-8481-15da098da1cf",
    "dnp": false,
    "pads": {
@@ -494,15 +487,15 @@
     "3": "SERVO_PAN"
    },
    "pcb": {
-    "x": 95,
+    "x": 97,
     "y": 41,
-    "rot": 90
+    "rot": 0
    }
   },
   {
    "ref": "J4",
    "value": "Servo Tilt (GND/5V/Sig)",
-   "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
    "uuid": "4796865f-5d67-5676-a9af-f5b1cbe9cdfe",
    "dnp": false,
    "pads": {
@@ -511,9 +504,9 @@
     "3": "SERVO_TILT"
    },
    "pcb": {
-    "x": 95,
+    "x": 97,
     "y": 53,
-    "rot": 90
+    "rot": 0
    }
   },
   {
@@ -535,7 +528,7 @@
   {
    "ref": "J5",
    "value": "ARGB 5V/GND/Data",
-   "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
    "uuid": "80c3d1d1-d41e-5f65-a1ab-941566653422",
    "dnp": false,
    "pads": {
@@ -544,9 +537,9 @@
     "3": "WS_DATA_OUT"
    },
    "pcb": {
-    "x": 95,
+    "x": 97,
     "y": 65,
-    "rot": 90
+    "rot": 0
    }
   },
   {
@@ -583,8 +576,8 @@
   },
   {
    "ref": "J6",
-   "value": "BME680 (VCC GND SCL SDA SDO CS)",
-   "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical",
+   "value": "I2C / BME680 per Kabel",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
    "uuid": "1c0bdbd4-cadf-5129-9756-7d9fbfc9329d",
    "dnp": false,
    "pads": {
@@ -595,23 +588,23 @@
    },
    "pcb": {
     "x": 82,
-    "y": 4,
+    "y": 3.6,
     "rot": 90
    }
   },
   {
    "ref": "J7",
-   "value": "Augen-Kabel",
-   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+   "value": "Augen-Kabel IDC 2x5",
+   "footprint": "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical",
    "uuid": "f5a01a48-896a-58b9-99ac-aceba5a74084",
    "dnp": false,
    "pads": {
     "1": "3V3",
-    "2": "3V3",
-    "3": "GND",
+    "2": "GND",
+    "3": "SPI_SCK",
     "4": "GND",
     "5": "SPI_MOSI",
-    "6": "SPI_SCK",
+    "6": "GND",
     "7": "SPI_DC",
     "8": "CS_EYE_L",
     "9": "CS_EYE_R",
@@ -721,26 +714,20 @@
   }
  ],
  "nets": {
+  "VBUS": [
+   [
+    "J1",
+    "1"
+   ],
+   [
+    "F1",
+    "1"
+   ]
+  ],
   "GND": [
    [
     "J1",
-    "A1"
-   ],
-   [
-    "J1",
-    "A12"
-   ],
-   [
-    "J1",
-    "B1"
-   ],
-   [
-    "J1",
-    "B12"
-   ],
-   [
-    "J1",
-    "SH"
+    "2"
    ],
    [
     "R1",
@@ -860,11 +847,15 @@
    ],
    [
     "J7",
-    "3"
+    "2"
    ],
    [
     "J7",
     "4"
+   ],
+   [
+    "J7",
+    "6"
    ],
    [
     "J2",
@@ -891,32 +882,10 @@
     "30"
    ]
   ],
-  "VBUS": [
-   [
-    "J1",
-    "A4"
-   ],
-   [
-    "J1",
-    "A9"
-   ],
-   [
-    "J1",
-    "B4"
-   ],
-   [
-    "J1",
-    "B9"
-   ],
-   [
-    "F1",
-    "1"
-   ]
-  ],
   "CC1": [
    [
     "J1",
-    "A5"
+    "3"
    ],
    [
     "R1",
@@ -926,7 +895,7 @@
   "CC2": [
    [
     "J1",
-    "B5"
+    "4"
    ],
    [
     "R2",
@@ -1067,10 +1036,6 @@
    [
     "J7",
     "1"
-   ],
-   [
-    "J7",
-    "2"
    ],
    [
     "J2",
@@ -1322,7 +1287,7 @@
    ],
    [
     "J7",
-    "6"
+    "3"
    ],
    [
     "J2",
@@ -1548,37 +1513,6 @@
  ],
  "pre_tracks": [
   [
-   "CC1",
-   0.2,
-   "F.Cu",
-   [
-    [
-     53.73,
-     1.57
-    ],
-    [
-     53.73,
-     0.65
-    ],
-    [
-     51.4,
-     0.65
-    ],
-    [
-     51.4,
-     8.5
-    ],
-    [
-     47.0,
-     8.5
-    ],
-    [
-     "R1",
-     "1"
-    ]
-   ]
-  ],
-  [
    "GND",
    0.4,
    "F.Cu",
@@ -1594,76 +1528,507 @@
    ]
   ],
   [
-   "VBUS",
-   0.3,
-   "B.Cu",
+   "5V",
+   1.0,
+   "F.Cu",
    [
     [
-     52.88,
-     1.57
+     "C4",
+     "1"
     ],
     [
-     52.88,
-     0.65
+     83.25,
+     39.2
     ],
     [
-     57.12,
-     0.65
+     92.5,
+     39.2
     ],
     [
-     57.12,
-     1.57
+     92.5,
+     62.46
     ],
     [
-     57.12,
-     2.92
+     "J5",
+     "1"
     ]
    ]
   ],
   [
-   "VBUS",
-   0.3,
-   "B.Cu",
+   "5V",
+   1.0,
+   "F.Cu",
    [
     [
-     52.88,
-     1.57
+     92.5,
+     41.0
     ],
     [
-     52.88,
-     2.92
+     "J3",
+     "2"
     ]
    ]
   ],
   [
-   "GND",
-   0.3,
-   "B.Cu",
+   "5V",
+   1.0,
+   "F.Cu",
    [
     [
-     52.02,
-     1.57
+     92.5,
+     53.0
     ],
     [
-     52.02,
-     2.92
+     "J4",
+     "2"
     ]
    ]
   ],
   [
-   "GND",
-   0.3,
-   "B.Cu",
+   "5V",
+   1.0,
+   "F.Cu",
    [
     [
-     57.98,
-     1.57
+     92.5,
+     57.5
     ],
     [
-     57.98,
-     2.92
+     83.5,
+     57.5
+    ],
+    [
+     "C5",
+     "1"
     ]
    ]
+  ]
+ ],
+ "silk": [
+  [
+   "hideref",
+   [
+    "J1",
+    "J3",
+    "J4",
+    "J5",
+    "J6",
+    "U3",
+    "U4",
+    "U5",
+    "TP1",
+    "TP2",
+    "TP3"
+   ]
+  ],
+  [
+   "moveref",
+   "F1",
+   47.6,
+   15.5
+  ],
+  [
+   "logo",
+   54,
+   76,
+   14,
+   "F"
+  ],
+  [
+   "text",
+   "DESK-MATE",
+   64.5,
+   73.5,
+   3.0,
+   0,
+   "F",
+   "L",
+   true
+  ],
+  [
+   "text",
+   "MAINBOARD · BASE",
+   64.5,
+   77.5,
+   1.4,
+   0,
+   "F",
+   "L",
+   false
+  ],
+  [
+   "text",
+   "Rev 1 · 2026-10",
+   64.5,
+   80.5,
+   1.1,
+   0,
+   "F",
+   "L",
+   false
+  ],
+  [
+   "text",
+   "USB-C IN 5V/3A",
+   40.6,
+   4.5,
+   1.2,
+   0,
+   "F",
+   "R",
+   true
+  ],
+  [
+   "text",
+   "Kabel vom Breakout",
+   40.6,
+   7.0,
+   0.8,
+   0,
+   "F",
+   "R",
+   false
+  ],
+  [
+   "pins",
+   "J1",
+   [
+    "VBUS",
+    "GND",
+    "CC1",
+    "CC2"
+   ],
+   0,
+   5.7,
+   0,
+   "C",
+   1.0
+  ],
+  [
+   "pins",
+   "TP1",
+   [
+    "5V"
+   ],
+   0,
+   -2.3,
+   0,
+   "C",
+   0.8
+  ],
+  [
+   "pins",
+   "TP2",
+   [
+    "3V3"
+   ],
+   0,
+   -2.3,
+   0,
+   "C",
+   0.8
+  ],
+  [
+   "pins",
+   "TP3",
+   [
+    "GND"
+   ],
+   0,
+   -2.3,
+   0,
+   "C",
+   0.8
+  ],
+  [
+   "text",
+   "I2C · BME680",
+   82,
+   1.7,
+   0.8,
+   0,
+   "F",
+   "C",
+   true
+  ],
+  [
+   "pins",
+   "J6",
+   [
+    "3V3",
+    "GND",
+    "SCL",
+    "SDA"
+   ],
+   0,
+   1.7,
+   90,
+   "R",
+   0.7
+  ],
+  [
+   "text",
+   "AUGEN",
+   89.6,
+   21.5,
+   1.2,
+   90,
+   "F",
+   "C",
+   true
+  ],
+  [
+   "text",
+   "PAN",
+   97,
+   36.2,
+   1.0,
+   0,
+   "F",
+   "C",
+   true
+  ],
+  [
+   "pins",
+   "J3",
+   [
+    "GND",
+    "5V",
+    "SIG"
+   ],
+   -1.7,
+   0,
+   0,
+   "R",
+   0.8
+  ],
+  [
+   "text",
+   "TILT",
+   97,
+   48.2,
+   1.0,
+   0,
+   "F",
+   "C",
+   true
+  ],
+  [
+   "pins",
+   "J4",
+   [
+    "GND",
+    "5V",
+    "SIG"
+   ],
+   -1.7,
+   0,
+   0,
+   "R",
+   0.8
+  ],
+  [
+   "text",
+   "ARGB",
+   97,
+   60.2,
+   1.0,
+   0,
+   "F",
+   "C",
+   true
+  ],
+  [
+   "pins",
+   "J5",
+   [
+    "5V",
+    "GND",
+    "DIN"
+   ],
+   -1.7,
+   0,
+   0,
+   "R",
+   0.8
+  ],
+  [
+   "text",
+   "BOOST",
+   72.8,
+   29.4,
+   1.0,
+   0,
+   "F",
+   "R",
+   true
+  ],
+  [
+   "pins",
+   "U5",
+   [
+    "IN+",
+    "IN-",
+    "OUT+",
+    "OUT-"
+   ],
+   0,
+   -1.7,
+   90,
+   "L",
+   0.8
+  ],
+  [
+   "text",
+   "VM  1-2: 5V   2-3: BOOST",
+   58,
+   33.3,
+   0.8,
+   0,
+   "F",
+   "C",
+   false
+  ],
+  [
+   "pins",
+   "J8",
+   [
+    [
+     "RST",
+     -1.7,
+     0,
+     "R"
+    ],
+    [
+     "GND",
+     1.7,
+     0,
+     "L"
+    ],
+    [
+     "BOOT",
+     -1.7,
+     0,
+     "R"
+    ],
+    [
+     "GND",
+     1.7,
+     0,
+     "L"
+    ]
+   ],
+   0,
+   0,
+   0,
+   "C",
+   0.8
+  ],
+  [
+   "text",
+   "DRV8833 · FADER 1+2",
+   53,
+   45,
+   1.0,
+   90,
+   "F",
+   "C",
+   false
+  ],
+  [
+   "text",
+   "DRV8833 · FADER 3+4",
+   69,
+   45,
+   1.0,
+   90,
+   "F",
+   "C",
+   false
+  ],
+  [
+   "text",
+   "ESP32-S3-DevKitC-1",
+   18,
+   42,
+   1.5,
+   90,
+   "F",
+   "C",
+   true
+  ],
+  [
+   "text",
+   "FRONTPANEL",
+   52,
+   88.9,
+   1.2,
+   0,
+   "F",
+   "C",
+   true
+  ],
+  [
+   "logo",
+   18,
+   33,
+   16,
+   "B"
+  ],
+  [
+   "text",
+   "DESK-MATE",
+   18,
+   55,
+   3.0,
+   90,
+   "B",
+   "C",
+   true
+  ],
+  [
+   "text",
+   "MAINBOARD · BASE · Rev 1",
+   63,
+   70,
+   1.2,
+   0,
+   "B",
+   "C",
+   true
+  ],
+  [
+   "text",
+   "github.com/Kalilinuxloverr/Desk-Mate",
+   63,
+   73,
+   1.0,
+   0,
+   "B",
+   "C",
+   false
+  ],
+  [
+   "text",
+   "Leon Fröhlich · 2026",
+   63,
+   75.8,
+   1.0,
+   0,
+   "B",
+   "C",
+   false
+  ],
+  [
+   "text",
+   "JLCJLCJLCJLC",
+   63,
+   79,
+   1.0,
+   0,
+   "B",
+   "C",
+   false
   ]
  ]
 }

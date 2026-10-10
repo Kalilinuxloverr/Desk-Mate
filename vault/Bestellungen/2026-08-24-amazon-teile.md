@@ -1,6 +1,8 @@
 # 2026-08-24 — Amazon.de (Module) — im Aufbau
 
-**Status:** Warenkorb komplett (24.08.) — Summe Amazon ~**96,4 €** + Aluknopf offen. Bestand: DRV8833, Netzteil.
+**Stand 2026-10-09:** nie bestellt. Switches und Encoder kommen jetzt von Reichelt ([[2026-10-09-reichelt]]), die Module bleiben bei Amazon — aktuelle Liste: `hardware/bom.md` Teil B.
+
+**Status (24.08.):** Warenkorb komplett (24.08.) — Summe Amazon ~**96,4 €** + Aluknopf offen. Bestand: DRV8833, Netzteil.
 
 | Pos | Artikel | Stück | Preis € | Quelle | Notiz |
 |---|---|---|---|---|---|

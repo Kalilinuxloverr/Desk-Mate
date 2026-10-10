@@ -6,17 +6,17 @@
  "parts": [
   {
    "ref": "J11",
-   "value": "vom Mainboard J7",
-   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+   "value": "IDC 2x5 vom Mainboard J7",
+   "footprint": "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical",
    "uuid": "e0ba15a0-8c75-5ca5-b416-3f9afdd4642a",
    "dnp": false,
    "pads": {
     "1": "3V3",
-    "2": "3V3",
-    "3": "GND",
+    "2": "GND",
+    "3": "SPI_SCK",
     "4": "GND",
     "5": "SPI_MOSI",
-    "6": "SPI_SCK",
+    "6": "GND",
     "7": "SPI_DC",
     "8": "CS_EYE_L",
     "9": "CS_EYE_R",
@@ -24,14 +24,14 @@
    },
    "pcb": {
     "x": 21,
-    "y": 4,
+    "y": 8,
     "rot": 90
    }
   },
   {
    "ref": "J12",
-   "value": "GC9A01 links",
-   "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical",
+   "value": "GC9A01 links (Dupont)",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical",
    "uuid": "ce80cb85-7aaf-5e2a-8035-3bae1dcb2ab9",
    "dnp": false,
    "pads": {
@@ -51,8 +51,8 @@
   },
   {
    "ref": "J13",
-   "value": "GC9A01 rechts",
-   "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical",
+   "value": "GC9A01 rechts (Dupont)",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical",
    "uuid": "70679abe-e021-5cdb-92e2-e0c4aff6381f",
    "dnp": false,
    "pads": {
@@ -81,8 +81,8 @@
     "2": "GND"
    },
    "pcb": {
-    "x": 24.5,
-    "y": 13,
+    "x": 14,
+    "y": 17.5,
     "rot": 0
    }
   },
@@ -97,8 +97,8 @@
     "2": "GND"
    },
    "pcb": {
-    "x": 32.5,
-    "y": 13,
+    "x": 28,
+    "y": 17.5,
     "rot": 0
    }
   },
@@ -136,10 +136,6 @@
     "1"
    ],
    [
-    "J11",
-    "2"
-   ],
-   [
     "J12",
     "1"
    ],
@@ -159,11 +155,15 @@
   "GND": [
    [
     "J11",
-    "3"
+    "2"
    ],
    [
     "J11",
     "4"
+   ],
+   [
+    "J11",
+    "6"
    ],
    [
     "J12",
@@ -182,6 +182,20 @@
     "2"
    ]
   ],
+  "SPI_SCK": [
+   [
+    "J11",
+    "3"
+   ],
+   [
+    "J12",
+    "3"
+   ],
+   [
+    "J13",
+    "3"
+   ]
+  ],
   "SPI_MOSI": [
    [
     "J11",
@@ -194,20 +208,6 @@
    [
     "J13",
     "4"
-   ]
-  ],
-  "SPI_SCK": [
-   [
-    "J11",
-    "6"
-   ],
-   [
-    "J12",
-    "3"
-   ],
-   [
-    "J13",
-    "3"
    ]
   ],
   "SPI_DC": [
@@ -269,5 +269,134 @@
   ]
  },
  "keepout": [],
- "pre_tracks": []
+ "pre_tracks": [],
+ "silk": [
+  [
+   "logo",
+   36.5,
+   12.5,
+   7,
+   "F"
+  ],
+  [
+   "text",
+   "AUGEN",
+   5.5,
+   10.5,
+   1.2,
+   0,
+   "F",
+   "C",
+   true
+  ],
+  [
+   "text",
+   "Rev 1",
+   5.5,
+   13,
+   0.9,
+   0,
+   "F",
+   "C",
+   false
+  ],
+  [
+   "text",
+   "MAINBOARD",
+   21,
+   1.7,
+   0.8,
+   0,
+   "F",
+   "C",
+   true
+  ],
+  [
+   "text",
+   "AUGE L",
+   6,
+   20.8,
+   0.9,
+   0,
+   "F",
+   "C",
+   true
+  ],
+  [
+   "text",
+   "AUGE R",
+   36,
+   20.8,
+   0.9,
+   0,
+   "F",
+   "C",
+   true
+  ],
+  [
+   "pins",
+   "J12",
+   [
+    "VCC",
+    "GND",
+    "SCL",
+    "SDA",
+    "RES",
+    "DC",
+    "CS"
+   ],
+   0,
+   1.7,
+   90,
+   "R",
+   0.8
+  ],
+  [
+   "pins",
+   "J13",
+   [
+    "VCC",
+    "GND",
+    "SCL",
+    "SDA",
+    "RES",
+    "DC",
+    "CS"
+   ],
+   0,
+   1.7,
+   90,
+   "R",
+   0.8
+  ],
+  [
+   "logo",
+   5.5,
+   12,
+   7,
+   "B"
+  ],
+  [
+   "text",
+   "github.com/Kalilinuxloverr/Desk-Mate",
+   21,
+   20.5,
+   0.8,
+   0,
+   "B",
+   "C",
+   false
+  ],
+  [
+   "text",
+   "JLCJLCJLCJLC",
+   36.6,
+   12,
+   0.8,
+   0,
+   "B",
+   "C",
+   false
+  ]
+ ]
 }

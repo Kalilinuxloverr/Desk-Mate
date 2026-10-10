@@ -1,85 +1,73 @@
-# Stückliste (Stand 2026-10-04 nach Reserve-Streichung, Preise inkl. MwSt., „~“ = ungefähr/unbestätigt)
+# Stückliste — final (Stand 2026-10-09, Preise inkl. MwSt.)
 
-Referenzen werden in KiCad 1:1 übernommen. Spalte **Bestand** wird nach Leons Arduino-Box-Inventur gefüllt (`hardware/inventar.md`). Bestellvorschlag je Lieferant: `vault/Bestellungen/2026-08-23-bestellvorschlag.md`.
+**Regel:** Alles, was auf die drei Platinen gelötet wird, kommt von **Reichelt** (Art.-Nr. am 2026-10-09 auf reichelt.de geprüft, alle „2–3 Werktage“). Gesteckte oder verkabelte Module kommen von **Amazon** oder aus dem Bestand. Kein SMD. Referenzen = KiCad.
 
-## Mainboard (100 × 100 mm)
+## A · Reichelt — alles für die Platinen
 
-| Ref | Bauteil | Gehäuse | Stück | Quelle | Preis € | Bestand | Hinweis |
-|---|---|---|---|---|---|---|---|
-| U1 | ESP32-S3-DevKitC-1-**N16R8** (Espressif Original) | Sockel 2× 1×22 | 1 | Amazon (Prime) | **19,99** | im Warenkorb 24.08. | Revision nach Lieferung prüfen (LED-Pin 38/48); Sockel wird am echten Board vermessen |
-| U2 | LD1117V33 | TO-220 | 1 | [Reichelt](https://www.reichelt.com/de/en/ldo-voltage-regulator-15-vin-3-3-vout-950-ma-to-220-ld1117v33-p216683.html) | 0,25 | ? | 3,3 V für Peripherie |
-| U3, U4 | DRV8833-Breakout | Sockel | 2 | **Bestand** (Arduino-Box) | 0 | ✔ | Amazon-Fallback 10,07 €. **nSLEEP prüfen**, Footprint nach den vorhandenen Modulen |
-| U5 | MT3608-Boost (VM-Rail 9 V, optional) | **4-Pin-Stiftleiste + Drähte** (Modul-Raster ist nicht 2,54) | 1 | Amazon (Pack) | **6,04** | im Warenkorb 24.08. | Vor Einbau auf 9 V trimmen; erst nach Fader-Charakterisierung; JP1 auf 2-3 |
-| D1 | SB540 Schottky | DO-201 | 1 | Reichelt | ~0,30 | ? | J_PWR → Rail; DevKit-Diode ist der zweite Zweig |
-| F1 | Polyfuse 3 A (RXEF300) | radial | 1 | [Farnell](https://de.farnell.com/littelfuse/rxef300/polyswitch-sicherung-ptc-radial/dp/1345966) | ~0,50 | ? | |
-| J1 | USB-C-Buchse 16-Pin, THT-Shell (GCT USB4085-GF-A) | THT | 1 | [TME](https://www.tme.eu/en/details/usb4085-gf-a/usb-ieee1394-connectors/gct/) | ~1 | ? | Nur 5 V; 2× 5,1 kΩ an CC1/CC2 |
-| J2 | Wannenstecker IDC 2×15 + Buchse + Flachband 30-adrig 30 cm | DIN 41651 | 1 Set | Reichelt | ~5 | ? | |
-| J3, J4 | Servo-Stecker JST-XH 3-Pin | THT | 2 | [eBay-Set](https://www.ebay.de/itm/335345792316) | ~2 | ? | |
-| J5 | ARGB-Stecker JST-XH 3-Pin (5V/GND/Data) | THT | 1 | dito | ~1 | ✔ Streifen (Drohne) | generisch für jeden 5-V-WS2812-Streifen |
-| J6 | BME680-Breakout-Sockel | 1×6 Buchse (VCC GND SCL SDA SDO CS) | 1 | — | 0 | ✔ BME680 | Pinreihenfolge am Modul prüfen |
-| J7 | Augen-Kabel-Stecker 10-Pin | 2,54 | 1 | Leistenware | ~0,50 | ? | Pin 10 = DISP_RST (seit 2026-10-04) |
-| J8 | Reset/Boot nach außen | 2×2 | 1 | Leistenware | ~0,20 | ? | |
-| C1 | 1000 µF/10 V (Rail) | radial | 1 | Reichelt | ~0,40 | ? | |
-| C2, C3 | 100 µF (je DRV8833-VM) | radial | 2 | Reichelt | ~0,40 | ? | |
-| C4 | 470 µF (Servo-Pfad) | radial | 1 | Reichelt | ~0,30 | ? | |
-| C5 | 1000 µF (ARGB) | radial | 1 | Reichelt | ~0,40 | ? | |
-| C6, C7 | 100 nF | RM 5 | 2 | Sortiment | ~0,20 | ? | |
-| C11 | 10 µF | radial | 1 | Sortiment | ~0,10 | ? | LD1117-Ausgang |
-| JP1 | Lötjumper 3-fach (VM: 1-2 = 5 V, 2-3 = Boost) | — | 1 | — | 0 | — | 1-2 ab Werk gebrückt; einziger Jumper auf dem Board |
-| TP1–TP3 | Testpunkte 5V/3V3/GND | Ø1,5 Pad | 3 | — | 0 | — | Lötpunkt |
-| R1, R2 | 5,1 kΩ (CC) · R3 10 kΩ + R4 **15 kΩ** (PSU_SENSE → 3,0 V) · R5 330 Ω (ARGB) · R6/R7 4,7 kΩ (I²C) · R8 10 kΩ (IO_INT) | axial | 8 | Sortiment | ~0,50 | ? | Sortiment ~10 € falls Box leer |
-
-## Frontpanel (120 × 136 mm)
-
-| Ref | Bauteil | Gehäuse | Stück | Quelle | Preis € | Bestand | Hinweis |
-|---|---|---|---|---|---|---|---|
-| FD1, FD2 | Behringer X32 Motor-Fader 100 mm (5er-Set) | panel-mount + Kabel | 1 Set | Amazon.de („Behringer X32 MOTOR FADER Set“) | 39,32 | bestellt 23.08. | **Ersetzt MF60T:** Prime-Lieferung 25.08., 30 Tage Retour, kein PCB-Footprint nötig. Pinout/Motorspannung bei Charakterisierung |
-| FD3, FD4 | X32-Fader (aus dem Set) | panel-mount, Reserve | 0 | (im Set, +1 Ersatz) | 0 | ✔ | Reserve |
-| J14–J17 | Fader-Anschluss-Header 1×8 (MOT+ MOT− GND 3V3 WIPER GND TOUCH GND) | 2,54 Stift | 4 | Leistenware | ~1 | ? | X32-Fader hat Lötpins, kein Kabel → Drähte anlöten; Touch = Draht an Metallhebel |
-| SW1–SW10 | MX-Schalter linear | THT | 10 | Amazon | **7,04** | im Warenkorb 24.08. |
-| — | ~~Hot-Swap-Sockel~~ | — | 0 | gestrichen 24.08. | 0 | — | Sockel sind SMD → Switches direkt THT löten (Kein-Hand-SMD-Regel) |
-| — | Blank-Keycaps | — | 10 | Amazon | **10,04** | im Warenkorb 24.08. |
-| ENC1 | EC11-Encoder nackt (5er-Pack) | THT | 1 Pack | Amazon | **7,04** | im Warenkorb 24.08.; Aluknopf separat (offen) |
-| U8 | MCP23017-E/SP + DIP-28-Sockel | DIP-28 | 1 | [Reichelt](https://www.reichelt.com/de/en/i-o-extension-16bit-1-8-5v-serial-i2c-dip-28-mcp-23017-e-sp-p140074.html) | 1,90 | ? | |
-| U9 | MPR121-Breakout (Clone) | Sockel | 1 | Amazon | **6,04** | im Warenkorb 24.08.; ADDR=GND |
-| Q1 | **BC327** (PNP, High-Side an 3V3) | TO-92 | 1 | Reichelt | ~0,10 | ? | Backlight 150 mA |
-| DSP1 | ILI9341 2,8" SPI 320×240 | Steckleiste 14-Pin | 1 | Amazon | **14,11** | im Warenkorb 24.08. | EU-Ware meist MIT Touch — egal, Touch-Pins bleiben offen |
-| R13–R16, C15–C18 | Schleifer-RC 4× 1 kΩ + 4× 100 nF | axial/RM5 | 8 | Sortiment | ~0,50 | ? | |
-| R11 1 kΩ · R10, R17 10 kΩ | Backlight-Schalter (einstufig) + DISP_RST-Pull-up | axial | 3 | Sortiment | ~0,20 | ? | R17 ersetzt das Reset-RC auf dem Augen-Adapter |
-| C12 100 nF · C13, C14 10 nF | MCP-Abblock, Encoder-Entprellung | RM 5 | 3 | Sortiment | ~0,20 | ? | |
-| — | Abstandshalter M3 × 11 mm + Schrauben (Display) | — | 4 | Reichelt/Set | ~2 | ? | MSP2807: Header ragt 11,17 mm unter das Modul |
-| J9/J10 | Steckleisten + IDC-Gegenstück | 2,54 | — | Leistenware | ~1 | ? | |
-
-## Augen-Adapter (42 × 30 mm) + Kopf
-
-| Ref | Bauteil | Gehäuse | Stück | Quelle | Preis € | Bestand | Hinweis |
-|---|---|---|---|---|---|---|---|
-| DSP2, DSP3 | GC9A01 1,28" rund, SPI, 7-Pin | Buchse | 2 | Amazon (2er-Pack) | **10,07** | im Warenkorb 24.08. | |
-| M1, M2 | MG90S Metallgetriebe | — | 2 | Amazon | **14,10** | im Warenkorb 24.08. |
-| — | Pan-Tilt-Halter für MG90S | 3D-Druck | 1 | Printables/Thingiverse („SG90 pan tilt“) | 0 | — | Schrauben liegen Servos bei; alternativ Kit ~3 € AliExpress |
-| J11–J13 | Stecker Augen-Adapter (10-Pin Stift ein, 2× 7-Pin Buchse aus) | 2,54 | 3 | Leistenware | ~1 | ? | |
-| C20, C21 100 nF | Abblock | RM 5 | 2 | Sortiment | ~0,10 | ? | Reset kommt als DISP_RST über das Augen-Kabel (Pin 10) |
-
-## Sonstiges
-
-| Bauteil | Stück | Quelle | Preis € | Bestand | Hinweis |
+| Ref | Bauteil | Reichelt Art.-Nr. | Stück | Preis € | Hinweis |
 |---|---|---|---|---|---|
-| Panel-Mount-USB-C-Verlängerung (Buchse→Stecker, ~30 cm) | 1 | Amazon | **8,05** | im Warenkorb 24.08. | Daten-Port Gehäuserückwand → DevKit-Buchse |
-| Netzteil 5 V/3 A USB-C | 1 | **Bestand** | 0 | ✔ | Leon hat passendes (5V⎓3A geprüft) |
-| Buchsenleisten 1×40 zum Schneiden (2× 1×22 DevKit, 4× 1×8 DRV8833, 1×6/1×12 MPR121, 1×14 Display, 2× 1×7 Augen, 1×6 BME680; Reserve 4× 1×8) | 6 | Reichelt/AliExpress | ~3 | ? | 22er gibt es nicht fertig |
-| USB-C-Kabel | 2 | — | ~5 | vermutlich ✔ | |
+| U1, U3, U4, DSP1 | Buchsenleiste 1×40, 2,54 (schneiden: 2× 22 DevKit, 4× 8 DRV8833, 1× 14 Display) | BKL 10120978 | 3 | 9,54 | beim Schneiden geht je Schnitt ein Pin verloren |
+| J3–J6, U5, J12–J18 | Stiftleiste 1×40, 2,54 (schneiden) | SL 1X40G 2,54 | 2 | 0,60 | 72 Pins gebraucht |
+| J8 | Stiftleiste 2×2 (RST/BOOT) | ECON SL4G2 | 1 | 0,13 | |
+| J1 | Leiterplattenklemme 4-pol., RM 5,08 (VBUS GND CC1 CC2) | MKDS 1,5 4 5,08 | 1 | 1,61 | Phoenix, passt 1:1 zum KiCad-Footprint |
+| J2, J9 | Wannenstecker 2×15 gerade | HAN 530 6324 | 2 | 4,24 | |
+| — | Pfostenbuchse 30-pol. (Kabel Mainboard ↔ Frontpanel) | HAN 530 6803 | 2 | 3,70 | |
+| J7, J11 | Wannenstecker 2×5 gerade | WSL 10G | 2 | 0,30 | Augen-Kabel, verpolsicher |
+| — | Pfostenbuchse 10-pol. | PFL 10 | 2 | 0,20 | |
+| — | Flachbandkabel 40-pol., 28 AWG, 3 m | AWG 28-40G 3M | 1 | 6,96 | auf 30 bzw. 10 Adern abreißen |
+| U2 | LDO 3,3 V, TO-220 | LD1117V33 | 1 | 0,25 | |
+| D1 | Schottky 40 V/5 A, DO-201 | SB 540 DIO | 1 | 0,30 | |
+| F1 | PTC 3 A (Haltestrom), radial | LITT RXEF300 | 1 | 1,00 | Shop nennt den Auslösestrom 6 A |
+| U8 | MCP23017-E/SP, DIP-28 | MCP 23017-E/SP | 1 | 1,76 | |
+| — | IC-Sockel DIP-28 schmal | GS 28P-S | 1 | 0,45 | |
+| Q1 | BC327-25, TO-92 | BC 327-25 | 1 | 0,06 | Backlight high-side |
+| C1, C5 | Elko 1000 µF/16 V, RM 5 | RAD 105 1.000/16 | 2 | 0,42 | |
+| C4 | Elko 470 µF/16 V, RM 3,5 | NHG-A 470U 16 | 1 | 0,23 | Servos |
+| C2, C3 | Elko 100 µF/16 V, RM 2,5 | HD-A 100U 16 | 2 | 0,80 | DRV8833-VM |
+| C11 | Elko 10 µF/63 V, RM 2 | JAM TKP100M1JD11 | 1 | 0,05 | LD1117-Ausgang |
+| C6, C7, C12, C15–C18, C20, C21 | Kerko 100 nF, RM 5 | KERKO 100N | 9 | 0,36 | |
+| C13, C14 | Kerko 10 nF | KERKO 10N | 2 | 0,16 | Encoder-Entprellung |
+| R1, R2 | 5,1 kΩ 0207 | METALL 5,10K | 2 | 0,14 | CC1/CC2 |
+| R3, R8, R10, R17 | 10 kΩ 0207 | METALL 10,0K | 4 | 0,28 | |
+| R4 | 15 kΩ 0207 | METALL 15,0K | 1 | 0,07 | PSU_SENSE → 3,0 V |
+| R5 | 330 Ω 0207 | METALL 330 | 1 | 0,07 | ARGB-Daten |
+| R6, R7 | 4,7 kΩ 0207 | METALL 4,70K | 2 | 0,20 | I²C-Pull-ups |
+| R11, R13–R16 | 1 kΩ 0207 | METALL 1,00K | 5 | 0,35 | Backlight-Basis, Schleifer-RC |
+| SW1–SW10 | Cherry MX Black, Fixierzapfen (PCB-Montage) | CHERRY MX2A-11NW | 10 | 4,50 | |
+| ENC1 | ALPS-Drehgeber mit Taster, vertikal (EC11-Footprint) | STEC11B03 | 1 | 4,69 | 15 Impulse / 30 Rastungen |
+| — | Knopf für 6-mm-Achse | KNOPF 20-6 SW | 1 | 2,92 | |
+| H9–H12 | Abstandsbolzen M3 × 11, Innen/Außen | ECON D3X11A5MT | 4 | 0,72 | Display; M3-Schrauben/Muttern aus dem Sortiment |
+| | | | **Summe** | **≈ 47 €** | + Versand ab 6,95 € |
 
-## Bereits vorhanden (aus früheren Projekten / Drohnen-Bestellung)
+Lötjumper JP1 (VM: 1-2 = 5 V ab Werk, 2-3 = Boost) und die Testpunkte TP1–TP3 sind Kupfer, keine Bauteile.
+
+## B · Module — Amazon oder Bestand (verkabelt oder gesteckt)
+
+| Ref | Modul | Quelle | Preis € | Hinweis |
+|---|---|---|---|---|
+| U1 | ESP32-S3-DevKitC-1 **N16R8** (Espressif) | Amazon | 19,99 | N8R8 (Reichelt ESP32S3DK-C1N8R8, ~17,50) passt genauso: gleiche Pins, Octal-PSRAM. USB-Buchse am Board prüfen (USB-C oder Micro-USB) → passendes Einbaukabel |
+| U3, (U4) | DRV8833-Breakout **Pololu #2130** | Bestand prüfen, sonst Amazon ~10 | 0–10 | nur das Pololu-Layout (Reihen 10,16 mm, 16 Pins) passt in den Sockel; U4 erst für Fader 3/4 |
+| DSP1 | 2,8" ILI9341 SPI, **MSP2807-Typ** (rote Platine, 14-Pin-Leiste, 4 Löcher 76,08 × 44) | Amazon | 14,11 | Touch-Pins bleiben unbelegt |
+| J12, J13 | 2× GC9A01 1,28" rund, 7-Pin (VCC GND SCL SDA RES DC CS) | Amazon (2er-Pack) | 10,07 | per 7-poligem Dupont-Kabel (Buchse–Buchse) an die Stiftleisten |
+| J18 | MPR121-Breakout (beliebig) | Amazon | 6,04 | per Kabel an J18; ADDR am Modul auf GND |
+| U5 | Boost-Modul ~9 V (MT3608 o. ä.) | Amazon (Pack) | 6,04 | per 4 Drähten an U5; vor Anschluss einstellen, JP1 dann auf 2-3 |
+| J1 | USB-C-Buchse als Breakout mit CC1/CC2-Pins | Amazon oder Reichelt (Soldered 333011, 1,77) | ~2 | in die Rückwand; 4 Drähte an J1. Hat das Breakout schon 5,1 kΩ an CC: CC-Drähte weglassen |
+| — | USB-C-Einbauverlängerung Buchse → Stecker (~30 cm) | Amazon | 8,05 | Daten-Port Rückwand → DevKit |
+| J14–J17 | Behringer X32 Motorfader-Set (5× 100 mm) | Amazon | 39,32 | Drähte an die 8-Pin-Leisten; Reichelt-Alternative: ALPS RSA0N11M9 100 mm (18,70 je Stück, Motor 4–10 V) |
+| J3, J4 | 2× MG90S | Amazon | 14,10 | Servostecker passt direkt auf die Stiftleiste |
+| — | Keycaps blank, MX-Stem | Amazon oder 3D-Druck | 10,04 | Reichelt führt keine |
+| | | **Summe** | **≈ 130 €** | + ggf. DRV8833 |
+
+## C · Bestand
 
 | Bauteil | Verwendung |
 |---|---|
-| BME680-Breakout | Base, J6 |
-| ARGB/WS2812-Streifen (Drohnen-Bestellung) | Mund/Ampel hinter dem Visier, J5 |
-| ESP32-C3 SuperMini | nicht verbaut — Footprint gestrichen 2026-10-04 |
-| CYD ESP32-2432S028R | nicht verbaut — Testgerät für LovyanGFX-Entwicklung |
+| BME680-Breakout | per 4-poligem Kabel an J6 (3V3 GND SCL SDA) — sitzt hinter den Lüftungsschlitzen, weg von der ESP-Wärme |
+| ARGB/WS2812-Streifen (Drohne) | Mund/Ampel hinter dem Visier, an J5 (5V GND DIN) |
+| Netzteil 5 V/3 A USB-C | Strom über J1 |
+| USB-C-Kabel | 2 Stück |
+| CYD ESP32-2432S028R | nicht verbaut — Testgerät für LovyanGFX |
 
-## Summe (Schätzung 2026-08-23)
+## Summe
 
-- Beste EU-Quellen inkl. MF60T-US-Import: **~160 €**
-- Mit AliExpress-Alternativen (Displays, DRV8833, Encoder, Pan-Tilt): **~100–110 €**
-- Vor der Bestellung: Inventur (`hardware/inventar.md`) gegen Spalte „Bestand“, dann Bestellvorschlag im Vault aktualisieren.
+Reichelt ≈ 47 € + Versand, Module ≈ 130 € → **≈ 185 €** ohne Platinen. JLCPCB (Sponsor) separat: drei Designs, je 5 Stück.
